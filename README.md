@@ -1,20 +1,22 @@
 # vimcfg
-this is a customized vim config for my using vim to edit effectively
+This is a customized vim config for my using vim to edit effectively
 
 # how to use
-* make sure you have installed the vim 8.0+ in you computer.
+* Make sure you have installed the vim 8.0+ in you computer.
 
-* cp .vim directory and .vimrc files of this repository into your HOME dir of you computer.
+* Copy .vim directory and .vimrc files of this repository into your HOME dir of you computer.
 
-* open vim and type :PlugInstall ex cmd to install the plugin for vim, this maybe be some time
+* Open vim and type :PlugInstall ex cmd to install the plugins for vim, this maybe be some time
 
-* after finishing the step 3, you can have fun to use vim 
+* After finishing the step 3, you can have fun to use vim 
 
-* I just only test this vimcfg in my linux dist ubuntu.4
+* I just only test this vimcfg in my linux dist ubuntu.
 
 # screenshot
 * vim plug
+
 ![vim plug](https://github.com/ABigBright/vimcfg/blob/master/pic/plug_install.png)
 
 * vim panel
+
 ![vim panel](https://github.com/ABigBright/vimcfg/blob/master/pic/vim_panel.png)
