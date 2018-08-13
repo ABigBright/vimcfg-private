@@ -13,4 +13,6 @@ this is a customized vim config for my using vim to edit effectively
 5. I just only test this vimcfg in my linux dist ubuntu.4
 
 # screenshot
-![vim plug]()
+![vim plug](https://github.com/ABigBright/vimcfg/blob/master/pic/plug_install.png)
+
+![vim panel](https://github.com/ABigBright/vimcfg/blob/master/pic/vim_panel.png)
