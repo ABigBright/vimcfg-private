@@ -47,7 +47,7 @@ Plug 'easymotion/vim-easymotion'
 "Plug 'Lokaltog/vim-powerline'
 "Plug 'vim-scripts/sessionman.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 "Plug 'vim-scripts/EasyGrep'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
 Plug 'Valloric/YouCompleteMe'
