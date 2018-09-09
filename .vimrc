@@ -25,4 +25,5 @@ source $HOME/.vim/vimcfg/doxyGenToolkit.vim
 " source $HOME/.vim/vimcfg/airline.vim
 source $HOME/.vim/vimcfg/tabular.vim
 source $HOME/.vim/vimcfg/eleline.vim
+source $HOME/.vim/vimcfg/ycm.vim
 
