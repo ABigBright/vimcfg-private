@@ -7,8 +7,8 @@ colo molokai
 set ruler
 set cursorline
 set hlsearch
-set tabstop=4
-set shiftwidth=4
+set tabstop=8
+set shiftwidth=8
 set encoding=utf-8
 set fileencoding=utf-8
 set fileformat=unix
