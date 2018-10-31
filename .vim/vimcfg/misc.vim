@@ -16,6 +16,7 @@ set autoread
 syntax on
 set background=dark
 set nobackup
+set tms=10x0
 
 nmap <silent><F5> :vi $HOME/.vimrc<cr>
 nmap <silent><leader><F5> :vi $HOME/.vim/vimcfg/vim_plug.vim<cr>

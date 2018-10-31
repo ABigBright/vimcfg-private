@@ -27,4 +27,4 @@ source $HOME/.vim/vimcfg/tabular.vim
 source $HOME/.vim/vimcfg/eleline.vim
 source $HOME/.vim/vimcfg/ycm.vim
 source $HOME/.vim/vimcfg/quickfix.vim
-
+source $HOME/.vim/vimcfg/merge.vim
