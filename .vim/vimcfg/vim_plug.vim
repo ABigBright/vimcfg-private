@@ -61,5 +61,6 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'liuchengxu/eleline.vim'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
