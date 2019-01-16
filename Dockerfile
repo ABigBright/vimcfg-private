@@ -1,12 +1,8 @@
-FROM briq/vim:latest
+FROM briq/vim:base
 
-USER briq
-
-RUN cd ~
-RUN rm -rf vimcfg
 USER root
-RUN git clone https://github.com/ABigBright/vimcfg.git -b master
-RUN cp -va vimcfg/.vim vimcfg/.vimrc . && sync
+RUN source /home/briq/vim_init.sh
+USER briq
 
 CMD ["vim"]
     
