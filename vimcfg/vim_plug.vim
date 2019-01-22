@@ -52,8 +52,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
 Plug 'Valloric/YouCompleteMe'
 "Plug 'altercation/solarized'
-"Plug 'jsfaint/gen_tags.vim'
-" Plug 'https://github.com/altercation/solarized.git'
 Plug 'vim-scripts/winmanager'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'vim-scripts/DoxygenToolkit.vim'
@@ -62,5 +60,13 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 " Plug 'liuchengxu/eleline.vim'
 Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-syntastic/syntastic'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-eunuch'
+Plug 'w0rp/ale'
 
 call plug#end()
