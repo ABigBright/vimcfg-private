@@ -4,7 +4,7 @@ This is a customized vim config for my using vim to edit effectively
 # how to use
 * Make sure you have installed the vim 8.0+ in you computer.
 
-* Copy .vim directory and .vimrc files of this repository into your HOME dir of you computer.
+* git clone https://github.com/ABigBright/vimcfg-private.git $HOME/.vim
 
 * Open vim and type :PlugInstall ex cmd to install the plugins for vim, this maybe be some time
 
