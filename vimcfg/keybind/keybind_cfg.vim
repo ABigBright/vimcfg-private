@@ -26,7 +26,7 @@ nmap <silent><leader>dl :DoxLic<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gtags keybinding config
 " definition
-nmap <silent><eader>jd           :Gtags <c-r><c-w><cr>
+nmap <silent><leader>jd          :Gtags <c-r><c-w><cr>
 " reference
 nmap <silent><leader>jr          :Gtags -r <c-r><c-w><cr>
 " regexp
@@ -93,7 +93,8 @@ nmap <silent><leader>qc :ccl<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " edit style config
-vnoremap <leader>i :Tabularize /
+nmap <leader>si :Tabularize /
+" vmap <leader>si :Tabularize /
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
