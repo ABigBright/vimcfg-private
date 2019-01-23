@@ -3,6 +3,7 @@ set mouse=a
 set smartindent
 set cindent
 set autoindent
+let g:molokai_original = 1
 colo molokai
 set ruler
 set cursorline
@@ -18,7 +19,4 @@ set background=dark
 set nobackup
 set tms=10x0
 
-nmap <silent><F5> :vi $HOME/.vimrc<cr>
-nmap <silent><leader><F5> :vi $HOME/.vim/vimcfg/vim_plug.vim<cr>
-nmap <silent><leader><F5><F5> :NERDTree $HOME/.vim/vimcfg/<cr>
 

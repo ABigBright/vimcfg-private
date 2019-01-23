@@ -1,5 +1,3 @@
-nmap <silent><F12> :NERDTreeToggle<cr>
-
 " auto close the vim if only exist the one nerdtree win
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
