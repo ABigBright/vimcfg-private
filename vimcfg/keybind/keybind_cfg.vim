@@ -35,6 +35,7 @@ nmap <silent><leader>je          :Gtags -ge <c-r><c-w><cr>
 nmap <silent><leader>jg          :Gtags -go <c-r><c-w><cr>
 " look up symble of current file
 nmap <silent><leader>jc          :Gtags -f %<cr>
+nmap <silent><leader>jcf         :LeaderfFunction<cr>
 " look up the file including path
 nmap <silent><leader>ji          :Gtags -P
 " look up the symbol
@@ -94,7 +95,7 @@ nmap <silent><leader>qc :ccl<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " edit style config
 nmap <leader>si :Tabularize /
-" vmap <leader>si :Tabularize /
+vmap <leader>si :Tabularize /
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -102,6 +103,7 @@ nmap <leader>si :Tabularize /
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tag config
 nmap <silent>tl :TagbarToggle<cr>
+nmap <silent>tt :term<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -114,8 +116,8 @@ nmap <silent>tl :TagbarToggle<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf and leaderf keybinding config
-nmap <silent><leader>ff :Files<cr>
-nmap <silent><leader>fl :LeaderfFile<cr>
+let g:Lf_ShortcutF = '<leader>ff'
+nmap <silent><leader>fF :Files<cr>
 nmap <leader>fL         :Locate
 nmap <silent><leader>fg :GFiles<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -133,12 +135,15 @@ nmap <silent><leader>gcc :Commits<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " search keybinding config
-nmap <silent><leader>sa :Ag <c-r><c-w><cr>
+nmap <silent><leader>sa  :Ag <c-r><c-w><cr>
+nmap <silent><leader>srg :Rg <c-r><c-w><cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " buffer keybinding config
-nmap <silent><leader>bl :Buffers<cr>
+let g:Lf_ShortcutB = '<leader>bl'
+nmap <silent><leader>bL	:Buffers<cr>
+nmap <leader>bs        	:buffer 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
