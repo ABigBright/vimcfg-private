@@ -117,9 +117,11 @@ nmap <silent>tt :term<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf and leaderf keybinding config
 let g:Lf_ShortcutF = '<leader>ff'
-nmap <silent><leader>fF :Files<cr>
-nmap <leader>fL         :Locate
-nmap <silent><leader>fg :GFiles<cr>
+nmap <silent><leader>fF 	:Files<cr>
+nmap <leader>fL         	:Locate
+nmap <silent><leader>fg 	:GFiles<cr>
+nmap <silent><leader>fs 	:w<cr>
+nmap <silent><leader>fsq	:wq<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -143,7 +145,30 @@ nmap <silent><leader>srg :Rg <c-r><c-w><cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " buffer keybinding config
-let g:Lf_ShortcutB = '<leader>bl'
-nmap <silent><leader>bL	:Buffers<cr>
-nmap <leader>bs        	:buffer 
+let g:Lf_ShortcutB = '<leader>bt'
+nmap <silent><leader>bT	:Buffers<cr>
+nmap <leader>bs        	:buffer
+nmap <silent><leader>bp	:bp<cr>
+nmap <silent><leader>bn	:bn<cr>
+nmap <silent><leader>1	:b 1<cr>
+nmap <silent><leader>2	:b 2<cr>
+nmap <silent><leader>3	:b 3<cr>
+nmap <silent><leader>4	:b 4<cr>
+nmap <silent><leader>5	:b 5<cr>
+nmap <silent><leader>6	:b 6<cr>
+nmap <silent><leader>7	:b 7<cr>
+nmap <silent><leader>8	:b 8<cr>
+nmap <silent><leader>9	:b 9<cr>
+nmap <silent><leader>bl	:wincmd h<cr>
+nmap <silent><leader>br	:wincmd l<cr>
+nmap <silent><leader>bu	:wincmd k<cr>
+nmap <silent><leader>bb	:wincmd j<cr>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" window keybinding config
+nmap <silent><leader>wc  :q<cr>
+nmap <silent><leader>wcf :q!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
