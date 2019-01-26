@@ -121,7 +121,7 @@ nmap <silent><leader>fF 	:Files<cr>
 nmap <leader>fL         	:Locate
 nmap <silent><leader>fg 	:GFiles<cr>
 nmap <silent><leader>fs 	:w<cr>
-nmap <silent><leader>fsq	:wq<cr>
+nmap <silent><leader>fS	:wq<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -129,7 +129,7 @@ nmap <silent><leader>fsq	:wq<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " buffer keybinding config
 nmap <silent><leader>gs  :GFiles?<cr>
-nmap <silent><leader>gcc :BCommits<cr>
+nmap <silent><leader>gC :BCommits<cr>
 nmap <silent><leader>gc  :Commits<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -166,5 +166,5 @@ nmap <silent><leader>9	:b 9<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " window keybinding config
 nmap <silent><leader>wc  :q<cr>
-nmap <silent><leader>wcf :q!<cr>
+nmap <silent><leader>wC :q!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
