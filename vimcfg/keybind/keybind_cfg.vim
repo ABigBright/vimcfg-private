@@ -129,8 +129,8 @@ nmap <silent><leader>fsq	:wq<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " buffer keybinding config
 nmap <silent><leader>gs  :GFiles?<cr>
-nmap <silent><leader>gc  :BCommits<cr>
-nmap <silent><leader>gcc :Commits<cr>
+nmap <silent><leader>gcc :BCommits<cr>
+nmap <silent><leader>gc  :Commits<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
