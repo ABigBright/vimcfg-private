@@ -145,8 +145,8 @@ nmap <silent><leader>srg :Rg <c-r><c-w><cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " buffer keybinding config
-let g:Lf_ShortcutB = '<leader>bl'
-nmap <silent><leader>bL	:Buffers<cr>
+let g:Lf_ShortcutB = '<leader>bt'
+nmap <silent><leader>bT	:Buffers<cr>
 nmap <leader>bs        	:buffer
 nmap <silent><leader>bp	:bp<cr>
 nmap <silent><leader>bn	:bn<cr>
@@ -159,6 +159,10 @@ nmap <silent><leader>6	:b 6<cr>
 nmap <silent><leader>7	:b 7<cr>
 nmap <silent><leader>8	:b 8<cr>
 nmap <silent><leader>9	:b 9<cr>
+nmap <silent><leader>br	:wincmd l<cr>
+nmap <silent><leader>bl	:wincmd h<cr>
+nmap <silent><leader>bu	:wincmd k<cr>
+nmap <silent><leader>bd	:wincmd j<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
