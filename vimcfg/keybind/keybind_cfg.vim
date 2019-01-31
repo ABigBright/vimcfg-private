@@ -122,6 +122,7 @@ nmap <leader>fL         	:Locate
 nmap <silent><leader>fg 	:GFiles<cr>
 nmap <silent><leader>fs 	:w<cr>
 nmap <silent><leader>fS	:wq<cr>
+nmap <silent><leader>fr	:History<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
