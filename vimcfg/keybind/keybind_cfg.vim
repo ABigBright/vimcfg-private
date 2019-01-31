@@ -37,7 +37,7 @@ nmap <silent><leader>jg          :Gtags -go <c-r><c-w><cr>
 nmap <silent><leader>jc          :Gtags -f %<cr>
 nmap <silent><leader>jcf         :LeaderfFunction<cr>
 " look up the file including path
-nmap <silent><leader>ji          :Gtags -P
+nmap <silent><leader>jf          :Gtags -P <c-r><c-w><cr>
 " look up the symbol
 nmap <silent><leader>js          :Gtags -s <c-r><c-w><cr>
 nmap <silent><leader>jyd         :YcmCompleter GoTo<cr>
