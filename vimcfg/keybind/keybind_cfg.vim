@@ -102,8 +102,8 @@ vmap <leader>si :Tabularize /
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tag config
-nmap <silent>tl :TagbarToggle<cr>
-nmap <silent>tt :term<cr>
+nmap <silent><leader>tl :TagbarToggle<cr>
+nmap <silent><leader>tt :term<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -173,3 +173,23 @@ nmap <silent><leader>bd	:wincmd j<cr>
 nmap <silent><leader>wc  :q<cr>
 nmap <silent><leader>wC :q!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" which-key keybinding config
+let g:which_key_map = {}
+let g:which_key_map.b = {
+      \ 'name' : '+buffer',
+      \ 'r' : 'open-quickfix'    ,
+      \ 'l' : 'open-locationlist',
+      \ }
+"call which_key#register('<Space>', "g:which_key_map")
+nnoremap <silent><leader> :WhichKey '<Space>'<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+

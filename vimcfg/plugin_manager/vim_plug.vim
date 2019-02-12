@@ -63,5 +63,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/gv.vim'
+Plug 'liuchengxu/vim-which-key'
+" On-demand lazy load
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+" To register the descriptions when using the on-demand load feature, use the autocmd hook to call which#register(),
+" e.g., register for the Space key(see more configuration details in the following sections):
+" autocmd! User vim-which-key call which#register('<Space>', 'g:which_key_map')
 
 call plug#end()

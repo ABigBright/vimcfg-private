@@ -20,3 +20,4 @@ source $HOME/.vim/vimcfg/plugin_cfg/tagbar.vim
 source $HOME/.vim/vimcfg/plugin_cfg/vim-grepper.vim
 source $HOME/.vim/vimcfg/plugin_cfg/winmanager.vim
 source $HOME/.vim/vimcfg/plugin_cfg/ycm.vim
+source $HOME/.vim/vimcfg/plugin_cfg/vim-which-key.vim

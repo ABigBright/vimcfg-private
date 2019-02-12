@@ -1,0 +1,2 @@
+set timeoutlen=500
+
