@@ -5,7 +5,7 @@ let mapleader=" "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " async run keybinding config
 nmap <silent><leader>aa	:AsyncRun ag --vimgrep <c-r><c-w><cr>
-nmap <silent><leader>ag	:AsyncRun grep -rn <c-r><c-w> * <cr>
+nmap <silent><leader>ag	:AsyncRun grep -rn <c-r><c-w><cr>
 nmap <leader>al        	:AsyncRun locate
 nmap <leader>ar        	:AsyncRun
 nmap <leader>as        	:AsyncStop<cr>
@@ -108,11 +108,6 @@ nmap <silent><leader>tt :term<cr>
 
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ycm jump key define
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf and leaderf keybinding config
@@ -120,8 +115,6 @@ let g:Lf_ShortcutF = '<leader>ff'
 nmap <silent><leader>fF 	:Files<cr>
 nmap <leader>fL         	:Locate
 nmap <silent><leader>fg 	:GFiles<cr>
-nmap <silent><leader>fs 	:w<cr>
-nmap <silent><leader>fS	:wq<cr>
 nmap <silent><leader>fr	:History<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -162,13 +155,6 @@ nmap <silent><leader>8	:b 8<cr>
 nmap <silent><leader>9	:b 9<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" window keybinding config
-nmap <silent><leader>wc  :q<cr>
-nmap <silent><leader>wC :q!<cr>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
