@@ -87,16 +87,18 @@ let g:which_key_map.t = {
 
 " fzf and leaderf keybinding config
 let g:Lf_ShortcutF = '<leader>ff'
+nmap <leader>fl  :Locate 
+nmap <leader>fL  :AsyncRun locate 
 let g:which_key_map.f = {
       \ 'name' : '+File',
       \ 'f'    : 'leaderf-find-file',
       \ 'F'    : [':Files', 'fzf-find-file'],
-      \ 'l'    : [':Locate', 'locate-find-file'],
+      \ 'l'    : 'locate-find-file',
       \ 'g'    : [':GFiles', 'git-find-file'],
       \ 'r'    : [':History', 'fzf-find-recent-file'],
       \ 't'    : [':NERDTreeToggle', 'file-tree-browser-toggle'],
       \ 'c'    : [':NERDTreeFind %', 'current-file-tree-browser'],
-      \ 'L'    : [':AsyncRun locate', 'async-locate-find-file'],
+      \ 'L'    : 'async-locate-find-file',
       \ }
 
 " buffer keybinding config
