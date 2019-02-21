@@ -38,15 +38,12 @@ Plug 'vim-scripts/minibufexplorerpp'
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
 Plug 'majutsushi/tagbar'
-"Plug 'kien/ctrlp.vim'
 Plug 'vim-scripts/gtags.vim'
 Plug 'easymotion/vim-easymotion'
-"Plug 'Lokaltog/vim-powerline'
 Plug 'junegunn/limelight.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
 Plug 'Valloric/YouCompleteMe'
-"Plug 'altercation/solarized'
 Plug 'vim-scripts/winmanager'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'vim-scripts/DoxygenToolkit.vim'
@@ -69,5 +66,6 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 " To register the descriptions when using the on-demand load feature, use the autocmd hook to call which#register(),
 " e.g., register for the Space key(see more configuration details in the following sections):
 " autocmd! User vim-which-key call which#register('<Space>', 'g:which_key_map')
+autocmd! User vim-which-key call which_key#register('<Space>', 'g:which_key_map')
 
 call plug#end()

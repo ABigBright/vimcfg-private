@@ -1,177 +1,147 @@
 let mapleader=" "
+let g:which_key_map = {}
 
+" nerdcomment config
+let g:which_key_map.c = {
+      \ 'name' : '+Nerdcomment',
+      \ }
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " async run keybinding config
-nmap <silent><leader>aa	:AsyncRun ag --vimgrep <c-r><c-w><cr>
-nmap <silent><leader>ag	:AsyncRun grep -rn <c-r><c-w><cr>
-nmap <leader>al        	:AsyncRun locate
-nmap <leader>ar        	:AsyncRun
-nmap <leader>as        	:AsyncStop<cr>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>ar :AsyncRun 
+let g:which_key_map.a = {
+      \ 'name' : '+Async-do-something',
+      \ 'r'    : 'async-run',
+      \ 's'    : [':AsyncStop', 'async-stop'],
+      \ }
 
+let g:which_key_map.d = {
+      \ 'name' : '+Doxystyle',
+      \ 'f'    : [':Dox', 'doxygen-file'],
+      \ 'a'    : [':DoxAuthor', 'doxygen-author'],
+      \ 'l'    : [':DoxLic', 'doxygen-license'],
+      \ }
 
+nmap <silent><leader>jd    :Gtags <c-r><c-w><cr>
+nmap <silent><leader>jr    :Gtags -r <c-r><c-w><cr>
+nmap <silent><leader>je    :Gtags -ge <c-r><c-w><cr>
+nmap <silent><leader>jg    :Gtags -go <c-r><c-w><cr>
+nmap <silent><leader>jc    :Gtags -f %<cr>
+nmap <silent><leader>jcf   :LeaderfFunction<cr>
+nmap <silent><leader>jf    :Gtags -P <c-r><c-w><cr>
+nmap <silent><leader>js    :Gtags -s <c-r><c-w><cr>
+nmap <silent><leader>jyd   :YcmCompleter GoTo<cr>
+nmap <silent><leader>jyi   :YcmCompleter GoToInclude<cr>
+nmap <silent><leader>jS    :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jG    :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jC    :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jT    :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jE    :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jF    :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <silent><leader>jI    :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <silent><leader>jD    :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jA    :cs find a <C-R>=expand("<cword>")<CR><CR>
+let g:which_key_map.j = {
+      \ 'name' : '+Jump',
+      \ 'd'    : 'gtags-jump-definition',
+      \ 'r'    : 'gtags-jump-reference',
+      \ 'e'    : 'gtags-jump-regexp-find',
+      \ 'g'    : 'gtags-jump-grep',
+      \ 'c'    : 'gtags-jump-current-file-symbol',
+      \ 'cf'   : 'leaderf-jump-functions',
+      \ 'f'    : 'gtags-jump-file',
+      \ 's'    : 'gtags-jump-symbol',
+      \ 'yd'   : 'ycm-jump-definition',
+      \ 'yi'   : 'ycm-jump-include',
+      \ 'S'    : 'cscope-jump-symble',
+      \ 'G'    : 'cscope-jump-definition',
+      \ 'C'    : 'cscope-jump-reference',
+      \ 'T'    : 'cscope-jump-text',
+      \ 'E'    : 'cscope-jump-egrep',
+      \ 'F'    : 'cscope-jump-file',
+      \ 'I'    : 'cscope-jump-including',
+      \ 'D'    : 'cscope-jump-call-func',
+      \ 'A'    : 'cscope-jump-symbol-assigned',
+      \ }
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" doxygen style comment keybinding
-nmap <silent><leader>df :Dox<cr>
-nmap <silent><leader>da :DoxAuthor<cr>
-nmap <silent><leader>dl :DoxLic<cr>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" gtags keybinding config
-" definition
-nmap <silent><leader>jd          :Gtags <c-r><c-w><cr>
-" reference
-nmap <silent><leader>jr          :Gtags -r <c-r><c-w><cr>
-" regexp
-nmap <silent><leader>je          :Gtags -ge <c-r><c-w><cr>
-" grep
-nmap <silent><leader>jg          :Gtags -go <c-r><c-w><cr>
-" look up symble of current file
-nmap <silent><leader>jc          :Gtags -f %<cr>
-nmap <silent><leader>jcf         :LeaderfFunction<cr>
-" look up the file including path
-nmap <silent><leader>jf          :Gtags -P <c-r><c-w><cr>
-" look up the symbol
-nmap <silent><leader>js          :Gtags -s <c-r><c-w><cr>
-nmap <silent><leader>jyd         :YcmCompleter GoTo<cr>
-nmap <silent><leader>jyi         :YcmCompleter GoToInclude<cr>
-" cscope keybindig config
-nmap <silent><leader>jS          :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jG          :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jC          :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jT          :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jE          :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jF          :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <silent><leader>jI          :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <silent><leader>jD          :cs find d <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jA          :cs find a <C-R>=expand("<cword>")<CR><CR>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vimdiff keybinding config
-nmap <silent><leader>dg1 :diffget 1<cr> :diffupdate<cr>
-nmap <silent><leader>dg2 :diffget 2<cr> :diffupdate<cr>
-nmap <silent><leader>dg3 :diffget 3<cr> :diffupdate<cr>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " private init config file 
-nmap <silent><leader>hi 	:vi $HOME/.vim/vimrc<cr>
-nmap <silent><leader>hp 	:vi $HOME/.vim/vimcfg/plugin_manager/vim_plug.vim<cr>
-nmap <silent><leader>hk 	:vi $HOME/.vim/vimcfg/keybind/keybind_cfg.vim<cr>
-nmap <silent><leader>hpd	:NERDTree $HOME/.vim/vimcfg/<cr>
-nmap <silent><leader>hkm	:Maps<cr>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:which_key_map.h = {
+      \ 'name' : '+Help',
+      \ 'i'    : [':vi $HOME/.vim/vimrc', 'open-vimrc'],
+      \ 'p'    : [':vi $HOME/.vim/vimcfg/plugin_manager/vim_plug.vim', 'open-vimplug'],
+      \ 'k'    : [':vi $HOME/.vim/vimcfg/keybind/keybind_cfg.vim', 'open-keybiding-config'],
+      \ 'P'    : [':NERDTree $HOME/.vim/vimcfg/', 'open-vimcfg-in-file-browser'],
+      \ }
 
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" explorer keybinding config 
-nmap <silent><leader>et      :NERDTreeToggle<cr>
-nmap <silent><leader>ec      :NERDTreeFind %<cr>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim quickfix open/close keybinding config
-nmap <silent><leader>qo :botright cw<cr>
-nmap <silent><leader>qc :ccl<cr>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:which_key_map.q = {
+      \ 'name' : '+Quickfix',
+      \ 'o'    : [':botright cw', 'open-quickfix-win'],
+      \ 'c'    : [':ccl', 'close-quickfix-win'],
+      \ }
 
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" edit style config
-nmap <leader>si :Tabularize /
-vmap <leader>si :Tabularize /
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tag config
-nmap <silent><leader>tl :TagbarToggle<cr>
-nmap <silent><leader>tt :term<cr>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:which_key_map.t = {
+      \ 'name' : '+Tag',
+      \ 'l'    : [':TagbarToggle', 'open-tagbar-list'],
+      \ }
 
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf and leaderf keybinding config
 let g:Lf_ShortcutF = '<leader>ff'
-nmap <silent><leader>fF 	:Files<cr>
-nmap <leader>fL         	:Locate
-nmap <silent><leader>fg 	:GFiles<cr>
-nmap <silent><leader>fr	:History<cr>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:which_key_map.f = {
+      \ 'name' : '+File',
+      \ 'f'    : 'leaderf-find-file',
+      \ 'F'    : [':Files', 'fzf-find-file'],
+      \ 'l'    : [':Locate', 'locate-find-file'],
+      \ 'g'    : [':GFiles', 'git-find-file'],
+      \ 'r'    : [':History', 'fzf-find-recent-file'],
+      \ 't'    : [':NERDTreeToggle', 'file-tree-browser-toggle'],
+      \ 'c'    : [':NERDTreeFind %', 'current-file-tree-browser'],
+      \ 'L'    : [':AsyncRun locate', 'async-locate-find-file'],
+      \ }
 
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " buffer keybinding config
-nmap <silent><leader>gs  :GFiles?<cr>
-nmap <silent><leader>gC :BCommits<cr>
-nmap <silent><leader>gc  :Commits<cr>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:which_key_map.g = {
+      \ 'name' : '+Git',
+      \ 's'    : [':GFiles?', 'git-curr-status'],
+      \ 'c'    : [':Commits', 'git-all-commits'],
+      \ 'C'    : [':BCommits', 'git-curr-commits'],
+      \ }
 
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " search keybinding config
-nmap <silent><leader>sa  :Ag <c-r><c-w><cr>
-nmap <silent><leader>srg :Rg <c-r><c-w><cr>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>si         :Tabularize /
+vmap <leader>si         :Tabularize /
+nmap <silent><leader>sA :AsyncRun ag --vimgrep <c-r><c-w><cr>
+nmap <silent><leader>sG :AsyncRun grep -rn <c-r><c-w><cr>
+nmap <silent><leader>sa :Ag <c-r><c-w><cr>
+nmap <silent><leader>sr :Rg <c-r><c-w><cr>
+let g:which_key_map.s = {
+      \ 'name' : '+Search-And-Style',
+      \ 'a'    : 'ag-search',
+      \ 'r'    : 'rg-search',
+      \ 'i'    : 'indent-toggle',
+      \ 'A'    : 'async-ag-search',
+      \ 'G'    : 'async-grep-search',
+      \ }
 
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " buffer keybinding config
 let g:Lf_ShortcutB = '<leader>bt'
-nmap <silent><leader>bT	:Buffers<cr>
-nmap <leader>bs        	:buffer
-nmap <silent><leader>bp	:bp<cr>
-nmap <silent><leader>bn	:bn<cr>
-nmap <silent><leader>1	:b 1<cr>
-nmap <silent><leader>2	:b 2<cr>
-nmap <silent><leader>3	:b 3<cr>
-nmap <silent><leader>4	:b 4<cr>
-nmap <silent><leader>5	:b 5<cr>
-nmap <silent><leader>6	:b 6<cr>
-nmap <silent><leader>7	:b 7<cr>
-nmap <silent><leader>8	:b 8<cr>
-nmap <silent><leader>9	:b 9<cr>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" which-key keybinding config
-let g:which_key_map = {}
 let g:which_key_map.b = {
-      \ 'name' : '+buffer',
-      \ 'r' : 'open-quickfix'    ,
-      \ 'l' : 'open-locationlist',
+      \ 'name' : '+Buffer',
+      \ 'T'    : [':Buffers', 'fzf-buffers'],
+      \ 't'    : 'leaderf-buffers',
+      \ 'p'    : [':bp', 'prev-buffer'],
+      \ 'n'    : [':bn', 'next-buffer'],
+      \ '1'    : [':b 1', 'buffer-1'],
+      \ '2'    : [':b 2', 'buffer-2'],
+      \ '3'    : [':b 3', 'buffer-3'],
+      \ '4'    : [':b 4', 'buffer-4'],
+      \ '5'    : [':b 5', 'buffer-5'],
+      \ '6'    : [':b 6', 'buffer-6'],
+      \ '7'    : [':b 7', 'buffer-7'],
+      \ '8'    : [':b 8', 'buffer-8'],
+      \ '9'    : [':b 9', 'buffer-9'],
       \ }
-"call which_key#register('<Space>', "g:which_key_map")
+
+" which-key keybinding config
 nnoremap <silent><leader> :WhichKey '<Space>'<CR>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-
-
 
