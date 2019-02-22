@@ -29,8 +29,6 @@ nmap <silent><leader>jc    :Gtags -f %<cr>
 nmap <silent><leader>jcf   :LeaderfFunction<cr>
 nmap <silent><leader>jf    :Gtags -P <c-r><c-w><cr>
 nmap <silent><leader>js    :Gtags -s <c-r><c-w><cr>
-nmap <silent><leader>jyd   :YcmCompleter GoTo<cr>
-nmap <silent><leader>jyi   :YcmCompleter GoToInclude<cr>
 nmap <silent><leader>jS    :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <silent><leader>jG    :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <silent><leader>jC    :cs find c <C-R>=expand("<cword>")<CR><CR>
@@ -50,8 +48,8 @@ let g:which_key_map.j = {
       \ 'cf'   : 'leaderf-jump-functions',
       \ 'f'    : 'gtags-jump-file',
       \ 's'    : 'gtags-jump-symbol',
-      \ 'yd'   : 'ycm-jump-definition',
-      \ 'yi'   : 'ycm-jump-include',
+      \ 'yd'   : [':YcmCompleter GoTo', 'ycm-jump-definition'],
+      \ 'yi'   : [':YcmCompleter GoToInclude', 'ycm-jump-include'],
       \ 'S'    : 'cscope-jump-symble',
       \ 'G'    : 'cscope-jump-definition',
       \ 'C'    : 'cscope-jump-reference',
