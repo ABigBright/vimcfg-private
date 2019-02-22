@@ -142,6 +142,13 @@ let g:which_key_map.b = {
       \ '9'    : [':b 9', 'buffer-9'],
       \ }
 
+" cancel some keybinding
+" add the autocmd hook define when at vimenter
+au VimEnter * unmap  <unique><leader>mbt
+au VimEnter * unmap  <unique><leader>mbu
+au VimEnter * unmap  <unique><leader>mbc
+au VimEnter * unmap  <unique><leader>mbe
+
 " which-key keybinding config
 nnoremap <silent><leader> :WhichKey '<Space>'<CR>
 
