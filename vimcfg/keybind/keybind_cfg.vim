@@ -3,7 +3,7 @@ let g:which_key_map = {}
 
 " nerdcomment config
 let g:which_key_map.c = {
-      \ 'name' : '+Nerdcomment',
+      \ 'name' : '+Comment',
       \ }
 
 " async run keybinding config
