@@ -102,9 +102,10 @@ let g:which_key_map.f = {
 " buffer keybinding config
 let g:which_key_map.g = {
       \ 'name' : '+Git',
-      \ 's'    : [':GFiles?', 'git-curr-status'],
-      \ 'c'    : [':Commits', 'git-all-commits'],
-      \ 'C'    : [':BCommits', 'git-curr-commits'],
+      \ 'b'    : [':Gblame', 'git-blame'],
+      \ 's'    : [':Gstatus', 'git-status'],
+      \ 'c'    : [':GV', 'git-all-commits'],
+      \ 'C'    : [':GV!', 'git-curr-commits'],
       \ }
 
 " search keybinding config
