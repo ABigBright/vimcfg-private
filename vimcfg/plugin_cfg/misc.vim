@@ -3,7 +3,7 @@ set mouse=a
 set smartindent
 set cindent
 set autoindent
-colo morning
+colo molokai
 set ruler
 set cursorline
 set hlsearch
@@ -15,7 +15,7 @@ set fileencoding=utf-8
 set fileformat=unix
 set autoread
 syntax on
-set background=light
+set background=dark
 set nobackup
 set tms=10x0
 
