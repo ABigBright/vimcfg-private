@@ -18,5 +18,6 @@ syntax on
 set background=dark
 set nobackup
 set tms=10x0
+set updatetime=500
 
 

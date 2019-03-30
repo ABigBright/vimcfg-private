@@ -15,7 +15,7 @@ source $HOME/.vim/vimcfg/plugin_cfg/nerdtree.vim
 source $HOME/.vim/vimcfg/plugin_cfg/powerline.vim
 source $HOME/.vim/vimcfg/plugin_cfg/quickfix.vim
 source $HOME/.vim/vimcfg/plugin_cfg/snippets_cfg.vim
-source $HOME/.vim/vimcfg/plugin_cfg/syntastic_cfg.vim
+" source $HOME/.vim/vimcfg/plugin_cfg/syntastic_cfg.vim
 source $HOME/.vim/vimcfg/plugin_cfg/tagbar.vim
 source $HOME/.vim/vimcfg/plugin_cfg/vim-grepper.vim
 source $HOME/.vim/vimcfg/plugin_cfg/winmanager.vim
