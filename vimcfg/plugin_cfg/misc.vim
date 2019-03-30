@@ -17,7 +17,17 @@ set autoread
 syntax on
 set background=dark
 set nobackup
-set tms=10x0
+set termwinsize=
 set updatetime=500
+set go=m
 
+if has("gui_running")
+    if has("gui_gtk2")
+        set guifont=Source\ Code\ Pro\ Semibold\ 10
+    elseif has("x11")
+        set guifont=Source\ Code\ Pro\ Semibold\ 10
+    elseif has("gui_win32")
+	    set guifont=Source\ Code\ Pro:h10
+    endif
+endif
 
