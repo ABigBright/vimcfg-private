@@ -19,7 +19,7 @@ set background=dark
 set nobackup
 set termwinsize=
 set updatetime=500
-set go=m
+set go=
 
 if has("gui_running")
     if has("gui_gtk2")
