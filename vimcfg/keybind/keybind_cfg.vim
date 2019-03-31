@@ -27,7 +27,7 @@ nmap <silent><leader>je    :Gtags -ge <c-r><c-w><cr>
 nmap <silent><leader>jg    :Gtags -go <c-r><c-w><cr>
 nmap <silent><leader>jc    :Gtags -f %<cr>
 nmap <silent><leader>jcf   :LeaderfFunction<cr>
-nmap <silent><leader>jf    :Gtags -P <c-r><c-w><cr>
+nmap <silent><leader>jf    :Gtags -P <c-r><c-f><cr>
 nmap <silent><leader>js    :Gtags -s <c-r><c-w><cr>
 nmap <silent><leader>jS    :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <silent><leader>jG    :cs find g <C-R>=expand("<cword>")<CR><CR>
