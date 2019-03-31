@@ -26,7 +26,6 @@ nmap <silent><leader>jr    :Gtags -r <c-r><c-w><cr>
 nmap <silent><leader>je    :Gtags -ge <c-r><c-w><cr>
 nmap <silent><leader>jg    :Gtags -go <c-r><c-w><cr>
 nmap <silent><leader>jc    :Gtags -f %<cr>
-nmap <silent><leader>jcf   :LeaderfFunction<cr>
 nmap <silent><leader>jf    :Gtags -P <c-r><c-f><cr>
 nmap <silent><leader>js    :Gtags -s <c-r><c-w><cr>
 nmap <silent><leader>jS    :cs find s <C-R>=expand("<cword>")<CR><CR>
@@ -45,7 +44,9 @@ let g:which_key_map.j = {
       \ 'e'    : 'gtags-jump-regexp-find',
       \ 'g'    : 'gtags-jump-grep',
       \ 'c'    : 'gtags-jump-current-file-symbol',
-      \ 'cf'   : 'leaderf-jump-functions',
+      \ 'a'   : [':LeaderfFunction', 'leaderf-jump-current-functions'],
+      \ 'b'   : [':LeaderfBufTag', 'leaderf-jump-current-tag'],
+      \ 'h'   : [':LeaderfBufTagAll', 'leaderf-jump-all-tag'],
       \ 'f'    : 'gtags-jump-file',
       \ 's'    : 'gtags-jump-symbol',
       \ 'yd'   : [':YcmCompleter GoTo', 'ycm-jump-definition'],
@@ -90,6 +91,7 @@ nmap <leader>fL  :AsyncRun locate
 let g:which_key_map.f = {
       \ 'name' : '+File',
       \ 'f'    : 'leaderf-find-file',
+      \ 'a'   : [':LeaderfFileFullScreen', 'leaderf-find-file-fullscreen'],
       \ 'F'    : [':Files', 'fzf-find-file'],
       \ 'l'    : 'locate-find-file',
       \ 'g'    : [':GFiles', 'git-find-file'],
