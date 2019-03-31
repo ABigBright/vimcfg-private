@@ -67,7 +67,7 @@ let g:which_key_map.h = {
       \ 'i'    : [':vi $HOME/.vim/vimrc', 'open-vimrc'],
       \ 'p'    : [':vi $HOME/.vim/vimcfg/plugin_manager/vim_plug.vim', 'open-vimplug'],
       \ 'k'    : [':vi $HOME/.vim/vimcfg/keybind/keybind_cfg.vim', 'open-keybiding-config'],
-      \ 'P'    : [':NERDTree $HOME/.vim/vimcfg/', 'open-vimcfg-in-file-browser'],
+      \ 'P'    : [':NERDTreeFind $HOME/.vim/vimcfg/', 'open-vimcfg-in-file-browser'],
       \ }
 
 " vim quickfix open/close keybinding config

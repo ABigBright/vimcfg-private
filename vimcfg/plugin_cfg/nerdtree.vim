@@ -4,6 +4,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " dir symbol define
 let g:NERDTreeDirArrowExpandable = '▶'
 let g:NERDTreeDirArrowCollapsible = '▼'
+let g:NERDTreeQuitOnOpen = 1
 
 nmap <silent> <C-F10> :NERDTreeFind %<cr>
 
