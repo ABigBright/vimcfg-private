@@ -132,25 +132,48 @@ let g:which_key_map.b = {
       \ 'name' : '+Buffer',
       \ 'T'    : [':Buffers', 'fzf-buffers'],
       \ 't'    : 'leaderf-buffers',
-      \ 'p'    : [':bp', 'prev-buffer'],
-      \ 'n'    : [':bn', 'next-buffer'],
-      \ '1'    : [':b 1', 'buffer-1'],
-      \ '2'    : [':b 2', 'buffer-2'],
-      \ '3'    : [':b 3', 'buffer-3'],
-      \ '4'    : [':b 4', 'buffer-4'],
-      \ '5'    : [':b 5', 'buffer-5'],
-      \ '6'    : [':b 6', 'buffer-6'],
-      \ '7'    : [':b 7', 'buffer-7'],
-      \ '8'    : [':b 8', 'buffer-8'],
-      \ '9'    : [':b 9', 'buffer-9'],
+      \ 'p'    : [':bp', 'switch-prev-buffer'],
+      \ 'n'    : [':bn', 'switch-next-buffer'],
+      \ '1'    : [':b 1', 'switch buffer 1'],
+      \ '2'    : [':b 2', 'switch buffer 2'],
+      \ '3'    : [':b 3', 'switch buffer 3'],
+      \ '4'    : [':b 4', 'switch buffer 4'],
+      \ '5'    : [':b 5', 'switch buffer 5'],
+      \ '6'    : [':b 6', 'switch buffer 6'],
+      \ '7'    : [':b 7', 'switch buffer 7'],
+      \ '8'    : [':b 8', 'switch buffer 8'],
+      \ '9'    : [':b 9', 'switch buffer 9'],
       \ }
+
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>p <Plug>AirlineSelectPrevTab
+nmap <leader>n <Plug>AirlineSelectNextTab
+let g:which_key_map.1 = 'switch to buffer 1'
+let g:which_key_map.2 = 'switch to buffer 2'
+let g:which_key_map.3 = 'switch to buffer 3'
+let g:which_key_map.4 = 'switch to buffer 4'
+let g:which_key_map.5 = 'switch to buffer 5'
+let g:which_key_map.6 = 'switch to buffer 6'
+let g:which_key_map.7 = 'switch to buffer 7'
+let g:which_key_map.8 = 'switch to buffer 8'
+let g:which_key_map.9 = 'switch to buffer 9'
+let g:which_key_map.p = 'switch to buffer prev'
+let g:which_key_map.n = 'switch to buffer next'
 
 " cancel some keybinding
 " add the autocmd hook define when at vimenter
-au VimEnter * unmap  <unique><leader>mbt
-au VimEnter * unmap  <unique><leader>mbu
-au VimEnter * unmap  <unique><leader>mbc
-au VimEnter * unmap  <unique><leader>mbe
+" au VimEnter * unmap  <unique><leader>mbt
+" au VimEnter * unmap  <unique><leader>mbu
+" au VimEnter * unmap  <unique><leader>mbc
+" au VimEnter * unmap  <unique><leader>mbe
 
 " which-key keybinding config
 nnoremap <silent><leader> :WhichKey '<Space>'<CR>

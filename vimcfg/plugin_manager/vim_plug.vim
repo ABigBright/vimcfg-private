@@ -34,7 +34,7 @@ call plug#begin('~/.vim/plugged')
 " Plug '~/my-prototype-plugin'
 
 " Initialize plugin system
-Plug 'vim-scripts/minibufexplorerpp'
+" Plug 'vim-scripts/minibufexplorerpp'
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
 Plug 'majutsushi/tagbar'
