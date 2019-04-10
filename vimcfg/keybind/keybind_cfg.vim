@@ -145,6 +145,8 @@ let g:which_key_map.b = {
       \ '9'    : [':b 9', 'switch buffer 9'],
       \ }
 
+
+
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
@@ -167,6 +169,13 @@ let g:which_key_map.8 = 'switch to buffer 8'
 let g:which_key_map.9 = 'switch to buffer 9'
 let g:which_key_map.p = 'switch to buffer prev'
 let g:which_key_map.n = 'switch to buffer next'
+
+
+" window manipulate keybinding config
+nmap <silent><C-h> <C-W>h<cr>
+nmap <silent><C-l> <C-W>l<cr>
+nmap <silent><C-j> <C-W>j<cr>
+nmap <silent><C-k> <C-W>k<cr>
 
 " cancel some keybinding
 " add the autocmd hook define when at vimenter
