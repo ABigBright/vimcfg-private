@@ -1,3 +1,5 @@
+" we use vim in nocompatibal
+set nocompatible
 set nu
 set mouse=a
 set smartindent
