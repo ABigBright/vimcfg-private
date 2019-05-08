@@ -42,7 +42,7 @@ Plug 'vim-scripts/gtags.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/limelight.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/winmanager'
 Plug 'skywind3000/asyncrun.vim'
