@@ -172,10 +172,10 @@ let g:which_key_map.n = 'switch to buffer next'
 
 
 " window manipulate keybinding config
-nmap <silent><C-h> <C-W>h<cr>
-nmap <silent><C-l> <C-W>l<cr>
-nmap <silent><C-j> <C-W>j<cr>
-nmap <silent><C-k> <C-W>k<cr>
+nmap <silent><C-h> <C-W>h
+nmap <silent><C-l> <C-W>l
+nmap <silent><C-j> <C-W>j
+nmap <silent><C-k> <C-W>k
 
 " cancel some keybinding
 " add the autocmd hook define when at vimenter
