@@ -34,3 +34,5 @@ if has("gui_running")
     endif
 endif
 
+set lines=54
+set columns=239
