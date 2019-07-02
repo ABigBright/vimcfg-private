@@ -12,3 +12,5 @@ let g:gutentags_plus_switch = 1
 
 " disable the default keymaps 
 let g:gutentags_plus_nomap = 1
+
+set statusline+=%{gutentags#statusline()}
