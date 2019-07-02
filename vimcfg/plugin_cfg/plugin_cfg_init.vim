@@ -23,3 +23,4 @@ source $HOME/.vim/vimcfg/plugin_cfg/vim-grepper.vim
 source $HOME/.vim/vimcfg/plugin_cfg/ycm.vim
 source $HOME/.vim/vimcfg/plugin_cfg/vim-which-key.vim
 source $HOME/.vim/vimcfg/plugin_cfg/gutentags_plus.vim
+source $HOME/.vim/vimcfg/plugin_cfg/vim-preview.vim
