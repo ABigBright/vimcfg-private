@@ -1,5 +1,5 @@
 " enable gtags module
-let g:gutentags_modules = ['ctags', 'cscope', 'gtags_cscope']
+let g:gutentags_modules = ['ctags', 'gtags_cscope']
 
 " config project root markers.
 let g:gutentags_project_root = ['.root']
