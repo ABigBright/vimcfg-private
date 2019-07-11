@@ -6,7 +6,7 @@ let g:NERDTreeDirArrowExpandable = '▶'
 let g:NERDTreeDirArrowCollapsible = '▼'
 let g:NERDTreeQuitOnOpen = 1
 
-let g:NERDTreeWinSize = 60
+let g:NERDTreeWinSize = 30
 
 nmap <silent> <C-F10> :NERDTreeFind %<cr>
 
