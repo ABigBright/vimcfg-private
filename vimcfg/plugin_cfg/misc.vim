@@ -25,6 +25,10 @@ set updatetime=500
 set go=
 
 if has("gui_running")
+    
+    set lines=54
+    set columns=239
+
     if has("gui_gtk2")
         set guifont=Source\ Code\ Pro\ 10
     elseif has("x11")
@@ -32,7 +36,6 @@ if has("gui_running")
     elseif has("gui_win32")
 	    set guifont=Source\ Code\ Pro:h10
     endif
+
 endif
 
-set lines=54
-set columns=239
