@@ -193,6 +193,26 @@ let g:which_key_map.b = {
 " let g:which_key_map.p = 'switch to buffer prev'
 " let g:which_key_map.n = 'switch to buffer next'
 
+" map key config for lightline-bufferline
+nmap <Leader>1 <Plug>lightline#bufferline#go(1)
+nmap <Leader>2 <Plug>lightline#bufferline#go(2)
+nmap <Leader>3 <Plug>lightline#bufferline#go(3)
+nmap <Leader>4 <Plug>lightline#bufferline#go(4)
+nmap <Leader>5 <Plug>lightline#bufferline#go(5)
+nmap <Leader>6 <Plug>lightline#bufferline#go(6)
+nmap <Leader>7 <Plug>lightline#bufferline#go(7)
+nmap <Leader>8 <Plug>lightline#bufferline#go(8)
+nmap <Leader>9 <Plug>lightline#bufferline#go(9)
+let g:which_key_map.1 = 'switch to buffer 1'
+let g:which_key_map.2 = 'switch to buffer 2'
+let g:which_key_map.3 = 'switch to buffer 3'
+let g:which_key_map.4 = 'switch to buffer 4'
+let g:which_key_map.5 = 'switch to buffer 5'
+let g:which_key_map.6 = 'switch to buffer 6'
+let g:which_key_map.7 = 'switch to buffer 7'
+let g:which_key_map.8 = 'switch to buffer 8'
+let g:which_key_map.9 = 'switch to buffer 9'
+
 
 " window manipulate keybinding config
 nmap <silent><C-h> <C-W>h

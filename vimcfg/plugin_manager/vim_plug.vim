@@ -79,5 +79,6 @@ Plug 'skywind3000/vim-preview'
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 
 call plug#end()

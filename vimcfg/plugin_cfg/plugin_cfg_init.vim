@@ -25,3 +25,4 @@ source $HOME/.vim/vimcfg/plugin_cfg/vim-which-key.vim
 source $HOME/.vim/vimcfg/plugin_cfg/gutentags_plus.vim
 source $HOME/.vim/vimcfg/plugin_cfg/vim-preview.vim
 source $HOME/.vim/vimcfg/plugin_cfg/lightline.vim
+source $HOME/.vim/vimcfg/plugin_cfg/lightline-bufferline.vim
