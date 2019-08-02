@@ -41,7 +41,7 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/gtags.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/limelight.vim'
-" Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/winmanager'
@@ -78,7 +78,7 @@ Plug 'skywind3000/gutentags_plus'
 Plug 'skywind3000/vim-preview'
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
+" Plug 'itchyny/lightline.vim'
+" Plug 'mengelbrecht/lightline-bufferline'
 
 call plug#end()

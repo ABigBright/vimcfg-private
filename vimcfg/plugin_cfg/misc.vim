@@ -8,7 +8,7 @@ set autoindent
 colo molokai
 set ruler
 set cursorline
-" set cursorcolumn
+set cursorcolumn
 set hlsearch
 set tabstop=4
 set shiftwidth=4
