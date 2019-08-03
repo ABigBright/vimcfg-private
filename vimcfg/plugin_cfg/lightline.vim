@@ -21,3 +21,5 @@ let g:lightline = {
     \   'gitbranch' : 'fugitive#head'
     \ }
 \ }
+
+let g:lightline.colorscheme = 'molokai'
