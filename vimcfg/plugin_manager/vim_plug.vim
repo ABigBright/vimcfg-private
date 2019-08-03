@@ -80,5 +80,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
