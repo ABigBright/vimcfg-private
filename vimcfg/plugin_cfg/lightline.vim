@@ -22,4 +22,4 @@ let g:lightline = {
     \ }
 \ }
 
-let g:lightline.colorscheme = 'solarized'
+let g:lightline.colorscheme = 'molokai'

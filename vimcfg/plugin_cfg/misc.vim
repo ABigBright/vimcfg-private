@@ -5,7 +5,7 @@ set mouse=a
 set smartindent
 set cindent
 set autoindent
-colo solarized
+colo molokai
 set ruler
 set cursorline
 " set cursorcolumn
