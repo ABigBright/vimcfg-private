@@ -5,8 +5,7 @@ set mouse=a
 set smartindent
 set cindent
 set autoindent
-colo morning
-set background=light
+colo molokai
 set ruler
 set cursorline
 " set cursorcolumn
@@ -19,6 +18,7 @@ set fileencoding=utf-8
 set fileformat=unix
 set autoread
 syntax on
+set background=dark
 set nobackup
 set termwinsize=
 set updatetime=500
