@@ -10,7 +10,7 @@ let g:lightline = {
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
     \   'right': [ [ 'lineinfo' ],
     \              [ 'percent' ],
-    \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+    \              [ 'gutentags_state', 'fileformat', 'fileencoding', 'filetype' ] ],
     \ },
     \ 'inactive' : {
     \   'left' : [ [ 'filename' ] ],
@@ -18,8 +18,9 @@ let g:lightline = {
     \            [ 'percent' ] ]
     \ },
     \ 'component_function' : {
-    \   'gitbranch' : 'fugitive#head'
-    \ }
+    \   'gitbranch': 'fugitive#head',
+    \   'gutentags_state': 'gutentags#statusline'
+    \ },
 \ }
 
 let g:lightline.colorscheme = 'default'
