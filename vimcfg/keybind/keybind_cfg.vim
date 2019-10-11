@@ -28,61 +28,64 @@ nmap <silent><leader>jg    :Gtags -go <c-r><c-w><cr>
 nmap <silent><leader>jc    :Gtags -f %<cr>
 nmap <silent><leader>jf    :Gtags -P <c-r><c-f><cr>
 nmap <silent><leader>js    :Gtags -s <c-r><c-w><cr>
+nmap <silent><leader>jj    :GtagsCursor<cr>
 
-" nmap <silent><leader>jS    :cs find s <C-R>=expand("<cword>")<CR><CR>
-" nmap <silent><leader>jG    :cs find g <C-R>=expand("<cword>")<CR><CR>
-" nmap <silent><leader>jC    :cs find c <C-R>=expand("<cword>")<CR><CR>
-" nmap <silent><leader>jT    :cs find t <C-R>=expand("<cword>")<CR><CR>
-" nmap <silent><leader>jE    :cs find e <C-R>=expand("<cword>")<CR><CR>
-" nmap <silent><leader>jF    :cs find f <C-R>=expand("<cfile>")<CR><CR>
-" nmap <silent><leader>jI    :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-" nmap <silent><leader>jD    :cs find d <C-R>=expand("<cword>")<CR><CR>
-" nmap <silent><leader>jA    :cs find a <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jS    :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jG    :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jC    :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jT    :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jE    :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jF    :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <silent><leader>jI    :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <silent><leader>jD    :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>jA    :cs find a <C-R>=expand("<cword>")<CR><CR>
 
 " gutentag_plus key-binding config
-noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>
-noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>
-noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>
-noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>
-noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>
-noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>
-noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>
-noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
-noremap <silent><leader>jA :GscopeFind a <C-R><C-W><cr>
+" noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>
+" noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>
+" noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>
+" noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>
+" noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>
+" noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>
+" noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>
+" noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
+" noremap <silent><leader>jA :GscopeFind a <C-R><C-W><cr>
 
 let g:which_key_map.j = {
       \ 'name' : '+Jump',
-      \ 'd'    : 'gutentags-jump-definition',
-      \ 'r'    : 'gutentags-jump-reference',
-      \ 'e'    : 'gutentags-egrep-find',
-      \ 't'    : 'gutentags-text-find',
-      \ 'i'    : 'gutentags-find-file-include-this-file',
-      \ 'f'    : 'gutentags-find-this-file',
-      \ 's'    : 'gutentags-jump-symbol',
-      \ 'I'    : 'gutentags-jump-function-called-by-this-func',
-      \ 'A'    : 'gutentags-jump-this-symbol-is-assigned-value',
+      \ 'j'    : 'gtags-jump-definition-or-reference',
+      \ 'd'    : 'gtags-jump-definition',
+      \ 'r'    : 'gtags-jump-reference',
+      \ 'e'    : 'gtags-jump-regexp-find',
+      \ 'g'    : 'gtags-jump-grep',
+      \ 'c'    : 'gtags-jump-current-file-symbol',
+      \ 'f'    : 'gtags-jump-file',
+      \ 's'    : 'gtags-jump-symbol',
+      \ 'S'    : 'cscope-jump-symble',
+      \ 'G'    : 'cscope-jump-definition',
+      \ 'C'    : 'cscope-jump-reference',
+      \ 'T'    : 'cscope-jump-text',
+      \ 'E'    : 'cscope-jump-egrep',
+      \ 'F'    : 'cscope-jump-file',
+      \ 'I'    : 'cscope-jump-including',
+      \ 'D'    : 'cscope-jump-call-func',
+      \ 'A'    : 'cscope-jump-symbol-assigned',
       \ 'a'    : [':LeaderfFunction', 'leaderf-jump-current-functions'],
       \ 'b'    : [':LeaderfBufTag', 'leaderf-jump-current-tag'],
       \ 'h'    : [':LeaderfBufTagAll', 'leaderf-jump-all-tag'],
       \ 'yd'   : [':YcmCompleter GoTo', 'ycm-jump-definition'],
       \ 'yi'   : [':YcmCompleter GoToInclude', 'ycm-jump-include'],
       \ }
-      " \ 'd'    : 'gtags-jump-definition',
-      " \ 'r'    : 'gtags-jump-reference',
-      " \ 'e'    : 'gtags-jump-regexp-find',
-      " \ 'g'    : 'gtags-jump-grep',
-      " \ 'c'    : 'gtags-jump-current-file-symbol',
-      " \ 'f'    : 'gtags-jump-file',
-      " \ 's'    : 'gtags-jump-symbol',
-      " \ 'S'    : 'cscope-jump-symble',
-      " \ 'G'    : 'cscope-jump-definition',
-      " \ 'C'    : 'cscope-jump-reference',
-      " \ 'T'    : 'cscope-jump-text',
-      " \ 'E'    : 'cscope-jump-egrep',
-      " \ 'F'    : 'cscope-jump-file',
-      " \ 'I'    : 'cscope-jump-including',
-      " \ 'D'    : 'cscope-jump-call-func',
-      " \ 'A'    : 'cscope-jump-symbol-assigned',
+      
+      " \ 'd'    : 'gutentags-jump-definition',
+      " \ 'r'    : 'gutentags-jump-reference',
+      " \ 'e'    : 'gutentags-egrep-find',
+      " \ 't'    : 'gutentags-text-find',
+      " \ 'i'    : 'gutentags-find-file-include-this-file',
+      " \ 'f'    : 'gutentags-find-this-file',
+      " \ 's'    : 'gutentags-jump-symbol',
+      " \ 'I'    : 'gutentags-jump-function-called-by-this-func',
+      " \ 'A'    : 'gutentags-jump-this-symbol-is-assigned-value',
 
 " private init config file 
 let g:which_key_map.h = {
