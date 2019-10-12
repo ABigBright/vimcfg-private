@@ -20,7 +20,9 @@ set autoread
 syntax on
 set background=dark
 set nobackup
+if !has("nvim")
 set termwinsize=
+endif
 set updatetime=500
 set go=
 
