@@ -1,2 +1,2 @@
-set timeoutlen=500
+set timeoutlen=200
 

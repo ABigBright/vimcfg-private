@@ -1,4 +1,4 @@
-" Specify a directory for plugins
+"150 Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
@@ -43,7 +43,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/limelight.vim'
 " Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/winmanager'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'vim-scripts/DoxygenToolkit.vim'
@@ -82,5 +82,12 @@ Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'altercation/vim-colors-solarized'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'arakashic/chromatica.nvim'
+Plug 'brooth/far.vim'
+Plug 'wsdjeg/FlyGrep.vim'
+" Plug 'neomake/neomake'
+Plug 'mhinz/vim-grepper'
+Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()

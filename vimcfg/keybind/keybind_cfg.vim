@@ -142,6 +142,13 @@ nmap <silent><leader>sA :AsyncRun ag --vimgrep <c-r><c-w><cr>
 nmap <silent><leader>sG :AsyncRun grep -rn <c-r><c-w><cr>
 nmap <silent><leader>sa :Ag <c-r><c-w><cr>
 nmap <silent><leader>sr :Rg <c-r><c-w><cr>
+
+" Create mappings (with leader)
+nmap <Leader>ss <Plug>(AerojumpSpace)
+nmap <Leader>sb <Plug>(AerojumpBolt)
+nmap <Leader>se <Plug>(AerojumpFromCursorBolt)
+nmap <Leader>sd <Plug>(AerojumpDefault) 
+
 let g:which_key_map.s = {
       \ 'name' : '+Search-And-Style',
       \ 'a'    : 'ag-search',
@@ -149,6 +156,12 @@ let g:which_key_map.s = {
       \ 'i'    : 'indent-toggle',
       \ 'A'    : 'async-ag-search',
       \ 'G'    : 'async-grep-search',
+      \ 's'    : 'search-and-jump-space',
+      \ 'b'    : 'search-and-jump-bolt',
+      \ 'e'    : 'search-and-jump-from-cursor-bold',
+      \ 'd'    : 'search-and-jump-default',
+      \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
+      \ 'g'    : [':Grepper', 'async-grepper-search'],
       \ }
 
 " buffer keybinding config
@@ -218,7 +231,7 @@ let g:which_key_map.9 = 'switch to buffer 9'
 
 
 " window manipulate keybinding config
-nmap <silent><C-h> <C-W>h
+nmap <C-h> <C-W>h
 nmap <silent><C-l> <C-W>l
 nmap <silent><C-j> <C-W>j
 nmap <silent><C-k> <C-W>k

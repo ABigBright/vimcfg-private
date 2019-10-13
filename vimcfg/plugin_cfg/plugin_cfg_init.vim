@@ -22,8 +22,11 @@ source $HOME/.vim/vimcfg/plugin_cfg/vim-grepper.vim
 
 " source $HOME/.vim/vimcfg/plugin_cfg/winmanager.vim
 
-source $HOME/.vim/vimcfg/plugin_cfg/ycm.vim
+" source $HOME/.vim/vimcfg/plugin_cfg/ycm.vim
 source $HOME/.vim/vimcfg/plugin_cfg/vim-which-key.vim
 " source $HOME/.vim/vimcfg/plugin_cfg/gutentags_plus.vim
 source $HOME/.vim/vimcfg/plugin_cfg/vim-preview.vim
 source $HOME/.vim/vimcfg/plugin_cfg/rainbow_parentheses.vim
+" source $HOME/.vim/vimcfg/plugin_cfg/chromatica.vim
+" source $HOME/.vim/vimcfg/plugin_cfg/neomake.vim
+source $HOME/.vim/vimcfg/plugin_cfg/grepper.vim
