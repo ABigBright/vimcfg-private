@@ -147,7 +147,6 @@ nmap <silent><leader>sr :Rg <c-r><c-w><cr>
 nmap <Leader>ss <Plug>(AerojumpSpace)
 nmap <Leader>sb <Plug>(AerojumpBolt)
 nmap <Leader>se <Plug>(AerojumpFromCursorBolt)
-nmap <Leader>sd <Plug>(AerojumpDefault) 
 
 let g:which_key_map.s = {
       \ 'name' : '+Search-And-Style',
@@ -159,7 +158,6 @@ let g:which_key_map.s = {
       \ 's'    : 'search-and-jump-space',
       \ 'b'    : 'search-and-jump-bolt',
       \ 'e'    : 'search-and-jump-from-cursor-bold',
-      \ 'd'    : 'search-and-jump-default',
       \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
       \ 'g'    : [':Grepper', 'async-grepper-search'],
       \ }
