@@ -241,6 +241,20 @@ nmap <silent><C-k> <C-W>k
 " au VimEnter * unmap  <unique><leader>mbc
 " au VimEnter * unmap  <unique><leader>mbe
 
+
+"coc.nvim keybinding
+function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+" Map <tab> to trigger completion and navigate to the next item: >
+inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ coc#refresh()
+
+
 " which-key keybinding config
 nnoremap <silent><leader> :WhichKey '<Space>'<CR>
 
