@@ -5,7 +5,12 @@ set mouse=a
 set smartindent
 set cindent
 set autoindent
-colo molokai
+
+let s:molokai_prefix = $HOME . '/.vim/plugged/molokai/colors'
+if !empty(findfile("molokai.vim", s:molokai_prefix))
+    colo molokai
+endif
+
 set ruler
 set cursorline
 " set cursorcolumn
@@ -20,9 +25,11 @@ set autoread
 syntax on
 set background=dark
 set nobackup
-if !has("nvim")
-set termwinsize=
+
+if !has('nvim')
+    set termwinsize=
 endif
+
 set updatetime=500
 set go=
 
