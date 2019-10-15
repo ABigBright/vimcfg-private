@@ -229,7 +229,7 @@ let g:which_key_map.9 = 'switch to buffer 9'
 
 
 " window manipulate keybinding config
-nmap <C-h> <C-W>h
+nmap <silent><C-h> <C-W>h
 nmap <silent><C-l> <C-W>l
 nmap <silent><C-j> <C-W>j
 nmap <silent><C-k> <C-W>k
