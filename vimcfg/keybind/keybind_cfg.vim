@@ -124,6 +124,7 @@ let g:which_key_map.f = {
       \ 't'    : [':NERDTreeToggle', 'file-tree-browser-toggle'],
       \ 'c'    : [':NERDTreeFind %', 'current-file-tree-browser'],
       \ 'L'    : 'async-locate-find-file',
+      \ 's'    : [':Startify', 'open-startify'],
       \ }
 
 " buffer keybinding config

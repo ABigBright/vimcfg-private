@@ -1,5 +1,5 @@
-let g:startify_change_to_dir       = 1
-let g:startify_change_to_vcs_root  = 1
+let g:startify_change_to_dir       = 0
+" let g:startify_change_to_vcs_root  = 1
 let g:startify_files_number        = 30
 let g:startify_padding_left        = 4
 let g:startify_use_env             = 1
