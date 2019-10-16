@@ -31,3 +31,4 @@ source $HOME/.vim/vimcfg/plugin_cfg/rainbow_parentheses.vim
 " source $HOME/.vim/vimcfg/plugin_cfg/neomake.vim
 source $HOME/.vim/vimcfg/plugin_cfg/grepper.vim
 source $HOME/.vim/vimcfg/plugin_cfg/coc.vim
+source $HOME/.vim/vimcfg/plugin_cfg/startify.vim
