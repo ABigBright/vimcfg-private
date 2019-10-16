@@ -87,7 +87,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'brooth/far.vim'
 Plug 'wsdjeg/FlyGrep.vim'
 " Plug 'neomake/neomake'
-Plug 'mhinz/vim-grepper'
+" Plug 'mhinz/vim-grepper'
 Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'mhinz/vim-startify'
 

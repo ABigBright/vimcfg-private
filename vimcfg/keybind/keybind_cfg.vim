@@ -160,8 +160,8 @@ let g:which_key_map.s = {
       \ 'b'    : 'search-and-jump-bolt',
       \ 'e'    : 'search-and-jump-from-cursor-bold',
       \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
-      \ 'g'    : [':Grepper', 'async-grepper-search'],
       \ }
+      " \ 'g'    : [':Grepper', 'async-grepper-search'],
 
 " buffer keybinding config
 let g:Lf_ShortcutB = '<leader>bt'
