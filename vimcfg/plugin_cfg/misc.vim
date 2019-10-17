@@ -51,6 +51,7 @@ if has("gui_running")
 endif
 
 " script demo
+"
 " let g:briq_tmp='/lib'
 "
 " if '/lib' == g:briq_tmp
@@ -59,3 +60,8 @@ endif
 "     echo mm
 "     exec('cd ' . g:briq_tmp)
 " endif
+
+" let g:vimcfg_prefix=$HOME . '/.vim'
+" let g:mhodddd = g:vimcfg_prefix . "/vimcfg/init_cfg/init_cfg_init.vim"
+" echo g:mhodddd
+" execute 'source ' . g:mhodddd
