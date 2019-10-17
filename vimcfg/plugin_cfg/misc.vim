@@ -1,6 +1,7 @@
 " we use vim in nocompatibal
 set nocompatible
 set nu
+set relativenumber
 set mouse=a
 set smartindent
 set cindent
