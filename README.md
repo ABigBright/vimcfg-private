@@ -16,7 +16,7 @@ This is a customized vim config for my using vim to edit effectively
 
 # require
 * coc.vim  need nodejs
-* rg need ripGreep
+* rg need ripGrep : https://github.com/BurntSushi/ripgrep
 
 # screenshot
 * vim plug
