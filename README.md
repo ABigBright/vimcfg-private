@@ -15,7 +15,7 @@ This is a customized vim config for my using vim to edit effectively
 * I just only test this vimcfg in my linux dist ubuntu.
 
 # require
-* coc.vim  need js
+* coc.vim  need nodejs
 * rg need ripGreep
 
 # screenshot
