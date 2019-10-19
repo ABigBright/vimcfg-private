@@ -57,7 +57,7 @@ Plug 'airblade/vim-gitgutter'
 " Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/gv.vim'
 Plug 'liuchengxu/vim-which-key'
@@ -69,7 +69,7 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 " autocmd! User vim-which-key call which#register('<Space>', 'g:which_key_map')
 autocmd! User vim-which-key call which_key#register('<Space>', 'g:which_key_map')
 
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Plug 'ludovicchabant/vim-gutentags'
