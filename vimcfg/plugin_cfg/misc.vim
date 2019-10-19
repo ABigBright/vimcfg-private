@@ -65,3 +65,14 @@ endif
 " let g:mhodddd = g:vimcfg_prefix . "/vimcfg/init_cfg/init_cfg_init.vim"
 " echo g:mhodddd
 " execute 'source ' . g:mhodddd
+"
+
+" function! g:Source_vims(vims)
+"     for i in a:vims
+"         echo i
+"     endfor
+" endfunction
+"
+" let mab=['a', 'b', 'c']
+"
+" call g:Source_vims(mab)
