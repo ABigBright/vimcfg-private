@@ -5,10 +5,10 @@ function! g:Source_vims(vims)
 endfunction
 
 " config the vimcfg path prefix part
-let g:vims_prefix=getcwd() . '/'
+let g:vims_prefix = $HOME . '/.vim/'
 
 " the actual vimscipt relative file path
-let s:vims_tbl= [
+let s:vims_tbl = [
     \ g:vims_prefix . "autoload/plug.vim",
     \ g:vims_prefix . "vimcfg/init_cfg/init_cfg_init.vim"
     \]

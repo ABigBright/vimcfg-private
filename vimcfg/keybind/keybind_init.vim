@@ -1,4 +1,4 @@
-let s:vims_tbl= [
+let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/keybind/keybind_cfg.vim",
     \]
 

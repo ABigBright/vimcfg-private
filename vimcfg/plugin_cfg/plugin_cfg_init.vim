@@ -1,4 +1,4 @@
-let s:vims_tbl= [
+let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/lightline.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/lightline-bufferline.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/asyncrun.vim",
