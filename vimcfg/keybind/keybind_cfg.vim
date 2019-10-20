@@ -154,6 +154,9 @@ nmap <silent><leader>sr :Rg <c-r><c-w><cr>
 nmap <Leader>ss <Plug>(AerojumpSpace)
 nmap <Leader>sb <Plug>(AerojumpBolt)
 nmap <Leader>se <Plug>(AerojumpFromCursorBolt)
+nmap <Leader>sh <Plug>LeaderfRgPrompt
+nmap <Leader>sj <Plug>LeaderfRgCwordLiteralNoBoundary<cr>
+nmap <Leader>sk <Plug>LeaderfRgCwordRegexNoBoundary<cr>
 
 let g:which_key_map.s = {
       \ 'name' : '+Search-And-Style',
@@ -168,6 +171,9 @@ let g:which_key_map.s = {
       \ 'e'    : 'search-and-jump-from-cursor-bold',
       \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
       \ 'c'    : [':CocList words', 'coc-search-in-current-buffer'],
+      \ 'h'    : 'toggole-leaderf-search',
+      \ 'j'    : 'leaderf-search-word-under-cursor',
+      \ 'k'    : 'leaderf-regex-search-word-under-cursor',
       \ }
       " \ 'g'    : [':Grepper', 'async-grepper-search'],
 
