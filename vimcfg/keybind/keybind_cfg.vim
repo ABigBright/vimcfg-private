@@ -146,6 +146,7 @@ nmap <leader>si         :Tabularize /
 vmap <leader>si         :Tabularize /
 nmap <silent><leader>sA :AsyncRun ag --vimgrep <c-r><c-w><cr>
 nmap <silent><leader>sG :AsyncRun grep -rn <c-r><c-w><cr>
+nmap <silent><leader>sd :AsyncRun rg --vimgrep -rn <c-r><c-w><cr>
 nmap <silent><leader>sa :Ag <c-r><c-w><cr>
 nmap <silent><leader>sr :Rg <c-r><c-w><cr>
 
@@ -161,12 +162,12 @@ let g:which_key_map.s = {
       \ 'i'    : 'indent-toggle',
       \ 'A'    : 'async-ag-search',
       \ 'G'    : 'async-grep-search',
+      \ 'd'    : 'async-rg-search',
       \ 's'    : 'search-and-jump-space',
       \ 'b'    : 'search-and-jump-bolt',
       \ 'e'    : 'search-and-jump-from-cursor-bold',
       \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
-      \ 'c'    : [':CocList grep', 'async-coc-grep-search'],
-      \ 'd'    : [':CocList words', 'coc-search-in-current-buffer'],
+      \ 'c'    : [':CocList words', 'coc-search-in-current-buffer'],
       \ }
       " \ 'g'    : [':Grepper', 'async-grepper-search'],
 
