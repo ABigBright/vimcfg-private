@@ -73,8 +73,6 @@ let g:which_key_map.j = {
       \ 'a'    : [':LeaderfFunction', 'leaderf-jump-current-functions'],
       \ 'b'    : [':LeaderfBufTag', 'leaderf-jump-current-tag'],
       \ 'h'    : [':LeaderfBufTagAll', 'leaderf-jump-all-tag'],
-      \ 'yd'   : [':YcmCompleter GoTo', 'ycm-jump-definition'],
-      \ 'yi'   : [':YcmCompleter GoToInclude', 'ycm-jump-include'],
       \ }
       
       " \ 'd'    : 'gutentags-jump-definition',
@@ -90,10 +88,15 @@ let g:which_key_map.j = {
 " private init config file 
 let g:which_key_map.h = {
       \ 'name' : '+Help',
-      \ 'i'    : [':vi $HOME/.vim/vimrc', 'open-vimrc'],
-      \ 'p'    : [':vi $HOME/.vim/vimcfg/plugin_manager/vim_plug.vim', 'open-vimplug'],
-      \ 'k'    : [':vi $HOME/.vim/vimcfg/keybind/keybind_cfg.vim', 'open-keybiding-config'],
-      \ 'P'    : [':NERDTreeFind $HOME/.vim/vimcfg/', 'open-vimcfg-in-file-browser'],
+      \ 'i'    : [':call Open_vimcfg_file(g:vimrc_path)', 'open-vimrc'],
+      \ 'p'    : [':call Open_vimcfg_file(g:plugin_manange_path)', 'open-vimplug'],
+      \ 'k'    : [':call Open_vimcfg_file(g:keybind_cfg_path)', 'open-keybiding-config'],
+      \ 'P'    : [':exec "NERDTreeFind" . g:plugin_cfg_dir', 'open-vimcfg-in-file-browser'],
+      \ 'a'    : [':CocList maps', 'show-key-map'],
+      \ 'b'    : [':CocList vimcommands', 'show-vimcmd-list'],
+      \ 'c'    : [':CocList cmdhistory', 'show-vimcmd-history'],
+      \ 'd'    : [':CocList colors', 'switch-vim-colorscheme'],
+      \ 'e'    : [':CocList extensions', 'show-coc-extensions'],
       \ }
 
 " vim quickfix open/close keybinding config
@@ -125,6 +128,8 @@ let g:which_key_map.f = {
       \ 'c'    : [':NERDTreeFind %', 'current-file-tree-browser'],
       \ 'L'    : 'async-locate-find-file',
       \ 's'    : [':Startify', 'open-startify'],
+      \ 'b'    : [':CocList files', 'Coc-find-file'],
+      \ 'd'    : [':CocList mru', 'Coc-find-recent-file'],
       \ }
 
 " buffer keybinding config
@@ -160,6 +165,8 @@ let g:which_key_map.s = {
       \ 'b'    : 'search-and-jump-bolt',
       \ 'e'    : 'search-and-jump-from-cursor-bold',
       \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
+      \ 'c'    : [':CocList grep', 'async-coc-grep-search'],
+      \ 'd'    : [':CocList words', 'coc-search-in-current-buffer'],
       \ }
       " \ 'g'    : [':Grepper', 'async-grepper-search'],
 
@@ -170,6 +177,7 @@ let g:which_key_map.b = {
       \ 'T'    : [':Buffers', 'fzf-buffers'],
       \ 't'    : 'leaderf-buffers',
       \ 'b'    : [':CtrlPBuffer', 'ctrlp-buffers'],
+      \ 'a'    : [':CocList buffers', 'Coc-buffers'],
       \ 'p'    : [':bp', 'switch-prev-buffer'],
       \ 'n'    : [':bn', 'switch-next-buffer'],
       \ '1'    : [':b 1', 'switch buffer 1'],
@@ -218,15 +226,15 @@ nmap <Leader>6 <Plug>lightline#bufferline#go(6)
 nmap <Leader>7 <Plug>lightline#bufferline#go(7)
 nmap <Leader>8 <Plug>lightline#bufferline#go(8)
 nmap <Leader>9 <Plug>lightline#bufferline#go(9)
-let g:which_key_map.1 = 'switch to buffer 1'
-let g:which_key_map.2 = 'switch to buffer 2'
-let g:which_key_map.3 = 'switch to buffer 3'
-let g:which_key_map.4 = 'switch to buffer 4'
-let g:which_key_map.5 = 'switch to buffer 5'
-let g:which_key_map.6 = 'switch to buffer 6'
-let g:which_key_map.7 = 'switch to buffer 7'
-let g:which_key_map.8 = 'switch to buffer 8'
-let g:which_key_map.9 = 'switch to buffer 9'
+let g:which_key_map.1 = 'switch to window 1'
+let g:which_key_map.2 = 'switch to window 2'
+let g:which_key_map.3 = 'switch to window 3'
+let g:which_key_map.4 = 'switch to window 4'
+let g:which_key_map.5 = 'switch to window 5'
+let g:which_key_map.6 = 'switch to window 6'
+let g:which_key_map.7 = 'switch to window 7'
+let g:which_key_map.8 = 'switch to window 8'
+let g:which_key_map.9 = 'switch to window 9'
 
 
 " window manipulate keybinding config
@@ -242,6 +250,15 @@ nmap <silent><C-k> <C-W>k
 " au VimEnter * unmap  <unique><leader>mbc
 " au VimEnter * unmap  <unique><leader>mbe
 
+" coc.nvim coclist keybind config
+let g:which_key_map.e = {
+      \ 'name' : '+CocList',
+      \ 'a'    : [':CocList', 'CocList-toggle'],
+      \ 'b'    : [':CocList marketplace', 'Coc-extensions-store'],
+      \ 'c'    : ['<Plug>(coc-terminal-toggle)', 'Coc-terminal-toggle'],
+      \ 'd'    : [':CocConfig', 'CocConfig-open'],
+      \ 'e'    : [':CocCommand', 'coc-command-open'],
+      \ }
 
 "coc.nvim keybinding
 function! s:check_back_space() abort
