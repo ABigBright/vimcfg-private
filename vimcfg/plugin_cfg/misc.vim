@@ -7,7 +7,7 @@ set smartindent
 set cindent
 set autoindent
 
-let s:molokai_prefix = $HOME . '/.vim/plugged/molokai/colors'
+let s:molokai_prefix = g:vims_prefix . 'plugged/molokai/colors'
 if !empty(findfile("molokai.vim", s:molokai_prefix))
     colo molokai
 endif

@@ -5,3 +5,10 @@ let s:vims_tbl = [
     \]
 
 call g:Source_vims(s:vims_tbl)
+
+let s:plugin_install_dir = g:vims_prefix . 'plugged'
+
+if empty(finddir(s:plugin_install_dir))
+    PlugClean
+    PlugInstall
+endif
