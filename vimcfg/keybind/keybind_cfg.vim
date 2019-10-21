@@ -174,6 +174,7 @@ let g:which_key_map.s = {
       \ 'h'    : 'toggole-leaderf-search',
       \ 'j'    : 'leaderf-search-word-under-cursor',
       \ 'k'    : 'leaderf-regex-search-word-under-cursor',
+      \ 'l'    : [':LeaderfRgInteractive', 'leaderf-rg-search-interactive'],
       \ }
       " \ 'g'    : [':Grepper', 'async-grepper-search'],
 
