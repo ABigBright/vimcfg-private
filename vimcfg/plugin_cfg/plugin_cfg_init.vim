@@ -16,6 +16,7 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/coc.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/startify.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/flygrep.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/choose-wind.vim",
     \]
     
     " not use 

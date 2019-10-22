@@ -283,3 +283,5 @@ inoremap <silent><expr> <TAB>
 " which-key keybinding config
 nnoremap <silent><leader> :WhichKey '<Space>'<CR>
 
+" choose-wind keybinding config
+nmap  \  <Plug>(choosewin)
