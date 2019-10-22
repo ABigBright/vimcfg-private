@@ -91,4 +91,6 @@ Plug 'wsdjeg/FlyGrep.vim'
 Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'mhinz/vim-startify'
 
+Plug 't9md/vim-choosewin'
+
 call plug#end()
