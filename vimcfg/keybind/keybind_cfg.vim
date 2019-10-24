@@ -250,7 +250,7 @@ nmap <silent><C-h> <C-W>h
 nmap <silent><C-l> <C-W>l
 nmap <silent><C-j> <C-W>j
 nmap <silent><C-k> <C-W>k
-nmap <silent>q :q<cr>
+" nmap <silent>q :q<cr>
 
 " cancel some keybinding
 " add the autocmd hook define when at vimenter
