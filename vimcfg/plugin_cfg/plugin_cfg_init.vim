@@ -14,12 +14,12 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-preview.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/rainbow_parentheses.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/coc.vim",
-    \ g:vims_prefix . "vimcfg/plugin_cfg/startify.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/flygrep.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/choose-wind.vim",
     \]
     
     " not use 
+    " \ g:vims_prefix . "vimcfg/plugin_cfg/startify.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/airline.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/eleline.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/minibufexplorerpp.vim",
