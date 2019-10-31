@@ -76,3 +76,20 @@ endif
 " let mab=['a', 'b', 'c']
 "
 " call g:Source_vims(mab)
+"
+
+" if 1 == &nu && 1 == &rnu
+"     echo "---------------------->>>>"
+" endif
+"
+" function! g:Nu_toggle()
+"     if 1 == &nu && 1 == &rnu
+"         echo "---------------------->>>>"
+"         set nonu
+"         set nornu
+"     else
+"         echo "----------------------<<<<"
+"         set nu
+"         set rnu
+"     endif
+" endfunction
