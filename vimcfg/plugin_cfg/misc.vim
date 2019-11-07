@@ -28,7 +28,7 @@ set background=dark
 set nobackup
 
 if !has('nvim')
-    set termwinsize=
+    " set termwinsize=
 endif
 
 set updatetime=500
