@@ -81,7 +81,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'altercation/vim-colors-solarized'
-" Plug 'kien/rainbow_parentheses.vim'
+Plug 'kien/rainbow_parentheses.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'arakashic/chromatica.nvim'
 Plug 'brooth/far.vim'
