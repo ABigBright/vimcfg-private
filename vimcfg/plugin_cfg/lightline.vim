@@ -18,7 +18,7 @@ let g:lightline = {
     \            [ 'percent' ] ]
     \ },
     \ 'component_function' : {
-    \   'gitbranch': 'fugitive#head',
+    \   'gitbranch'  : 'fugitive#head',
     \ },
 \ }
 
