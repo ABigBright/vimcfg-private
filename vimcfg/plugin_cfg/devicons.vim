@@ -5,22 +5,6 @@ let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_conceal_nerdtree_brackets = 1
 
 
-" lightline config
-function! MyFiletype()
-    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-  
-function! MyFileformat()
-    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-endfunction
-
-let g:lightline = {
-    \ 'component_function' : {
-    \   'filetype'   : 'MyFiletype',
-    \   'fileformat' : 'MyFileformat',
-    \ },
-\ }
-
 " startify config
 " adding to vim-startify screen
 let g:webdevicons_enable_startify = 1
@@ -38,3 +22,4 @@ let g:webdevicons_enable_vimfiler = 1
 " Can be enabled or disabled
 " add glyphs to all modes
 let g:webdevicons_enable_ctrlp = 1
+

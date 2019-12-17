@@ -4,6 +4,15 @@ endif
 
 set laststatus=2
 
+" lightline config, depend on devicon plugin
+function! MyFiletype()
+    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+  
+function! MyFileformat()
+    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
+
 let g:lightline = {
     \ 'active' : {
     \   'left': [ [ 'mode', 'paste' ],
@@ -19,6 +28,8 @@ let g:lightline = {
     \ },
     \ 'component_function' : {
     \   'gitbranch'  : 'fugitive#head',
+    \   'filetype'   : 'MyFiletype',
+    \   'fileformat' : 'MyFileformat',
     \ },
 \ }
 
