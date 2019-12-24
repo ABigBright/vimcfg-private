@@ -7,16 +7,20 @@ let s:vims_tbl = [
 call g:Source_vims(s:vims_tbl)
 
 let s:plugin_install_dir = g:vims_prefix . 'plugged'
-let s:coc_install_dir = g:vims_prefix . 'plugged/coc.nvim/plugin'
 
 " for the first open vimcfg
 if empty(finddir(s:plugin_install_dir))
     PlugClean
     PlugInstall
+endif
+
+" coc install func define 
+let s:coc_install_dir = g:vims_prefix . 'plugged/coc.nvim/plugin'
+function! g:Coc_extd_instl()
     if !empty(finddir(s:coc_install_dir))
         CocInstall coc-json
         CocInstall coc-lists
         CocInstall coc-marketplace
         CocInstall coc-terminal
     endif
-endif
+endfunction
