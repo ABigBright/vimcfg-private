@@ -97,5 +97,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'trusktr/seti.vim'
 Plug 'andymass/vim-matchup'
+" Plug 'ryanoasis/nerd-fonts', {'do': './install FiraCode'}
 
 call plug#end()
