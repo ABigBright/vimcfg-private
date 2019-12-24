@@ -18,10 +18,12 @@ let g:rbpt_colorpairs = [
     \ ]
 
 let g:rbpt_max = 16
-
 let g:rbpt_loadcmd_toggle = 0
+let s:rainbow_parenthese_prefix = g:vims_prefix . 'plugged/rainbow_parentheses.vim/autoload'
+if !empty(findfile("rainbow_parentheses.vim", s:rainbow_parenthese_prefix))
+    au VimEnter * RainbowParenthesesToggle
+    au Syntax * RainbowParenthesesLoadRound
+    au Syntax * RainbowParenthesesLoadSquare
+    au Syntax * RainbowParenthesesLoadBraces
+endif
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
