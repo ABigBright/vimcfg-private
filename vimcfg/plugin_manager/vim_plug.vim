@@ -93,8 +93,8 @@ Plug 'mhinz/vim-startify'
 
 Plug 't9md/vim-choosewin'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Plug 'ryanoasis/vim-devicons'
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'trusktr/seti.vim'
 Plug 'andymass/vim-matchup'
 " Plug 'ryanoasis/nerd-fonts', {'do': './install FiraCode'}
