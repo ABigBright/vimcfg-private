@@ -19,18 +19,21 @@ set laststatus=2
 let g:lightline = {
     \ 'active' : {
     \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'getwinid'],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
     \   'right': [ [ 'lineinfo' ],
     \              [ 'percent' ],
     \              [ 'fileformat', 'fileencoding', 'filetype' ] ],
     \ },
     \ 'inactive' : {
-    \   'left' : [ [ 'filename' ] ],
+    \   'left' : [ [ 'getwinid' ], 
+    \              [ 'filename' ] ],
     \   'right': [ [ 'lineinfo' ],
-    \            [ 'percent' ] ]
+    \              [ 'percent' ] ]
     \ },
     \ 'component_function' : {
     \   'gitbranch'  : 'fugitive#head',
+    \   'getwinid'   : 'winnr' 
     \ },
 \ }
     

@@ -225,15 +225,15 @@ let g:which_key_map.b = {
 " let g:which_key_map.n = 'switch to buffer next'
 
 " map key config for lightline-bufferline
-nmap <Leader>1 <Plug>lightline#bufferline#go(1)
-nmap <Leader>2 <Plug>lightline#bufferline#go(2)
-nmap <Leader>3 <Plug>lightline#bufferline#go(3)
-nmap <Leader>4 <Plug>lightline#bufferline#go(4)
-nmap <Leader>5 <Plug>lightline#bufferline#go(5)
-nmap <Leader>6 <Plug>lightline#bufferline#go(6)
-nmap <Leader>7 <Plug>lightline#bufferline#go(7)
-nmap <Leader>8 <Plug>lightline#bufferline#go(8)
-nmap <Leader>9 <Plug>lightline#bufferline#go(9)
+nmap <Leader>1 :1wincmd w<cr>
+nmap <Leader>2 :2wincmd w<cr>
+nmap <Leader>3 :3wincmd w<cr>
+nmap <Leader>4 :4wincmd w<cr>
+nmap <Leader>5 :5wincmd w<cr>
+nmap <Leader>6 :6wincmd w<cr>
+nmap <Leader>7 :7wincmd w<cr>
+nmap <Leader>8 :8wincmd w<cr>
+nmap <Leader>9 :9wincmd w<cr>
 let g:which_key_map.1 = 'switch to window 1'
 let g:which_key_map.2 = 'switch to window 2'
 let g:which_key_map.3 = 'switch to window 3'
