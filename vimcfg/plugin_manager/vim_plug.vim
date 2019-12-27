@@ -89,14 +89,15 @@ Plug 'wsdjeg/FlyGrep.vim'
 " Plug 'neomake/neomake'
 " Plug 'mhinz/vim-grepper'
 Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 
-Plug 't9md/vim-choosewin'
+" Plug 't9md/vim-choosewin'
 Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'ryanoasis/vim-devicons'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'trusktr/seti.vim'
 Plug 'andymass/vim-matchup'
 " Plug 'ryanoasis/nerd-fonts', {'do': './install FiraCode'}
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()

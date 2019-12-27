@@ -45,11 +45,11 @@ if has("gui_running")
     set columns=239
 
     if has("gui_gtk2")
-        set guifont=Source\ Code\ Pro\ 10
+        set guifont=Fira\ Code\ Retina\ 10
     elseif has("x11")
-        set guifont=Source\ Code\ Pro\ 10
+        set guifont=Fira\ Code\ Retina\ 10
     elseif has("gui_win32")
-	    set guifont=Source\ Code\ Pro:h10
+	    set guifont=Fira\ Code\ Retina:h10
 
     endif
 
