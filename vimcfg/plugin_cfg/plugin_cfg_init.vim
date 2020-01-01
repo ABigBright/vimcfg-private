@@ -20,6 +20,7 @@ let s:vims_tbl = [
     \]
     
     " not use 
+    " \ g:vims_prefix . "vimcfg/plugin_cfg/vim-instant-markdown.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/choose-wind.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/startify.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/devicons.vim",
