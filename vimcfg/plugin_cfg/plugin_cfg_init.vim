@@ -17,10 +17,10 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/flygrep.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-cpp-enhanced-highlight.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-matchup.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/vim-instant-markdown.vim",
     \]
     
     " not use 
-    " \ g:vims_prefix . "vimcfg/plugin_cfg/vim-instant-markdown.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/choose-wind.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/startify.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/devicons.vim",
