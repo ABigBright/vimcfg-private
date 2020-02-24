@@ -269,6 +269,16 @@ let g:which_key_map.e = {
       \ 'e'    : [':CocCommand', 'coc-command-open'],
       \ }
 
+" markdown config
+let g:which_key_map.m = {
+      \ 'name' : '+markdown',
+      \ 'P' : [':InstantMarkdownPreview', 'vim-instant-markdown-preview'],
+      \ 'S' : [':InstantMarkdownStop', 'vim-instant-markdown-stop'],
+      \ 'p' : ['<Plug>MarkdownPreview', 'markdown-preview'],
+      \ 's' : ['<Plug>MarkdownPreviewStop', 'markdown-stop'],
+      \ 't' : ['<Plug>MarkdownPreviewToggle', 'markdown-toggle'],
+      \ }
+
 "coc.nvim keybinding
 function! s:check_back_space() abort
     let col = col('.') - 1
