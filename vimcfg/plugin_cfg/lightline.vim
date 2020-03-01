@@ -20,7 +20,8 @@ let g:lightline = {
     \ 'active' : {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'getwinid'],
-    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ],
+    \             [ 'gtags_status' ] ],
     \   'right': [ [ 'lineinfo' ],
     \              [ 'percent' ],
     \              [ 'fileformat', 'fileencoding', 'filetype' ] ],
@@ -32,12 +33,18 @@ let g:lightline = {
     \              [ 'percent' ] ]
     \ },
     \ 'component_function' : {
-    \   'gitbranch'  : 'fugitive#head',
-    \   'getwinid'   : 'winnr' 
+    \   'gitbranch'        : 'fugitive#head',
+    \   'getwinid'         : 'winnr',
+    \   'gtags_status'     : 'gutentags#statusline'
     \ },
 \ }
     
 " \ 'filetype'   : 'MyFiletype',
 " \ 'fileformat' : 'MyFileformat',
+let g:lightline.component_visible_condition = {
+    \ 'modified': '&modified||!&modifiable',
+    \ 'readonly': '&readonly',
+    \ 'paste': '&paste',
+    \ 'spell': '&spell' }
 
 let g:lightline.colorscheme = 'default'

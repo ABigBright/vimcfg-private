@@ -19,6 +19,7 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-matchup.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-instant-markdown.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/markdown_preview.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/gutentags_plus.vim",
     \]
     
     " not use 
@@ -33,7 +34,6 @@ let s:vims_tbl = [
     " \ g:vims_prefix . "vimcfg/plugin_cfg/syntastic_cfg.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/winmanager.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/ycm.vim",
-    " \ g:vims_prefix . "vimcfg/plugin_cfg/gutentags_plus.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/chromatica.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/neomake.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/grepper.vim",

@@ -21,60 +21,74 @@ let g:which_key_map.d = {
       \ 'l'    : [':DoxLic', 'doxygen-license'],
       \ }
 
-nmap <silent><leader>jd    :Gtags <c-r><c-w><cr>
-nmap <silent><leader>jr    :Gtags -r <c-r><c-w><cr>
-nmap <silent><leader>je    :Gtags -ge <c-r><c-w><cr>
-nmap <silent><leader>jg    :Gtags -go <c-r><c-w><cr>
-nmap <silent><leader>jc    :Gtags -f %<cr>
-nmap <silent><leader>jf    :Gtags -P <c-r><c-f><cr>
-nmap <silent><leader>js    :Gtags -s <c-r><c-w><cr>
-nmap <silent><leader>jj    :GtagsCursor<cr>
+" nmap <silent><leader>jd    :Gtags <c-r><c-w><cr>
+" nmap <silent><leader>jr    :Gtags -r <c-r><c-w><cr>
+" nmap <silent><leader>je    :Gtags -ge <c-r><c-w><cr>
+" nmap <silent><leader>jg    :Gtags -go <c-r><c-w><cr>
+" nmap <silent><leader>jc    :Gtags -f %<cr>
+" nmap <silent><leader>jf    :Gtags -P <c-r><c-f><cr>
+" nmap <silent><leader>js    :Gtags -s <c-r><c-w><cr>
+" nmap <silent><leader>jj    :GtagsCursor<cr>
 
-nmap <silent><leader>jS    :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jG    :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jC    :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jT    :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jE    :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jF    :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <silent><leader>jI    :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <silent><leader>jD    :cs find d <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>jA    :cs find a <C-R>=expand("<cword>")<CR><CR>
+" nmap <silent><leader>jS    :cs find s <C-R>=expand("<cword>")<CR><CR>
+" nmap <silent><leader>jG    :cs find g <C-R>=expand("<cword>")<CR><CR>
+" nmap <silent><leader>jC    :cs find c <C-R>=expand("<cword>")<CR><CR>
+" nmap <silent><leader>jT    :cs find t <C-R>=expand("<cword>")<CR><CR>
+" nmap <silent><leader>jE    :cs find e <C-R>=expand("<cword>")<CR><CR>
+" nmap <silent><leader>jF    :cs find f <C-R>=expand("<cfile>")<CR><CR>
+" nmap <silent><leader>jI    :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+" nmap <silent><leader>jD    :cs find d <C-R>=expand("<cword>")<CR><CR>
+" nmap <silent><leader>jA    :cs find a <C-R>=expand("<cword>")<CR><CR>
 
 " gutentag_plus key-binding config
-" noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>
-" noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>
-" noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>
-" noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>
-" noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>
-" noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>
-" noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>
-" noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
-" noremap <silent><leader>jA :GscopeFind a <C-R><C-W><cr>
+noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>
+noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>
+noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>
+noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>
+noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>
+noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>
+noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>
+noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
+noremap <silent><leader>jA :GscopeFind a <C-R><C-W><cr>
+
+"leaderf gtags integration
+" noremap <silent><leader>jd :Leaderf! gtags -d <c-r><c-w><cr>
+" noremap <silent><leader>jr :Leaderf! gtags -r <c-r><c-w><cr>
+" noremap <silent><leader>js :Leaderf! gtags -s <c-r><c-w><cr>
+" noremap <silent><leader>jg :Leaderf! gtags -g <c-r><c-w><cr>
 
 let g:which_key_map.j = {
       \ 'name' : '+Jump',
-      \ 'j'    : 'gtags-jump-definition-or-reference',
       \ 'd'    : 'gtags-jump-definition',
       \ 'r'    : 'gtags-jump-reference',
-      \ 'e'    : 'gtags-jump-regexp-find',
-      \ 'g'    : 'gtags-jump-grep',
-      \ 'c'    : 'gtags-jump-current-file-symbol',
-      \ 'f'    : 'gtags-jump-file',
       \ 's'    : 'gtags-jump-symbol',
-      \ 'S'    : 'cscope-jump-symble',
-      \ 'G'    : 'cscope-jump-definition',
-      \ 'C'    : 'cscope-jump-reference',
-      \ 'T'    : 'cscope-jump-text',
-      \ 'E'    : 'cscope-jump-egrep',
-      \ 'F'    : 'cscope-jump-file',
-      \ 'I'    : 'cscope-jump-including',
-      \ 'D'    : 'cscope-jump-call-func',
-      \ 'A'    : 'cscope-jump-symbol-assigned',
+      \ 'e'    : 'gtags-jump-egrep',
+      \ 'f'    : 'gtags-jump-file',
+      \ 't'    : 'gtags-jump-text',
+      \ 'i'    : 'gtags-jump-file-include-this-file',
+      \ 'I'    : 'gtags-jump-functions-called-by-this-function',
+      \ 'A'    : 'gtags-jump-where-this-symbol-is-assigned-value',
       \ 'a'    : [':LeaderfFunction', 'leaderf-jump-current-functions'],
       \ 'b'    : [':LeaderfBufTag', 'leaderf-jump-current-tag'],
       \ 'h'    : [':LeaderfBufTagAll', 'leaderf-jump-all-tag'],
       \ }
       
+      " \ 's'    : 'gtags-jump-symbol',
+      " \ 'j'    : 'gtags-jump-definition-or-reference',
+      " \ 'd'    : 'gtags-jump-definition',
+      " \ 'r'    : 'gtags-jump-reference',
+      " \ 'e'    : 'gtags-jump-regexp-find',
+      " \ 'g'    : 'gtags-jump-grep',
+      " \ 'c'    : 'gtags-jump-current-file-symbol',
+      " \ 'S'    : 'cscope-jump-symble',
+      " \ 'G'    : 'cscope-jump-definition',
+      " \ 'C'    : 'cscope-jump-reference',
+      " \ 'T'    : 'cscope-jump-text',
+      " \ 'E'    : 'cscope-jump-egrep',
+      " \ 'F'    : 'cscope-jump-file',
+      " \ 'I'    : 'cscope-jump-including',
+      " \ 'D'    : 'cscope-jump-call-func',
+      " \ 'A'    : 'cscope-jump-symbol-assigned',
       " \ 'd'    : 'gutentags-jump-definition',
       " \ 'r'    : 'gutentags-jump-reference',
       " \ 'e'    : 'gutentags-egrep-find',
@@ -278,6 +292,15 @@ let g:which_key_map.m = {
       \ 's' : ['<Plug>MarkdownPreviewStop', 'markdown-stop'],
       \ 't' : ['<Plug>MarkdownPreviewToggle', 'markdown-toggle'],
       \ }
+
+
+" vim-preview keybind config
+" M-u to scroll preview up
+" M-d to scroll preview down
+nmap <silent>u :PreviewScroll -1<cr>
+nmap <silent>d :PreviewScroll +1<cr>
+imap <silent>u <c-\><c-o>:PreviewScroll -1<cr>
+imap <silent>d <c-\><c-o>:PreviewScroll +1<cr>
 
 "coc.nvim keybinding
 function! s:check_back_space() abort

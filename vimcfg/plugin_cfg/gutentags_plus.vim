@@ -1,5 +1,5 @@
 " enable gtags module
-let g:gutentags_modules = ['ctags', 'gtags_cscope']
+let g:gutentags_modules = ['gtags_cscope']
 
 " config project root markers.
 let g:gutentags_project_root = ['.root']
@@ -14,3 +14,6 @@ let g:gutentags_plus_switch = 1
 let g:gutentags_plus_nomap = 1
 
 set statusline+=%{gutentags#statusline()}
+
+" open advance command log
+" let g:gutentags_define_advanced_commands = 1

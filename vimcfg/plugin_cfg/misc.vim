@@ -8,10 +8,14 @@ set cindent
 set autoindent
 colo default
 
+" color define 
 let s:molokai_prefix = g:vims_prefix . 'plugged/molokai/colors'
 let s:solarized_prefix = g:vims_prefix . 'plugged/vim-colors-solarized/colors'
+let s:onehalf_prefix = g:vims_prefix . 'plugged/onehalf/vim/colors'
 
-if !empty(findfile("molokai.vim", s:molokai_prefix))
+if !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
+    colo onehalfdark
+elseif !empty(findfile("molokai.vim", s:molokai_prefix))
     colo molokai
 elseif !empty(findfile("solarized.vim", s:solarized_prefix))
     colo solarized
