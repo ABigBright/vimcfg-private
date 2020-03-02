@@ -15,10 +15,19 @@ let g:which_key_map.a = {
       \ }
 
 let g:which_key_map.d = {
-      \ 'name' : '+Doxystyle',
+      \ 'name' : '+Doxystyle-and-window',
       \ 'f'    : [':Dox', 'doxygen-file'],
       \ 'a'    : [':DoxAuthor', 'doxygen-author'],
       \ 'l'    : [':DoxLic', 'doxygen-license'],
+      \ '1'    : [':1quit!', 'quit windwow 1'],
+      \ '2'    : [':2quit!', 'quit windwow 2'],
+      \ '3'    : [':3quit!', 'quit windwow 3'],
+      \ '4'    : [':4quit!', 'quit windwow 4'],
+      \ '5'    : [':5quit!', 'quit windwow 5'],
+      \ '6'    : [':6quit!', 'quit windwow 6'],
+      \ '7'    : [':7quit!', 'quit windwow 7'],
+      \ '8'    : [':8quit!', 'quit windwow 8'],
+      \ '9'    : [':9quit!', 'quit windwow 9'],
       \ }
 
 " nmap <silent><leader>jd    :Gtags <c-r><c-w><cr>
@@ -199,6 +208,8 @@ let g:which_key_map.b = {
       \ 'T'    : [':Buffers', 'fzf-buffers'],
       \ 't'    : 'leaderf-buffers',
       \ 'b'    : [':CtrlPBuffer', 'ctrlp-buffers'],
+      \ 'w'    : [':w!', 'buffer-write-to-file'],
+      \ 'W'    : [':wa!', 'all-buffer-write-to-file'],
       \ 'a'    : [':CocList buffers', 'Coc-buffers'],
       \ 'p'    : [':bp', 'switch-prev-buffer'],
       \ 'n'    : [':bn', 'switch-next-buffer'],
