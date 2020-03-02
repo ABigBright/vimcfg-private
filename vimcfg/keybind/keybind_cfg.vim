@@ -258,6 +258,22 @@ let g:which_key_map.7 = 'switch to window 7'
 let g:which_key_map.8 = 'switch to window 8'
 let g:which_key_map.9 = 'switch to window 9'
 
+" window keybind config
+let g:which_key_map.w = {
+    \ 'name' : '+Window',
+    \}
+
+let g:which_key_map.w.d = {
+      \ '1'    : [':1quit!', 'quit windwow 1'],
+      \ '2'    : [':2quit!', 'quit windwow 2'],
+      \ '3'    : [':3quit!', 'quit windwow 3'],
+      \ '4'    : [':4quit!', 'quit windwow 4'],
+      \ '5'    : [':5quit!', 'quit windwow 5'],
+      \ '6'    : [':6quit!', 'quit windwow 6'],
+      \ '7'    : [':7quit!', 'quit windwow 7'],
+      \ '8'    : [':8quit!', 'quit windwow 8'],
+      \ '9'    : [':9quit!', 'quit windwow 9'],
+      \ }
 
 " window manipulate keybinding config
 nmap <silent><C-h> <C-W>h
