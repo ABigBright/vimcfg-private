@@ -15,6 +15,12 @@ set laststatus=2
 "         return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 "     endfunction
 " endif
+"
+
+" lightline show gutentags state
+function! Litline_show_gutentag_sta()
+    return gutentags#statusline('|', '...')
+endfunction
 
 let g:lightline = {
     \ 'active' : {

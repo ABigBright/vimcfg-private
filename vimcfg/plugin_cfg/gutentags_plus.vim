@@ -17,3 +17,7 @@ set statusline+=%{gutentags#statusline()}
 
 " open advance command log
 " let g:gutentags_define_advanced_commands = 1
+
+" disable default project root markers
+let g:gutentags_add_default_project_roots = 0
+
