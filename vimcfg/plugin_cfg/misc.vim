@@ -8,6 +8,8 @@ set cindent
 set autoindent
 colo default
 set showcmd
+set splitbelow
+set splitright
 
 " color define 
 let s:molokai_prefix = g:vims_prefix . 'plugged/molokai/colors'

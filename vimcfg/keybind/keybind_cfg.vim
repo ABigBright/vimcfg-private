@@ -264,10 +264,10 @@ let g:which_key_map.w = {
     \}
 
 " window manipulate keybinding config
-nmap <silent><C-h> <C-W>h
-nmap <silent><C-l> <C-W>l
-nmap <silent><C-j> <C-W>j
-nmap <silent><C-k> <C-W>k
+" nmap <silent><C-h> <C-W>h
+" nmap <silent><C-l> <C-W>l
+" nmap <silent><C-j> <C-W>j
+" nmap <silent><C-k> <C-W>k
 " nmap <silent>q :q<cr>
 
 " cancel some keybinding
@@ -312,6 +312,10 @@ noremap Q :q!<cr>
 noremap R :source $MYVIMRC<cr>
 nmap n nzz
 nmap N Nzz
+nmap <silent><C-j> :resize +5<cr>
+nmap <silent><C-k> :resize -5<cr>
+nmap <silent><M-j> :vertical resize -5<cr>
+nmap <silent><M-k> :vertical resize +5<cr>
 
 "coc.nvim keybinding
 function! s:check_back_space() abort
