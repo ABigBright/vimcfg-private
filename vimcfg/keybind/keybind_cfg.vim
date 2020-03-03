@@ -312,6 +312,8 @@ noremap Q :q!<cr>
 noremap R :source $MYVIMRC<cr>
 nmap n nzz
 nmap N Nzz
+nmap j jzz
+nmap k kzz
 
 "coc.nvim keybinding
 function! s:check_back_space() abort
