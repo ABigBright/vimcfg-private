@@ -263,18 +263,6 @@ let g:which_key_map.w = {
     \ 'name' : '+Window',
     \}
 
-let g:which_key_map.w.d = {
-      \ '1'    : [':1quit!', 'quit windwow 1'],
-      \ '2'    : [':2quit!', 'quit windwow 2'],
-      \ '3'    : [':3quit!', 'quit windwow 3'],
-      \ '4'    : [':4quit!', 'quit windwow 4'],
-      \ '5'    : [':5quit!', 'quit windwow 5'],
-      \ '6'    : [':6quit!', 'quit windwow 6'],
-      \ '7'    : [':7quit!', 'quit windwow 7'],
-      \ '8'    : [':8quit!', 'quit windwow 8'],
-      \ '9'    : [':9quit!', 'quit windwow 9'],
-      \ }
-
 " window manipulate keybinding config
 nmap <silent><C-h> <C-W>h
 nmap <silent><C-l> <C-W>l
@@ -313,10 +301,17 @@ let g:which_key_map.m = {
 " vim-preview keybind config
 " M-u to scroll preview up
 " M-d to scroll preview down
-nmap <silent>u :PreviewScroll -1<cr>
-nmap <silent>d :PreviewScroll +1<cr>
-imap <silent>u <c-\><c-o>:PreviewScroll -1<cr>
-imap <silent>d <c-\><c-o>:PreviewScroll +1<cr>
+nmap <silent><M-u> :PreviewScroll -1<cr>
+nmap <silent><M-d> :PreviewScroll +1<cr>
+imap <silent><M-u> <c-\><c-o>:PreviewScroll -1<cr>
+imap <silent><M-d> <c-\><c-o>:PreviewScroll +1<cr>
+
+" some misc setting config keybind
+noremap S :w!<cr>
+noremap Q :q!<cr>
+noremap R :source $MYVIMRC<cr>
+nmap n nzz
+nmap N Nzz
 
 "coc.nvim keybinding
 function! s:check_back_space() abort
