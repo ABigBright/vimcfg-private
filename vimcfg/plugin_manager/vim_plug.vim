@@ -108,5 +108,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 Plug 'connorholyday/vim-snazzy'
+Plug 'Xuyuanp/nerdtree-git-plugin' 
 
 call plug#end()
