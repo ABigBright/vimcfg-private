@@ -309,7 +309,6 @@ imap <silent><M-d> <c-\><c-o>:PreviewScroll +1<cr>
 " some misc setting config keybind
 noremap S :w!<cr>
 noremap Q :q!<cr>
-noremap R :source $MYVIMRC<cr>
 nmap n nzz
 nmap N Nzz
 nmap <silent><C-j> :resize +5<cr>
