@@ -19,10 +19,10 @@ let s:onehalf_prefix = g:vims_prefix . 'plugged/onehalf/vim/colors'
 
 " if !empty(findfile("snazzy.vim", s:snazzy_prefix))
 "     colo snazzy
-if !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
-    colo onehalfdark
-elseif !empty(findfile("molokai.vim", s:molokai_prefix))
+if !empty(findfile("molokai.vim", s:molokai_prefix))
     colo molokai
+elseif !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
+    colo onehalfdark
 elseif !empty(findfile("solarized.vim", s:solarized_prefix))
     colo solarized
 endif
