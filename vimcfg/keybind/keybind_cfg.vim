@@ -309,13 +309,6 @@ let g:which_key_map.m = {
       \ }
 
 
-" vim-preview keybind config
-" M-u to scroll preview up
-" M-d to scroll preview down
-nmap <silent><M-u> :PreviewScroll -1<cr>
-nmap <silent><M-d> :PreviewScroll +1<cr>
-imap <silent><M-u> <c-\><c-o>:PreviewScroll -1<cr>
-imap <silent><M-d> <c-\><c-o>:PreviewScroll +1<cr>
 
 " some misc setting config keybind
 noremap S :w!<cr>
@@ -328,9 +321,23 @@ nmap <silent><C-j> :resize +5<cr>
 nmap <silent><C-k> :resize -5<cr>
 
 if has('nvim')
+    " vim-preview keybind config
+    " M-u to scroll preview up
+    " M-d to scroll preview down
+    nmap <silent><M-u> :PreviewScroll -1<cr>
+    nmap <silent><M-d> :PreviewScroll +1<cr>
+    imap <silent><M-u> <c-\><c-o>:PreviewScroll -1<cr>
+    imap <silent><M-d> <c-\><c-o>:PreviewScroll +1<cr>
     nmap <silent><M-j> :vertical resize -5<cr>
     nmap <silent><M-k> :vertical resize +5<cr>
 else
+    " vim-preview keybind config
+    " M-u to scroll preview up
+    " M-d to scroll preview down
+    nmap <silent>u :PreviewScroll -1<cr>
+    nmap <silent>d :PreviewScroll +1<cr>
+    imap <silent>u <c-\><c-o>:PreviewScroll -1<cr>
+    imap <silent>d <c-\><c-o>:PreviewScroll +1<cr>
     nmap <silent>j :vertical resize -5<cr>
     nmap <silent>k :vertical resize +5<cr>
 endif
