@@ -22,3 +22,5 @@ let g:gutentags_define_advanced_commands = 1
 let g:gutentags_add_default_project_roots = 0
 
 let g:gutentags_auto_add_gtags_cscope = 1
+
+let g:gutentags_trace = 1
