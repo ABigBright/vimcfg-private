@@ -15,11 +15,11 @@ set splitright
 let s:molokai_prefix = g:vims_prefix . 'plugged/molokai/colors'
 let s:solarized_prefix = g:vims_prefix . 'plugged/vim-colors-solarized/colors'
 let s:onehalf_prefix = g:vims_prefix . 'plugged/onehalf/vim/colors'
-let s:snazzy_prefix = g:vims_prefix . 'plugged/vim-snazzy/colors'
+" let s:snazzy_prefix = g:vims_prefix . 'plugged/vim-snazzy/colors'
 
-if !empty(findfile("snazzy.vim", s:snazzy_prefix))
-    colo snazzy
-elseif !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
+" if !empty(findfile("snazzy.vim", s:snazzy_prefix))
+"     colo snazzy
+if !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
     colo onehalfdark
 elseif !empty(findfile("molokai.vim", s:molokai_prefix))
     colo molokai
