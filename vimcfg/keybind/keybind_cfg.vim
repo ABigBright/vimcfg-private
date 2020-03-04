@@ -326,8 +326,14 @@ nmap n nzz
 nmap N Nzz
 nmap <silent><C-j> :resize +5<cr>
 nmap <silent><C-k> :resize -5<cr>
-nmap <silent><M-j> :vertical resize -5<cr>
-nmap <silent><M-k> :vertical resize +5<cr>
+
+if has('nvim')
+    nmap <silent><M-j> :vertical resize -5<cr>
+    nmap <silent><M-k> :vertical resize +5<cr>
+else
+    nmap <silent>j :vertical resize -5<cr>
+    nmap <silent>k :vertical resize +5<cr>
+endif
 
 "coc.nvim keybinding
 function! s:check_back_space() abort
