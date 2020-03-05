@@ -356,7 +356,8 @@ inoremap <silent><expr> <TAB>
 
 
 " which-key keybinding config
-nnoremap <silent><leader> :WhichKey '<Space>'<CR>
+nnoremap <silent><leader> :<c-u>WhichKey '<Space>'<CR>
+vnoremap <silent><leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 
 " choose-wind keybinding config
 " nmap  \  <Plug>(choosewin)
