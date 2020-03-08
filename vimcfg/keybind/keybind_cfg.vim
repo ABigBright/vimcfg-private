@@ -269,23 +269,23 @@ let g:which_key_map.7 = 'which_key_ignore'
 let g:which_key_map.8 = 'which_key_ignore'
 let g:which_key_map.9 = 'which_key_ignore'
 
-noremap <leader>wa :set splitright<cr>:vert split<cr> 
-noremap <leader>wb :set nosplitright<cr>:vert split<cr> 
-noremap <leader>wc :set splitbelow<cr>:split<cr> 
-noremap <leader>wd :set nosplitbelow<cr>:split<cr> 
+noremap <leader>wr :set splitright<cr>:vert split<cr> 
+noremap <leader>wl :set nosplitright<cr>:vert split<cr> 
+noremap <leader>wb :set splitbelow<cr>:split<cr> 
+noremap <leader>wu :set nosplitbelow<cr>:split<cr> 
 noremap <leader>wo <C-W>o 
 noremap <leader>wh <C-W>t<C-W>K 
 noremap <leader>wv <C-W>t<C-W>H 
 " window keybind config
 let g:which_key_map.w = {
     \ 'name' : '+Window',
-    \ 'a'    : 'split-horizontal-right-window',
-    \ 'b'    : 'split-horizontal-left-window',
-    \ 'c'    : 'split-vertical-below-window',
-    \ 'd'    : 'split-vertical-up-window',
-    \ 'o'    : 'close-other-window',
-    \ 'h'    : 'change-window-split-horizontal',
-    \ 'v'    : 'change-window-split-vertical',
+    \ 'r'    : 'vertical-split-right-win',
+    \ 'l'    : 'vertical-split-left-win',
+    \ 'b'    : 'horizontal-split-below-win',
+    \ 'u'    : 'horizontal-split-up-win',
+    \ 'o'    : 'close-other-win',
+    \ 'h'    : 'change-split-horizontal',
+    \ 'v'    : 'change-split-vertical',
     \}
 
 " window manipulate keybinding config
