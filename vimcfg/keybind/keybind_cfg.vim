@@ -19,15 +19,15 @@ let g:which_key_map.d = {
       \ 'f'    : [':Dox', 'doxygen-file'],
       \ 'a'    : [':DoxAuthor', 'doxygen-author'],
       \ 'l'    : [':DoxLic', 'doxygen-license'],
-      \ '1'    : [':1quit!', 'quit windwow 1'],
-      \ '2'    : [':2quit!', 'quit windwow 2'],
-      \ '3'    : [':3quit!', 'quit windwow 3'],
-      \ '4'    : [':4quit!', 'quit windwow 4'],
-      \ '5'    : [':5quit!', 'quit windwow 5'],
-      \ '6'    : [':6quit!', 'quit windwow 6'],
-      \ '7'    : [':7quit!', 'quit windwow 7'],
-      \ '8'    : [':8quit!', 'quit windwow 8'],
-      \ '9'    : [':9quit!', 'quit windwow 9'],
+      \ '1'    : [':1quit!', 'which_key_ignore'],
+      \ '2'    : [':2quit!', 'which_key_ignore'],
+      \ '3'    : [':3quit!', 'which_key_ignore'],
+      \ '4'    : [':4quit!', 'which_key_ignore'],
+      \ '5'    : [':5quit!', 'which_key_ignore'],
+      \ '6'    : [':6quit!', 'which_key_ignore'],
+      \ '7'    : [':7quit!', 'which_key_ignore'],
+      \ '8'    : [':8quit!', 'which_key_ignore'],
+      \ '9'    : [':9quit!', 'which_key_ignore'],
       \ }
 
 " nmap <silent><leader>jd    :Gtags <c-r><c-w><cr>
@@ -213,15 +213,15 @@ let g:which_key_map.b = {
       \ 'a'    : [':CocList buffers', 'Coc-buffers'],
       \ 'p'    : [':bp', 'switch-prev-buffer'],
       \ 'n'    : [':bn', 'switch-next-buffer'],
-      \ '1'    : [':b 1', 'switch buffer 1'],
-      \ '2'    : [':b 2', 'switch buffer 2'],
-      \ '3'    : [':b 3', 'switch buffer 3'],
-      \ '4'    : [':b 4', 'switch buffer 4'],
-      \ '5'    : [':b 5', 'switch buffer 5'],
-      \ '6'    : [':b 6', 'switch buffer 6'],
-      \ '7'    : [':b 7', 'switch buffer 7'],
-      \ '8'    : [':b 8', 'switch buffer 8'],
-      \ '9'    : [':b 9', 'switch buffer 9'],
+      \ '1'    : [':b 1', 'which_key_ignore'],
+      \ '2'    : [':b 2', 'which_key_ignore'],
+      \ '3'    : [':b 3', 'which_key_ignore'],
+      \ '4'    : [':b 4', 'which_key_ignore'],
+      \ '5'    : [':b 5', 'which_key_ignore'],
+      \ '6'    : [':b 6', 'which_key_ignore'],
+      \ '7'    : [':b 7', 'which_key_ignore'],
+      \ '8'    : [':b 8', 'which_key_ignore'],
+      \ '9'    : [':b 9', 'which_key_ignore'],
       \ }
 
 
@@ -259,19 +259,33 @@ nmap <silent><Leader>6 :6wincmd w<cr>
 nmap <silent><Leader>7 :7wincmd w<cr>
 nmap <silent><Leader>8 :8wincmd w<cr>
 nmap <silent><Leader>9 :9wincmd w<cr>
-let g:which_key_map.1 = 'switch to window 1'
-let g:which_key_map.2 = 'switch to window 2'
-let g:which_key_map.3 = 'switch to window 3'
-let g:which_key_map.4 = 'switch to window 4'
-let g:which_key_map.5 = 'switch to window 5'
-let g:which_key_map.6 = 'switch to window 6'
-let g:which_key_map.7 = 'switch to window 7'
-let g:which_key_map.8 = 'switch to window 8'
-let g:which_key_map.9 = 'switch to window 9'
+let g:which_key_map.1 = 'which_key_ignore'
+let g:which_key_map.2 = 'which_key_ignore'
+let g:which_key_map.3 = 'which_key_ignore'
+let g:which_key_map.4 = 'which_key_ignore'
+let g:which_key_map.5 = 'which_key_ignore'
+let g:which_key_map.6 = 'which_key_ignore'
+let g:which_key_map.7 = 'which_key_ignore'
+let g:which_key_map.8 = 'which_key_ignore'
+let g:which_key_map.9 = 'which_key_ignore'
 
+noremap <leader>wa :set splitright<cr>:vert split<cr> 
+noremap <leader>wb :set nosplitright<cr>:vert split<cr> 
+noremap <leader>wc :set splitbelow<cr>:split<cr> 
+noremap <leader>wd :set nosplitbelow<cr>:split<cr> 
+noremap <leader>wo <C-W>o 
+noremap <leader>wh <C-W>t<C-W>K 
+noremap <leader>wv <C-W>t<C-W>H 
 " window keybind config
 let g:which_key_map.w = {
     \ 'name' : '+Window',
+    \ 'a'    : 'split-horizontal-right-window',
+    \ 'b'    : 'split-horizontal-left-window',
+    \ 'c'    : 'split-vertical-below-window',
+    \ 'd'    : 'split-vertical-up-window',
+    \ 'o'    : 'close-other-window',
+    \ 'h'    : 'change-window-split-horizontal',
+    \ 'v'    : 'change-window-split-vertical',
     \}
 
 " window manipulate keybinding config
