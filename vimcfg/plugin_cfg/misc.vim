@@ -12,7 +12,7 @@ set splitbelow
 set splitright
 set wildmenu
 set scrolloff=5
-set list
+" set list
 
 " color define 
 let s:molokai_prefix = g:vims_prefix . 'plugged/molokai/colors'
