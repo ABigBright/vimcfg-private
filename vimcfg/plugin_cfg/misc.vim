@@ -6,7 +6,6 @@ set mouse=a
 set smartindent
 set cindent
 set autoindent
-colo default
 set showcmd
 set splitbelow
 set splitright
@@ -22,12 +21,14 @@ let s:onehalf_prefix = g:vims_prefix . 'plugged/onehalf/vim/colors'
 
 " if !empty(findfile("snazzy.vim", s:snazzy_prefix))
 "     colo snazzy
-if !empty(findfile("molokai.vim", s:molokai_prefix))
-    colo molokai
-elseif !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
+if !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
     colo onehalfdark
+elseif !empty(findfile("molokai.vim", s:molokai_prefix))
+    colo molokai
 elseif !empty(findfile("solarized.vim", s:solarized_prefix))
     colo solarized
+else
+    colo default
 endif
 
 set ruler
