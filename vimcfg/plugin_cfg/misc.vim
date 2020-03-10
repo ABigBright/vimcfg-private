@@ -6,7 +6,7 @@ set mouse=a
 set smartindent
 set cindent
 set autoindent
-set showcmd
+" set showcmd
 set splitbelow
 set splitright
 set wildmenu
