@@ -24,3 +24,5 @@ let g:gutentags_add_default_project_roots = 0
 let g:gutentags_auto_add_gtags_cscope = 1
 
 let g:gutentags_trace = 0
+
+let g:gutentags_plus_height = 10
