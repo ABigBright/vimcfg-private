@@ -25,4 +25,4 @@ let g:gutentags_auto_add_gtags_cscope = 1
 
 let g:gutentags_trace = 0
 
-let g:gutentags_plus_height = 10
+let g:gutentags_plus_height = 5

@@ -125,7 +125,7 @@ let g:which_key_map.h = {
 " vim quickfix open/close keybinding config
 let g:which_key_map.q = {
       \ 'name' : '+Quickfix',
-      \ 'o'    : [':botright cw 10', 'open-quickfix-win'],
+      \ 'o'    : [':botright cw 5', 'open-quickfix-win'],
       \ 'c'    : [':ccl', 'close-quickfix-win'],
       \ }
 
