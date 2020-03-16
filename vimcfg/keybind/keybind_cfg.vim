@@ -152,7 +152,7 @@ let g:which_key_map.f = {
       \ 'F'    : [':Files', 'fzf-find-file'],
       \ 'l'    : 'locate-find-file',
       \ 'g'    : [':GFiles', 'git-find-file'],
-      \ 'r'    : [':History', 'fzf-find-recent-file'],
+      \ 'r'    : [':LeaderfMru', 'most-recent-used-file'],
       \ 't'    : [':NERDTreeToggle', 'file-tree-browser-toggle'],
       \ 'c'    : [':NERDTreeFind %', 'current-file-tree-browser'],
       \ 'L'    : 'async-locate-find-file',
