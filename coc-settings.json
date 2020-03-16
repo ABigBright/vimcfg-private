@@ -1,0 +1,22 @@
+
+"bookmark.enable": {
+    "type": "boolean",
+    "default": true,
+    "description": "Whether to enable this extension"
+},
+"bookmark.maxsize": {
+    "type": "number",
+    "default": 5000,
+    "description": "Maxsize of bookmark"
+},
+"bookmark.sign": {
+    "type": "string",
+    "default": "⚑",
+    "description": "Bookmark icon for sign column"
+},
+"bookmark.signHi": {
+  "type": "string",
+  "default": "Identifier",
+  "description": "Highlight group for sign"
+}
+

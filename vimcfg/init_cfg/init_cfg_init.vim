@@ -22,5 +22,6 @@ function! g:Coc_extd_instl()
         CocInstall coc-lists
         CocInstall coc-marketplace
         CocInstall coc-terminal
+        CocInstall coc-bookmark
     endif
 endfunction
