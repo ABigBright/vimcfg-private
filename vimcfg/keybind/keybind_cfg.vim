@@ -50,27 +50,28 @@ let g:which_key_map.d = {
 " nmap <silent><leader>jA    :cs find a <C-R>=expand("<cword>")<CR><CR>
 
 " echo getqflist({'size' : 1}) , get quickfix error iterm number
-" function! Quickfix_jump()
-"     let s:quickfix_item_num = getqflist({'size' : 1})['size']
-"     echo s:quickfix_item_num
-"     if s:quickfix_item_num == 2
-"         <Down><cr>
-"     elseif s:quickfix_item_num > 2
-"         <Down>
-"     endif
-" endfunction
+function! s:Quickfix_jump()
+    let s:quickfix_item_num = getqflist({'size' : 1})['size']
+    if s:quickfix_item_num == 2
+        normal j
+        " jump the quickfix item under cursor
+        .cc
+    elseif s:quickfix_item_num > 2
+        normal j
+    endif
+endfunction
 
 
 
 " gutentag_plus key-binding config
-noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>j
-noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>j
-noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>j
-noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>j
-noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>j
-noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>j
-noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>j
-noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>j
+noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>:call <SID>Quickfix_jump()<cr>
+noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>:call <SID>Quickfix_jump()<cr>
+noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
 " not common for use
 " noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
 
