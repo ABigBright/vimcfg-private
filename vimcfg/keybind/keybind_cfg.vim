@@ -49,6 +49,19 @@ let g:which_key_map.d = {
 " nmap <silent><leader>jD    :cs find d <C-R>=expand("<cword>")<CR><CR>
 " nmap <silent><leader>jA    :cs find a <C-R>=expand("<cword>")<CR><CR>
 
+" echo getqflist({'size' : 1}) , get quickfix error iterm number
+" function! Quickfix_jump()
+"     let s:quickfix_item_num = getqflist({'size' : 1})['size']
+"     echo s:quickfix_item_num
+"     if s:quickfix_item_num == 2
+"         <Down><cr>
+"     elseif s:quickfix_item_num > 2
+"         <Down>
+"     endif
+" endfunction
+
+
+
 " gutentag_plus key-binding config
 noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>j
 noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>j
