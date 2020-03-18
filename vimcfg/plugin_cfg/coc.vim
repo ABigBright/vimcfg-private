@@ -6,3 +6,5 @@ let g:coc_global_extensions = [
     \ "coc-explorer",
     \ "coc-marketplace",
     \]
+    
+    " \ "coc-clangd",

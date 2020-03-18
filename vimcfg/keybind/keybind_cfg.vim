@@ -64,14 +64,14 @@ endfunction
 
 
 " gutentag_plus key-binding config
-noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
-noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
-noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
-noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
-noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
-noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>:call <SID>Quickfix_jump()<cr>
-noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>:call <SID>Quickfix_jump()<cr>
-noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+" noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+" noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+" noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+" noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+" noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+" noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>:call <SID>Quickfix_jump()<cr>
+" noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>:call <SID>Quickfix_jump()<cr>
+" noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
 " not common for use
 " noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
 
@@ -90,16 +90,19 @@ noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:call <SID>Quickfix_jump(
 " noremap <silent><leader>jB :<C-U><C-R>=printf("Leaderf gtags --all-buffers --result ctags-mod %s", "")<CR><CR>
 " noremap <silent><leader>ja :<C-U><C-R>=printf("Leaderf gtags --all --result ctags-mod %s", "")<CR><CR>
 
+nmap <silent><leader>jd <Plug>(coc-definition)
+nmap <silent><leader>jD <Plug>(coc-declaration)
+nmap <silent><leader>ji <Plug>(coc-implementation)
+nmap <silent><leader>jt <Plug>(coc-type-definition)
+nmap <silent><leader>jr <Plug>(coc-references)
+
 let g:which_key_map.j = {
       \ 'name' : '+Jump',
       \ 'd'    : 'jump-definition',
+      \ 'D'    : 'jump-declaration',
+      \ 'i'    : 'jump-implementation',
+      \ 't'    : 'jump-type-definition',
       \ 'r'    : 'jump-reference',
-      \ 's'    : 'jump-symbol',
-      \ 'e'    : 'jump-egrep',
-      \ 't'    : 'jump-text',
-      \ 'f'    : 'jump-file',
-      \ 'i'    : 'jump-file-include-this-file',
-      \ 'a'    : 'jump-symbol-is-assigned',
       \ 'b'    : [':LeaderBufTag', 'current-buffer-tag'],
       \ 'B'    : [':LeaderBufTagAll', 'all-buffers-tag'],
       \ }
