@@ -19,10 +19,10 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-matchup.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-instant-markdown.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/markdown_preview.vim",
-    \ g:vims_prefix . "vimcfg/plugin_cfg/gutentags_plus.vim",
     \]
     
     " not use 
+    " \ g:vims_prefix . "vimcfg/plugin_cfg/gutentags_plus.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/nerdtree-git-plugin.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/vim-snazzy.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/choose-wind.vim",

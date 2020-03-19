@@ -90,11 +90,11 @@ endfunction
 " noremap <silent><leader>jB :<C-U><C-R>=printf("Leaderf gtags --all-buffers --result ctags-mod %s", "")<CR><CR>
 " noremap <silent><leader>ja :<C-U><C-R>=printf("Leaderf gtags --all --result ctags-mod %s", "")<CR><CR>
 
-nmap <silent><leader>jd <Plug>(coc-definition)
-nmap <silent><leader>jD <Plug>(coc-declaration)
-nmap <silent><leader>ji <Plug>(coc-implementation)
-nmap <silent><leader>jt <Plug>(coc-type-definition)
-nmap <silent><leader>jr <Plug>(coc-references)
+nmap <silent><leader>jd :call CocActionAsync("jumpDefinition", "vsplit")<cr>
+nmap <silent><leader>jD :call CocActionAsync("jumpDeclaration", "vsplit")<cr>
+nmap <silent><leader>ji :call CocActionAsync("jumpImplementation", "vsplit")<cr>
+nmap <silent><leader>jt :call CocActionAsync("jumpTypeDefinition", "vsplit")<cr>
+nmap <silent><leader>jr :call CocActionAsync("jumpReferences", "drop")<cr>
 
 let g:which_key_map.j = {
       \ 'name' : '+Jump',

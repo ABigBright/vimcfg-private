@@ -30,4 +30,8 @@
     }
 },
 
+"list.normalMappings":{
+    "v" : "action:vsplit",
+},
+
 }
