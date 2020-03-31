@@ -11,6 +11,8 @@ set splitbelow
 set splitright
 set wildmenu
 set scrolloff=5
+syntax on
+set background=dark
 " set list
 
 " color define 
@@ -23,6 +25,7 @@ let s:onehalf_prefix = g:vims_prefix . 'plugged/onehalf/vim/colors'
 "     colo snazzy
 if !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
     colo onehalfdark
+    hi Pmenu ctermbg=235
 elseif !empty(findfile("molokai.vim", s:molokai_prefix))
     colo molokai
 elseif !empty(findfile("solarized.vim", s:solarized_prefix))
@@ -42,8 +45,6 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileformat=unix
 set autoread
-syntax on
-set background=dark
 set nobackup
 
 if !has('nvim')

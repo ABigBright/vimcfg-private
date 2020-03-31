@@ -109,5 +109,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " Plug 'connorholyday/vim-snazzy'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
+"
+Plug 'guns/xterm-color-table.vim'
 
 call plug#end()
