@@ -1,10 +1,10 @@
 let s:vims_tbl = [
+    \ g:vims_prefix . "vimcfg/plugin_cfg/misc.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/lightline.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/lightline-bufferline.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/asyncrun.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/fzf_cfg.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/leaderf.vim",
-    \ g:vims_prefix . "vimcfg/plugin_cfg/misc.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/nerdcommenter.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/nerdtree.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/quickfix.vim",
