@@ -364,14 +364,19 @@ let g:which_key_map.e = {
       \ 'e'    : [':CocCommand', 'coc-command-open'],
       \ }
 
+nmap <silent> <leader>mm :BookmarkToggle<cr>:e<cr>
+nmap <silent> <leader>ma :BookmarkShowAll<cr>
+nmap <silent> <leader>mc :BookmarkClearAll<cr>:e<cr>
+
 " markdown config
 let g:which_key_map.m = {
-      \ 'name' : '+markdown',
-      \ 'P' : [':InstantMarkdownPreview', 'vim-instant-markdown-preview'],
-      \ 'S' : [':InstantMarkdownStop', 'vim-instant-markdown-stop'],
+      \ 'name' : '+markdown-and-bookmark',
       \ 'p' : ['<Plug>MarkdownPreview', 'markdown-preview'],
       \ 's' : ['<Plug>MarkdownPreviewStop', 'markdown-stop'],
       \ 't' : ['<Plug>MarkdownPreviewToggle', 'markdown-toggle'],
+      \ 'm' : 'bookmark-toggle',
+      \ 'a' : 'show-all-bookmark',
+      \ 'c' : 'clear-all-bookmark',
       \ }
 
 

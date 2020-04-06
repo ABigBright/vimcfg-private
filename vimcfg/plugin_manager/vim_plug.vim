@@ -99,7 +99,7 @@ Plug 'trusktr/seti.vim'
 Plug 'andymass/vim-matchup'
 " Plug 'ryanoasis/nerd-fonts', {'do': './install FiraCode'}
 Plug 'plasticboy/vim-markdown'
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 " If you don't have nodejs and yarn
 " use pre build
@@ -111,5 +111,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 "
 Plug 'guns/xterm-color-table.vim'
+Plug 'MattesGroeger/vim-bookmarks'
 
 call plug#end()
