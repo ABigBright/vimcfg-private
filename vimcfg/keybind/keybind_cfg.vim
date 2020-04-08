@@ -232,6 +232,9 @@ nmap <Leader>se <Plug>(AerojumpFromCursorBolt)
 nmap <Leader>sh <Plug>LeaderfRgPrompt
 nmap <Leader>sj <Plug>LeaderfRgCwordLiteralNoBoundary<cr>
 nmap <Leader>sk <Plug>LeaderfRgCwordRegexNoBoundary<cr>
+" Formatting selected code.
+xmap <leader>sF  <Plug>(coc-format-selected)
+nmap <leader>sF  <Plug>(coc-format-selected)
 
 let g:which_key_map.s = {
       \ 'name' : '+Search-And-Style',
@@ -250,6 +253,7 @@ let g:which_key_map.s = {
       \ 'j'    : 'leaderf-search-word-under-cursor',
       \ 'k'    : 'leaderf-regex-search-word-under-cursor',
       \ 'l'    : [':LeaderfRgInteractive', 'leaderf-rg-search-interactive'],
+      \ 'F'    : 'format-select-region',
       \ }
       " \ 'g'    : [':Grepper', 'async-grepper-search'],
 
@@ -424,7 +428,37 @@ inoremap <silent><expr> <TAB>
     \ pumvisible() ? "\<C-n>" :
     \ <SID>check_back_space() ? "\<TAB>" :
     \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+" rename config
+let g:which_key_map.r = {
+      \ 'name' : '+rename',
+      \ 'n' : 'symbol-rename',
+      \ }
 
 " which-key keybinding config
 nnoremap <silent><leader> :<c-u>WhichKey '<Space>'<CR>
