@@ -1,0 +1,52 @@
+From ee2c01e4ed377d9cd20704cdf3a4c0ba2c295d2c Mon Sep 17 00:00:00 2001
+From: briq <990647625@qq.com>
+Date: Wed, 1 Apr 2020 15:22:39 +0800
+Subject: [PATCH] fix : fix step2 for whichkey floating win color
+
+---
+ vimcfg/plugin_cfg/misc.vim            | 1 -
+ vimcfg/plugin_cfg/plugin_cfg_init.vim | 2 +-
+ vimcfg/plugin_cfg/vim-which-key.vim   | 2 ++
+ 3 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/vimcfg/plugin_cfg/misc.vim b/vimcfg/plugin_cfg/misc.vim
+index 6c867d7..4a38452 100755
+--- a/vimcfg/plugin_cfg/misc.vim
++++ b/vimcfg/plugin_cfg/misc.vim
+@@ -25,7 +25,6 @@ let s:onehalf_prefix = g:vims_prefix . 'plugged/onehalf/vim/colors'
+ "     colo snazzy
+ if !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
+     colo onehalfdark
+-    hi Pmenu ctermbg=235
+ elseif !empty(findfile("molokai.vim", s:molokai_prefix))
+     colo molokai
+ elseif !empty(findfile("solarized.vim", s:solarized_prefix))
+diff --git a/vimcfg/plugin_cfg/plugin_cfg_init.vim b/vimcfg/plugin_cfg/plugin_cfg_init.vim
+index 3d6de1b..6f3344f 100644
+--- a/vimcfg/plugin_cfg/plugin_cfg_init.vim
++++ b/vimcfg/plugin_cfg/plugin_cfg_init.vim
+@@ -1,10 +1,10 @@
+ let s:vims_tbl = [
++    \ g:vims_prefix . "vimcfg/plugin_cfg/misc.vim",
+     \ g:vims_prefix . "vimcfg/plugin_cfg/lightline.vim",
+     \ g:vims_prefix . "vimcfg/plugin_cfg/lightline-bufferline.vim",
+     \ g:vims_prefix . "vimcfg/plugin_cfg/asyncrun.vim",
+     \ g:vims_prefix . "vimcfg/plugin_cfg/fzf_cfg.vim",
+     \ g:vims_prefix . "vimcfg/plugin_cfg/leaderf.vim",
+-    \ g:vims_prefix . "vimcfg/plugin_cfg/misc.vim",
+     \ g:vims_prefix . "vimcfg/plugin_cfg/nerdcommenter.vim",
+     \ g:vims_prefix . "vimcfg/plugin_cfg/nerdtree.vim",
+     \ g:vims_prefix . "vimcfg/plugin_cfg/quickfix.vim",
+diff --git a/vimcfg/plugin_cfg/vim-which-key.vim b/vimcfg/plugin_cfg/vim-which-key.vim
+index eb8f361..e84dd8b 100755
+--- a/vimcfg/plugin_cfg/vim-which-key.vim
++++ b/vimcfg/plugin_cfg/vim-which-key.vim
+@@ -2,3 +2,5 @@ set timeoutlen=200
+ " let g:which_key_hspace = 1
+ " some old version do not supprt floating win or pop win
+ " let g:which_key_use_floating_win = 1
++"
++hi WhichKeyFloating ctermbg=235 ctermfg=250
+-- 
+2.20.1
+
