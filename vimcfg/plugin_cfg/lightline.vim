@@ -27,7 +27,7 @@ let g:lightline = {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'getwinid'],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ],
-    \             [ 'gtags_status' ] ],
+    \             [ 'gtags_status', 'func_near' ] ],
     \   'right': [ [ 'lineinfo' ],
     \              [ 'percent' ],
     \              [ 'fileformat', 'fileencoding', 'filetype' ] ],
@@ -41,7 +41,8 @@ let g:lightline = {
     \ 'component_function' : {
     \   'gitbranch'        : 'fugitive#head',
     \   'getwinid'         : 'winnr',
-    \   'gtags_status'     : 'gutentags#statusline'
+    \   'gtags_status'     : 'gutentags#statusline',
+    \   'func_near'        : 'NearestMethodOrFunction'
     \ },
 \ }
     

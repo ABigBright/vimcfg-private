@@ -113,4 +113,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'guns/xterm-color-table.vim'
 Plug 'MattesGroeger/vim-bookmarks'
 
+Plug 'liuchengxu/vista.vim'
+
 call plug#end()
