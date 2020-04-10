@@ -26,8 +26,8 @@ let g:lightline = {
     \ 'active' : {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'getwinid'],
-    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ],
-    \             [ 'gtags_status', 'func_near' ] ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'func_near'],
+    \             [ 'gtags_status' ] ],
     \   'right': [ [ 'lineinfo' ],
     \              [ 'percent' ],
     \              [ 'fileformat', 'fileencoding', 'filetype' ] ],
