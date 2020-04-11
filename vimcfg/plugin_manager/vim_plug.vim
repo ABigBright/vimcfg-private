@@ -88,7 +88,7 @@ Plug 'brooth/far.vim'
 Plug 'wsdjeg/FlyGrep.vim'
 " Plug 'neomake/neomake'
 " Plug 'mhinz/vim-grepper'
-Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ABigBright/aerojump.nvim', { 'branch': 'for_briq_vimcfg', 'do': ':UpdateRemotePlugins' }
 " Plug 'mhinz/vim-startify'
 
 " Plug 't9md/vim-choosewin'
