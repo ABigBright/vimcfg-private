@@ -247,7 +247,6 @@ let g:which_key_map.s = {
       \ 's'    : 'search-and-jump-space',
       \ 'b'    : 'search-and-jump-bolt',
       \ 'e'    : 'search-and-jump-from-cursor-bold',
-      \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
       \ 'c'    : [':CocList words', 'coc-search-in-current-buffer'],
       \ 'h'    : 'toggole-leaderf-search',
       \ 'j'    : 'leaderf-search-word-under-cursor',
@@ -256,6 +255,7 @@ let g:which_key_map.s = {
       \ 'F'    : 'format-select-region',
       \ }
       " \ 'g'    : [':Grepper', 'async-grepper-search'],
+      " \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
 
 " buffer keybinding config
 let g:Lf_ShortcutB = '<leader>bt'

@@ -85,7 +85,7 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'arakashic/chromatica.nvim'
 Plug 'brooth/far.vim'
-Plug 'wsdjeg/FlyGrep.vim'
+" Plug 'wsdjeg/FlyGrep.vim'
 " Plug 'neomake/neomake'
 " Plug 'mhinz/vim-grepper'
 Plug 'ABigBright/aerojump.nvim', { 'branch': 'for_briq_vimcfg', 'do': ':UpdateRemotePlugins' }
