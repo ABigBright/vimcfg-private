@@ -19,11 +19,14 @@ set background=dark
 let s:molokai_prefix = g:vims_prefix . 'plugged/molokai/colors'
 let s:solarized_prefix = g:vims_prefix . 'plugged/vim-colors-solarized/colors'
 let s:onehalf_prefix = g:vims_prefix . 'plugged/onehalf/vim/colors'
-" let s:snazzy_prefix = g:vims_prefix . 'plugged/vim-snazzy/colors'
+let s:snazzy_prefix = g:vims_prefix . 'plugged/vim-snazzy/colors'
 
-" if !empty(findfile("snazzy.vim", s:snazzy_prefix))
-"     colo snazzy
-if !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
+if !empty(findfile("snazzy.vim", s:snazzy_prefix))
+    " semi-transparent
+    let g:SnazzyTransparent = 1
+    colo snazzy
+    hi Pmenu ctermbg=235 ctermfg=244
+elseif !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
     colo onehalfdark
     hi Pmenu ctermbg=235 ctermfg=244
 elseif !empty(findfile("molokai.vim", s:molokai_prefix))
