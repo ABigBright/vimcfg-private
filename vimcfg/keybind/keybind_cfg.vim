@@ -184,7 +184,8 @@ let g:which_key_map.q = {
 " tag config
 let g:which_key_map.t = {
       \ 'name' : '+Tag',
-      \ 'l'    : [':TagbarToggle', 'open-tagbar-list'],
+      \ 'l'    : [':Vista', 'tag-list'],
+      \ 'L'    : [':Vista coc', 'coc-tag-list'],
       \ }
 
 " fzf and leaderf keybinding config
