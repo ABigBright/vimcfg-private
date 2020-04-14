@@ -24,8 +24,7 @@ endfunction
 
 let g:lightline = {
     \ 'active' : {
-    \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'getwinid'],
+    \   'left': [ [ 'getwinid', 'mode', 'paste' ],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'func_near'],
     \             [ 'gtags_status' ] ],
     \   'right': [ [ 'lineinfo' ],
