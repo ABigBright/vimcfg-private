@@ -50,7 +50,7 @@ let g:which_key_map.d = {
 " nmap <silent><leader>jA    :cs find a <C-R>=expand("<cword>")<CR><CR>
 
 " echo getqflist({'size' : 1}) , get quickfix error iterm number
-function! s:Quickfix_jump()
+function! s:Quickfix_jump(arg) abort
     let s:quickfix_item_num = getqflist({'size' : 1})['size']
     if s:quickfix_item_num == 2
         normal j
@@ -61,7 +61,7 @@ function! s:Quickfix_jump()
     endif
 endfunction
 
-
+com! -n=? QuickfixJump call s:Quickfix_jump(<q-args>)
 
 " gutentag_plus key-binding config
 " noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
@@ -112,14 +112,14 @@ if "lsp" == g:jump_engine
          
 elseif "gtags" == g:jump_engine
     " gutentag_plus key-binding config
-    noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
-    noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
-    noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
-    noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
-    noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
-    noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>:call <SID>Quickfix_jump()<cr>
-    noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>:call <SID>Quickfix_jump()<cr>
-    noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:call <SID>Quickfix_jump()<cr>
+    noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:QuickfixJump<cr>
+    noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:QuickfixJump<cr>
+    noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>:QuickfixJump<cr>
+    noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>:QuickfixJump<cr>
+    noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>:QuickfixJump<cr>
+    noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
+    noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
+    noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:QuickfixJump<cr>
     " not common for use
     " noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
     let g:which_key_map.j = {
@@ -181,11 +181,29 @@ let g:which_key_map.q = {
       \ 'c'    : [':ccl', 'close-quickfix-win'],
       \ }
 
+let s:Vista_toggle_cnt = 0
+function! s:Vista_toggle(sel) abort
+    if s:Vista_toggle_cnt == 0
+        exec 'Vista ' . a:sel
+        let s:Vista_toggle_cnt = 1
+    else
+        Vista!
+        let s:Vista_toggle_cnt = 0
+    endif
+endfunction
+
+com! -n=? VistaToggle call s:Vista_toggle(<q-args>)
+
+nmap <silent><leader>tl :let g:vista_stay_on_open=1<cr>:VistaToggle<cr>
+nmap <silent><leader>tp :let g:vista_stay_on_open=0<cr>:VistaToggle<cr>
+nmap <silent><leader>tc :VistaToggle coc<cr>
+
 " tag config
 let g:which_key_map.t = {
       \ 'name' : '+Tag',
-      \ 'l'    : [':Vista', 'tag-list'],
-      \ 'L'    : [':Vista coc', 'coc-tag-list'],
+      \ 'l'    : 'tag-list-toggle',
+      \ 'p'    : 'preview-tag-list-toggle',
+      \ 'c'    : 'coc-tag-list-toggle',
       \ }
 
 " fzf and leaderf keybinding config

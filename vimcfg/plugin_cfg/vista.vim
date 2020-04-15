@@ -48,3 +48,6 @@ let g:vista#renderer#icons = {
 \   "function": "\uf794",
 \   "variable": "\uf71b",
 \  }
+
+let g:vista_update_on_text_changed = 1
+let g:vista_close_on_jump = 1
