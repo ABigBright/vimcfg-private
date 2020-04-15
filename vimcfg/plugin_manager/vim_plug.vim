@@ -78,8 +78,8 @@ Plug 'skywind3000/gutentags_plus'
 Plug 'skywind3000/vim-preview'
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
+" Plug 'itchyny/lightline.vim'
+" Plug 'mengelbrecht/lightline-bufferline'
 Plug 'altercation/vim-colors-solarized'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -114,5 +114,7 @@ Plug 'guns/xterm-color-table.vim'
 Plug 'MattesGroeger/vim-bookmarks'
 
 Plug 'liuchengxu/vista.vim'
+
+Plug 'liuchengxu/eleline.vim' 
 
 call plug#end()

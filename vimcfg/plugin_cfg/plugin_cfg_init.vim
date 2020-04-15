@@ -1,7 +1,5 @@
 let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/misc.vim",
-    \ g:vims_prefix . "vimcfg/plugin_cfg/lightline.vim",
-    \ g:vims_prefix . "vimcfg/plugin_cfg/lightline-bufferline.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/asyncrun.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/fzf_cfg.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/leaderf.vim",
@@ -20,9 +18,12 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/markdown_preview.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/gutentags_plus.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-bookmark.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/eleline.vim",
     \]
     
     " not use 
+    " \ g:vims_prefix . "vimcfg/plugin_cfg/lightline.vim",
+    " \ g:vims_prefix . "vimcfg/plugin_cfg/lightline-bufferline.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/flygrep.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/nerdtree-git-plugin.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/vim-snazzy.vim",
