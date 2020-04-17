@@ -107,7 +107,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 " If you have nodejs and yarn
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
-Plug 'connorholyday/vim-snazzy'
+" Plug 'connorholyday/vim-snazzy'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 "
 Plug 'guns/xterm-color-table.vim'
