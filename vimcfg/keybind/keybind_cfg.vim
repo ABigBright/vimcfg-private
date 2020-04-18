@@ -194,9 +194,9 @@ endfunction
 
 com! -n=? VistaToggle call s:Vista_toggle(<q-args>)
 
-nmap <silent><leader>tl :let g:vista_stay_on_open=1<cr>:VistaToggle<cr>
-nmap <silent><leader>tp :let g:vista_stay_on_open=0<cr>:VistaToggle<cr>
-nmap <silent><leader>tc :VistaToggle coc<cr>
+nmap <silent><leader>tl :let g:vista_stay_on_open=1<cr>:call vista#sidebar#Toggle()<cr>
+nmap <silent><leader>tp :let g:vista_stay_on_open=0<cr>:call vista#sidebar#Toggle()<cr>
+nmap <silent><leader>tc :Vista coc<cr>
 
 " tag config
 let g:which_key_map.t = {

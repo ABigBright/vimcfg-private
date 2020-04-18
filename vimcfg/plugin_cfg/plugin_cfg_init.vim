@@ -19,6 +19,7 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/gutentags_plus.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-bookmark.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/eleline.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/vista.vim",
     \]
     
     " not use 
