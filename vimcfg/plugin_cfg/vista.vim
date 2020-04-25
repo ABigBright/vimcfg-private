@@ -41,7 +41,7 @@ let g:vista_default_executive = 'ctags'
 " For example:
 let g:vista_fzf_preview = ['right:50%']
 " Ensure you have installed some decent font to show these pretty symbols, then you can enable icon for the kind.
-let g:vista#renderer#enable_icon = 1
+" let g:vista#renderer#enable_icon = 1
 
 " The default icons can't be suitable for all the filetypes, you can extend it as you wish.
 let g:vista#renderer#icons = {
@@ -51,3 +51,4 @@ let g:vista#renderer#icons = {
 
 let g:vista_update_on_text_changed = 1
 let g:vista_close_on_jump = 1
+let g:vista_disable_statusline = 1
