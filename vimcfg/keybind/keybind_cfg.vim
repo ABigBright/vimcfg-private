@@ -195,14 +195,12 @@ endfunction
 com! -n=? VistaToggle call s:Vista_toggle(<q-args>)
 
 nmap <silent><leader>tl :let g:vista_stay_on_open=1<cr>:call vista#sidebar#Toggle()<cr>
-nmap <silent><leader>tp :let g:vista_stay_on_open=0<cr>:call vista#sidebar#Toggle()<cr>
 nmap <silent><leader>tc :Vista coc<cr>
 
 " tag config
 let g:which_key_map.t = {
       \ 'name' : '+Tag',
       \ 'l'    : 'tag-list-toggle',
-      \ 'p'    : 'preview-tag-list-toggle',
       \ 'c'    : 'coc-tag-list-toggle',
       \ }
 
@@ -351,6 +349,7 @@ noremap <leader>wu :set nosplitbelow<cr>:split<cr>
 noremap <leader>wo <C-W>o 
 noremap <leader>wh <C-W>t<C-W>K 
 noremap <leader>wv <C-W>t<C-W>H 
+noremap <leader>wp <c-w>p 
 " window keybind config
 let g:which_key_map.w = {
     \ 'name' : '+Window',
@@ -361,6 +360,7 @@ let g:which_key_map.w = {
     \ 'o'    : 'close-other-win',
     \ 'h'    : 'change-split-horizontal',
     \ 'v'    : 'change-split-vertical',
+    \ 'p'    : 'previous-window',
     \}
 
 " window manipulate keybinding config
