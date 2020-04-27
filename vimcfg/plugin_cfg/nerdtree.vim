@@ -20,3 +20,6 @@ endfunction
 function! NERDTree_IsValid()
 	return 1
 endfunction
+
+" use globle statusline , not nerdtree self
+let g:NERDTreeStatusline = -1
