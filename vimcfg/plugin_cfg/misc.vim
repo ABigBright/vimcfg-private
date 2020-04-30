@@ -30,7 +30,7 @@ if !empty(findfile("snazzy.vim", s:snazzy_prefix))
 elseif !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
     colo onehalfdark
     hi Pmenu ctermbg=235 ctermfg=244
-    hi CursorLine ctermbg=58
+    " hi CursorLine ctermbg=58
 elseif !empty(findfile("molokai.vim", s:molokai_prefix))
     colo molokai
 elseif !empty(findfile("solarized.vim", s:solarized_prefix))
