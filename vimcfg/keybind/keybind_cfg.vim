@@ -270,6 +270,7 @@ let g:which_key_map.s = {
       \ 'k'    : 'leaderf-regex-search-word-under-cursor',
       \ 'l'    : [':LeaderfRgInteractive', 'leaderf-rg-search-interactive'],
       \ 'F'    : 'format-select-region',
+      \ 'p'    : [':Leaderf rg --recall', 'leaderf-rg-recall-last-search'],
       \ }
       " \ 'g'    : [':Grepper', 'async-grepper-search'],
       " \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
