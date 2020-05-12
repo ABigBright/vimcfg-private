@@ -21,6 +21,18 @@ let s:solarized_prefix = g:vims_prefix . 'plugged/vim-colors-solarized/colors'
 let s:onehalf_prefix = g:vims_prefix . 'plugged/onehalf/vim/colors'
 let s:snazzy_prefix = g:vims_prefix . 'plugged/vim-snazzy/colors'
 
+function! g:Transparent_enable(en)
+    if a:en == 1
+        highlight  Normal              guibg=NONE   ctermbg=NONE
+        highlight  SignColumn          guibg=NONE   ctermbg=NONE
+        highlight  DiffAdd             guibg=NONE   ctermbg=NONE
+        highlight  DiffDelete          guibg=NONE   ctermbg=NONE
+        highlight  DiffChange          guibg=NONE   ctermbg=NONE
+        highlight  SignifyLineDelete   guibg=NONE   ctermbg=NONE
+        highlight  SignifyLineChange   guibg=NONE   ctermbg=NONE
+    endif
+endfunction
+
 if !empty(findfile("snazzy.vim", s:snazzy_prefix))
     " semi-transparent
     let g:SnazzyTransparent = 1
@@ -31,6 +43,7 @@ elseif !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
     colo onehalfdark
     hi Pmenu ctermbg=235 ctermfg=244
     " hi CursorLine ctermbg=58
+    call Transparent_enable(1)
 elseif !empty(findfile("molokai.vim", s:molokai_prefix))
     colo molokai
 elseif !empty(findfile("solarized.vim", s:solarized_prefix))
