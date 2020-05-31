@@ -97,7 +97,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'trusktr/seti.vim'
 Plug 'andymass/vim-matchup'
-" Plug 'ryanoasis/nerd-fonts', {'do': './install FiraCode'}
+Plug 'ryanoasis/nerd-fonts', {'do': './install FiraCode'}
 Plug 'plasticboy/vim-markdown'
 " Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
@@ -108,7 +108,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Plug 'connorholyday/vim-snazzy'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 "
 Plug 'guns/xterm-color-table.vim'
 Plug 'MattesGroeger/vim-bookmarks'
