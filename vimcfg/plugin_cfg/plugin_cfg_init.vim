@@ -20,17 +20,17 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-bookmark.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/eleline.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vista.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/nerdtree-git-plugin.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/devicons.vim",
     \]
     
     " not use 
     " \ g:vims_prefix . "vimcfg/plugin_cfg/lightline.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/lightline-bufferline.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/flygrep.vim",
-    " \ g:vims_prefix . "vimcfg/plugin_cfg/nerdtree-git-plugin.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/vim-snazzy.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/choose-wind.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/startify.vim",
-    " \ g:vims_prefix . "vimcfg/plugin_cfg/devicons.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/airline.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/eleline.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/minibufexplorerpp.vim",
