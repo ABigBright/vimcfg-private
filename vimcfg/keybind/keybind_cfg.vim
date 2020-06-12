@@ -221,8 +221,8 @@ let g:which_key_map.f = {
       \ 'L'    : 'async-locate-find-file',
       \ 'b'    : [':CocList files', 'Coc-find-file'],
       \ 'd'    : [':CocList mru', 'Coc-find-recent-file'],
+      \ 's'    : [':Startify', 'open-startify'],
       \ }
-      " \ 's'    : [':Startify', 'open-startify'],
 
 " buffer keybinding config
 let g:which_key_map.g = {
