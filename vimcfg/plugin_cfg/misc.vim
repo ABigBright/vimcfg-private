@@ -13,6 +13,7 @@ set wildmenu
 set scrolloff=5
 syntax on
 set background=dark
+set conceallevel=3
 " set list
 
 " color define 

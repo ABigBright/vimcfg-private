@@ -35,7 +35,7 @@ call plug#begin('~/.vim/plugged')
 
 " Initialize plugin system
 " Plug 'vim-scripts/minibufexplorerpp'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'tomasr/molokai'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/gtags.vim'
@@ -44,7 +44,7 @@ Plug 'junegunn/limelight.vim'
 " Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 " Plug 'Valloric/YouCompleteMe'
-Plug 'vim-scripts/winmanager'
+" Plug 'vim-scripts/winmanager'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -81,7 +81,7 @@ Plug 'junegunn/goyo.vim'
 " Plug 'itchyny/lightline.vim'
 " Plug 'mengelbrecht/lightline-bufferline'
 Plug 'altercation/vim-colors-solarized'
-Plug 'kien/rainbow_parentheses.vim'
+" Plug 'kien/rainbow_parentheses.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'arakashic/chromatica.nvim'
 Plug 'brooth/far.vim'
@@ -89,7 +89,7 @@ Plug 'brooth/far.vim'
 " Plug 'neomake/neomake'
 " Plug 'mhinz/vim-grepper'
 Plug 'ABigBright/aerojump.nvim', { 'branch': 'for_briq_vimcfg', 'do': ':UpdateRemotePlugins' }
-" Plug 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 
 " Plug 't9md/vim-choosewin'
 Plug 'octol/vim-cpp-enhanced-highlight'

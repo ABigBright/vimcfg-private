@@ -10,7 +10,6 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-grepper.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-which-key.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-preview.vim",
-    \ g:vims_prefix . "vimcfg/plugin_cfg/rainbow_parentheses.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/coc.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-cpp-enhanced-highlight.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-matchup.vim",
@@ -22,15 +21,16 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/vista.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/nerdtree-git-plugin.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/devicons.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/startify.vim",
     \]
     
     " not use 
+    " \ g:vims_prefix . "vimcfg/plugin_cfg/rainbow_parentheses.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/lightline.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/lightline-bufferline.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/flygrep.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/vim-snazzy.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/choose-wind.vim",
-    " \ g:vims_prefix . "vimcfg/plugin_cfg/startify.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/airline.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/eleline.vim",
     " \ g:vims_prefix . "vimcfg/plugin_cfg/minibufexplorerpp.vim",
