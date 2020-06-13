@@ -224,6 +224,11 @@ let g:which_key_map.f = {
       \ 's'    : [':Startify', 'open-startify'],
       \ }
 
+
+
+nmap <silent><leader>gr :Grabse 
+nmap <silent><leader>gR :Grevert 
+nmap <silent><leader>gP :Gpush 
 " buffer keybinding config
 let g:which_key_map.g = {
       \ 'name' : '+Git',
@@ -231,6 +236,12 @@ let g:which_key_map.g = {
       \ 's'    : [':Gstatus', 'git-status'],
       \ 'c'    : [':GV', 'git-all-commits'],
       \ 'C'    : [':GV!', 'git-curr-commits'],
+      \ 'd'    : [':Gvdiff', 'git-diff'],
+      \ 'p'    : [':Gpull --rebase', 'git-pull-rebase'],
+      \ 'r'    : 'git-rebase',
+      \ 'R'    : 'git-revert',
+      \ 'P'    : 'git-push',
+      \ 'l'    : [':Gllog', 'git-log'],
       \ }
 
 " search keybinding config
