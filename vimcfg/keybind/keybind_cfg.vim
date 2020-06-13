@@ -106,8 +106,8 @@ if "lsp" == g:jump_engine
           \ 'i'    : 'jump-implementation',
           \ 't'    : 'jump-type-definition',
           \ 'r'    : 'jump-reference',
-          \ 'b'    : [':LeaderBufTag', 'current-buffer-tag'],
-          \ 'B'    : [':LeaderBufTagAll', 'all-buffers-tag'],
+          \ 'b'    : [':LeaderfBufTag', 'current-buffer-tag'],
+          \ 'B'    : [':LeaderfBufTagAll', 'all-buffers-tag'],
           \ }
          
 elseif "gtags" == g:jump_engine
