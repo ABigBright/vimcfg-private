@@ -90,75 +90,121 @@ com! -n=? QuickfixJump call s:Quickfix_jump(<q-args>)
 " noremap <silent><leader>jB :<C-U><C-R>=printf("Leaderf gtags --all-buffers --result ctags-mod %s", "")<CR><CR>
 " noremap <silent><leader>ja :<C-U><C-R>=printf("Leaderf gtags --all --result ctags-mod %s", "")<CR><CR>
 
-let g:jump_engine = "lsp"
-
-if "lsp" == g:jump_engine
-    nmap <silent><leader>jd :call CocActionAsync("jumpDefinition", "vsplit")<cr>
-    nmap <silent><leader>jD :call CocActionAsync("jumpDeclaration", "vsplit")<cr>
-    nmap <silent><leader>ji :call CocActionAsync("jumpImplementation", "vsplit")<cr>
-    nmap <silent><leader>jt :call CocActionAsync("jumpTypeDefinition", "vsplit")<cr>
-    nmap <silent><leader>jr :call CocActionAsync("jumpReferences", "drop")<cr>
-
-    let g:which_key_map.j = {
-          \ 'name' : '+Jump',
-          \ 'd'    : 'jump-definition',
-          \ 'D'    : 'jump-declaration',
-          \ 'i'    : 'jump-implementation',
-          \ 't'    : 'jump-type-definition',
-          \ 'r'    : 'jump-reference',
-          \ 'b'    : [':LeaderfBufTag', 'current-buffer-tag'],
-          \ 'B'    : [':LeaderfBufTagAll', 'all-buffers-tag'],
-          \ }
-         
-elseif "gtags" == g:jump_engine
-    " gutentag_plus key-binding config
-    noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:QuickfixJump<cr>
-    noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:QuickfixJump<cr>
-    noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>:QuickfixJump<cr>
-    noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>:QuickfixJump<cr>
-    noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>:QuickfixJump<cr>
-    noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
-    noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
-    noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:QuickfixJump<cr>
-    " not common for use
-    " noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
-    let g:which_key_map.j = {
-          \ 'name' : '+Jump',
-          \ 'd'    : 'jump-definition',
-          \ 'r'    : 'jump-reference',
-          \ 'e'    : 'jump-egrep',
-          \ 't'    : 'jump-text',
-          \ 'i'    : 'jump-include-this-file',
-          \ 'f'    : 'jump-this-file',
-          \ 's'    : 'jump-symbol',
-          \ 'a'    : 'jump-symbol-assigned',
-          \ }
-endif
-      " \ 's'    : 'gtags-jump-symbol',
-      " \ 'j'    : 'gtags-jump-definition-or-reference',
-      " \ 'd'    : 'gtags-jump-definition',
-      " \ 'r'    : 'gtags-jump-reference',
-      " \ 'e'    : 'gtags-jump-regexp-find',
-      " \ 'g'    : 'gtags-jump-grep',
-      " \ 'c'    : 'gtags-jump-current-file-symbol',
-      " \ 'S'    : 'cscope-jump-symble',
-      " \ 'G'    : 'cscope-jump-definition',
-      " \ 'C'    : 'cscope-jump-reference',
-      " \ 'T'    : 'cscope-jump-text',
-      " \ 'E'    : 'cscope-jump-egrep',
-      " \ 'F'    : 'cscope-jump-file',
-      " \ 'I'    : 'cscope-jump-including',
-      " \ 'D'    : 'cscope-jump-call-func',
-      " \ 'A'    : 'cscope-jump-symbol-assigned',
-      " \ 'd'    : 'gutentags-jump-definition',
-      " \ 'r'    : 'gutentags-jump-reference',
-      " \ 'e'    : 'gutentags-egrep-find',
-      " \ 't'    : 'gutentags-text-find',
-      " \ 'i'    : 'gutentags-find-file-include-this-file',
-      " \ 'f'    : 'gutentags-find-this-file',
-      " \ 's'    : 'gutentags-jump-symbol',
-      " \ 'I'    : 'gutentags-jump-function-called-by-this-func',
-      " \ 'A'    : 'gutentags-jump-this-symbol-is-assigned-value',
+" let g:jump_engine = "lsp"
+"
+" if "lsp" == g:jump_engine
+"     nmap <silent><leader>jd :call CocActionAsync("jumpDefinition", "vsplit")<cr>
+"     nmap <silent><leader>jD :call CocActionAsync("jumpDeclaration", "vsplit")<cr>
+"     nmap <silent><leader>ji :call CocActionAsync("jumpImplementation", "vsplit")<cr>
+"     nmap <silent><leader>jt :call CocActionAsync("jumpTypeDefinition", "vsplit")<cr>
+"     nmap <silent><leader>jr :call CocActionAsync("jumpReferences", "drop")<cr>
+"
+"     let g:which_key_map.j = {
+"           \ 'name' : '+Jump',
+"           \ 'd'    : 'jump-definition',
+"           \ 'D'    : 'jump-declaration',
+"           \ 'i'    : 'jump-implementation',
+"           \ 't'    : 'jump-type-definition',
+"           \ 'r'    : 'jump-reference',
+"           \ 'b'    : [':LeaderfBufTag', 'current-buffer-tag'],
+"           \ 'B'    : [':LeaderfBufTagAll', 'all-buffers-tag'],
+"           \ }
+"
+" elseif "gtags" == g:jump_engine
+"     " gutentag_plus key-binding config
+"     noremap <silent><leader>jc :call CocActionAsync("jumpDefinition", "vsplit")<cr>
+"     noremap <silent><leader>jD :call CocActionAsync("jumpDeclaration", "vsplit")<cr>
+"     noremap <silent><leader>jI :call CocActionAsync("jumpImplementation", "vsplit")<cr>
+"     noremap <silent><leader>jg :call CocActionAsync("jumpTypeDefinition", "vsplit")<cr>
+"     noremap <silent><leader>jh :call CocActionAsync("jumpReferences", "drop")<cr>
+"     noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:QuickfixJump<cr>
+"     noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:QuickfixJump<cr>
+"     noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>:QuickfixJump<cr>
+"     noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>:QuickfixJump<cr>
+"     noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>:QuickfixJump<cr>
+"     noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
+"     noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
+"     noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:QuickfixJump<cr>
+"     " not common for use
+"     " noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
+"     let g:which_key_map.j = {
+"           \ 'name' : '+Jump',
+"           \ 'd'    : 'jump-definition',
+"           \ 'r'    : 'jump-reference',
+"           \ 'e'    : 'jump-egrep',
+"           \ 't'    : 'jump-text',
+"           \ 'i'    : 'jump-include-this-file',
+"           \ 'f'    : 'jump-this-file',
+"           \ 's'    : 'jump-symbol',
+"           \ 'a'    : 'jump-symbol-assigned',
+"           \ 'b'    : [':LeaderfBufTag', 'current-buffer-tag'],
+"           \ 'B'    : [':LeaderfBufTagAll', 'all-buffers-tag'],
+"           \ 'c'    : 'jump-lsp-definition',
+"           \ 'D'    : 'jump-lsp-declaration',
+"           \ 'I'    : 'jump-lsp-implementation',
+"           \ 'g'    : 'jump-lsp-type-definition',
+"           \ 'h'    : 'jump-lsp-reference',
+"           \ }
+" endif
+    
+noremap <silent><leader>jc :call CocActionAsync("jumpDefinition", "split")<cr>
+noremap <silent><leader>jD :call CocActionAsync("jumpDeclaration", "split")<cr>
+noremap <silent><leader>jI :call CocActionAsync("jumpImplementation", "split")<cr>
+noremap <silent><leader>jg :call CocActionAsync("jumpTypeDefinition", "split")<cr>
+noremap <silent><leader>jh :call CocActionAsync("jumpReferences", "preview")<cr>
+noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:QuickfixJump<cr>
+noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:QuickfixJump<cr>
+noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>:QuickfixJump<cr>
+noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>:QuickfixJump<cr>
+noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>:QuickfixJump<cr>
+noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
+noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
+noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:QuickfixJump<cr>
+" not common for use
+" noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
+let g:which_key_map.j = {
+      \ 'name' : '+Jump',
+      \ 'd'    : 'jump-definition',
+      \ 'r'    : 'jump-reference',
+      \ 'e'    : 'jump-egrep',
+      \ 't'    : 'jump-text',
+      \ 'i'    : 'jump-include-this-file',
+      \ 'f'    : 'jump-this-file',
+      \ 's'    : 'jump-symbol',
+      \ 'a'    : 'jump-symbol-assigned',
+      \ 'b'    : [':LeaderfBufTag', 'current-buffer-tag'],
+      \ 'B'    : [':LeaderfBufTagAll', 'all-buffers-tag'],
+      \ 'c'    : 'jump-lsp-definition',
+      \ 'D'    : 'jump-lsp-declaration',
+      \ 'I'    : 'jump-lsp-implementation',
+      \ 'g'    : 'jump-lsp-type-definition',
+      \ 'h'    : 'jump-lsp-reference',
+      \ }
+  " \ 's'    : 'gtags-jump-symbol',
+  " \ 'j'    : 'gtags-jump-definition-or-reference',
+  " \ 'd'    : 'gtags-jump-definition',
+  " \ 'r'    : 'gtags-jump-reference',
+  " \ 'e'    : 'gtags-jump-regexp-find',
+  " \ 'g'    : 'gtags-jump-grep',
+  " \ 'c'    : 'gtags-jump-current-file-symbol',
+  " \ 'S'    : 'cscope-jump-symble',
+  " \ 'G'    : 'cscope-jump-definition',
+  " \ 'C'    : 'cscope-jump-reference',
+  " \ 'T'    : 'cscope-jump-text',
+  " \ 'E'    : 'cscope-jump-egrep',
+  " \ 'F'    : 'cscope-jump-file',
+  " \ 'I'    : 'cscope-jump-including',
+  " \ 'D'    : 'cscope-jump-call-func',
+  " \ 'A'    : 'cscope-jump-symbol-assigned',
+  " \ 'd'    : 'gutentags-jump-definition',
+  " \ 'r'    : 'gutentags-jump-reference',
+  " \ 'e'    : 'gutentags-egrep-find',
+  " \ 't'    : 'gutentags-text-find',
+  " \ 'i'    : 'gutentags-find-file-include-this-file',
+  " \ 'f'    : 'gutentags-find-this-file',
+  " \ 's'    : 'gutentags-jump-symbol',
+  " \ 'I'    : 'gutentags-jump-function-called-by-this-func',
+  " \ 'A'    : 'gutentags-jump-this-symbol-is-assigned-value',
 
 " private init config file 
 let g:which_key_map.h = {
@@ -490,6 +536,20 @@ let g:which_key_map.r = {
       \ 'name' : '+rename',
       \ 'n' : 'symbol-rename',
       \ }
+
+" Map <tab> for trigger completion, completion confirm, snippet expand and jump like VSCode. >
+" inoremap <silent><expr> <TAB>
+"   \ pumvisible() ? coc#_select_confirm() :
+"   \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+"   \ <SID>check_back_space() ? "\<TAB>" :
+"   \ coc#refresh()
+"
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+"
+" let g:coc_snippet_next = '<tab>'
 
 " which-key keybinding config
 nnoremap <silent><leader> :<c-u>WhichKey '<Space>'<CR>
