@@ -173,6 +173,7 @@ let g:which_key_map.j = {
       \ 's'    : 'jump-symbol',
       \ 'a'    : 'jump-symbol-assigned',
       \ 'b'    : [':LeaderfBufTag', 'current-buffer-tag'],
+      \ 'j'    : [':BTags', 'current-buffer-fzf-tag'],
       \ 'B'    : [':LeaderfBufTagAll', 'all-buffers-tag'],
       \ 'c'    : 'jump-lsp-definition',
       \ 'D'    : 'jump-lsp-declaration',
@@ -457,6 +458,7 @@ let g:which_key_map.m = {
       \ 't' : ['<Plug>MarkdownPreviewToggle', 'markdown-toggle'],
       \ 'm' : 'bookmark-toggle',
       \ 'a' : 'show-all-bookmark',
+      \ 'b' : [':Marks', 'list-marks'],
       \ 'c' : 'clear-all-bookmark',
       \ }
 
