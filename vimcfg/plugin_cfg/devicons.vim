@@ -1,3 +1,7 @@
+if exists("g:loaded_webdevicons")
+  call webdevicons#refresh()
+endif
+
 " nerdtree config
 " Can be enabled or disabled
 let g:webdevicons_enable_nerdtree = 1
