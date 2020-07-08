@@ -17,10 +17,10 @@ set conceallevel=3
 " set list
 
 " color define 
-let s:molokai_prefix = g:vims_prefix . 'plugged/molokai/colors'
+let s:molokai_prefix   = g:vims_prefix . 'plugged/molokai/colors'
 let s:solarized_prefix = g:vims_prefix . 'plugged/vim-colors-solarized/colors'
-let s:onehalf_prefix = g:vims_prefix . 'plugged/onehalf/vim/colors'
-let s:snazzy_prefix = g:vims_prefix . 'plugged/vim-snazzy/colors'
+let s:onehalf_prefix   = g:vims_prefix . 'plugged/onehalf/vim/colors'
+let s:snazzy_prefix    = g:vims_prefix . 'plugged/vim-snazzy/colors'
 
 function! g:Transparent_enable(en)
     if a:en == 1
