@@ -241,14 +241,25 @@ endfunction
 
 com! -n=? VistaToggle call s:Vista_toggle(<q-args>)
 
-nmap <silent><leader>tl :let g:vista_stay_on_open=1<cr>:call vista#sidebar#Toggle()<cr>
+nmap <silent><leader>tt :let g:vista_stay_on_open=1<cr>:call vista#sidebar#Toggle()<cr>
 nmap <silent><leader>tc :Vista coc<cr>
+
+noremap <leader>tr :set splitright<cr>:vert split<cr>:terminal<cr>
+noremap <leader>tl :set nosplitright<cr>:vert split<cr>:terminal<cr>
+noremap <leader>tb :set splitbelow<cr>:split<cr>:terminal<cr>
+noremap <leader>tu :set nosplitbelow<cr>:split<cr>:terminal<cr>
+autocmd TermOpen * startinsert
+tnoremap <Esc> <C-\><C-n>
 
 " tag config
 let g:which_key_map.t = {
-      \ 'name' : '+Tag',
-      \ 'l'    : 'tag-list-toggle',
+      \ 'name' : '+Tag-And-Terminal',
+      \ 't'    : 'tag-list-toggle',
       \ 'c'    : 'coc-tag-list-toggle',
+      \ 'r'    : 'vertical-split-right-terminal',
+      \ 'l'    : 'vertical-split-left-terminal',
+      \ 'b'    : 'horizontal-split-below-terminal',
+      \ 'u'    : 'horizontal-split-up-terminal'
       \ }
 
 " fzf and leaderf keybinding config
@@ -258,7 +269,7 @@ nmap <leader>fL  :AsyncRun locate
 let g:which_key_map.f = {
       \ 'name' : '+File',
       \ 'f'    : 'leaderf-find-file',
-      \ 'a'   : [':LeaderfFileFullScreen', 'leaderf-find-file-fullscreen'],
+      \ 'a'    : [':LeaderfFileFullScreen', 'leaderf-find-file-fullscreen'],
       \ 'F'    : [':Files', 'fzf-find-file'],
       \ 'l'    : 'locate-find-file',
       \ 'g'    : [':GFiles', 'git-find-file'],
