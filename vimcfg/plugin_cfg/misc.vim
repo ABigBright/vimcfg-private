@@ -44,10 +44,10 @@ elseif !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
     colo onehalfdark
     hi Pmenu ctermbg=235 ctermfg=244
     " hi CursorLine ctermbg=58
-    call Transparent_enable(1)
+    " call Transparent_enable(1)
 elseif !empty(findfile("molokai.vim", s:molokai_prefix))
     colo molokai
-    call Transparent_enable(1)
+    " call Transparent_enable(1)
 elseif !empty(findfile("solarized.vim", s:solarized_prefix))
     colo solarized
 else
