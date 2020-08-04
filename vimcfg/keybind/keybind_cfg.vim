@@ -213,7 +213,7 @@ let g:which_key_map.h = {
       \ 'i'    : [':call Open_vimcfg_file(g:vimrc_path)', 'open-vimrc'],
       \ 'p'    : [':call Open_vimcfg_file(g:plugin_manange_path)', 'open-vimplug'],
       \ 'k'    : [':call Open_vimcfg_file(g:keybind_cfg_path)', 'open-keybiding-config'],
-      \ 'P'    : [':exec "NERDTreeFind" . g:plugin_cfg_dir', 'open-vimcfg-in-file-browser'],
+      \ 'P'    : [':exec "NERDTreeFind " . g:plugin_cfg_dir', 'open-vimcfg-in-file-browser'],
       \ 'a'    : [':CocList maps', 'show-key-map'],
       \ 'b'    : [':CocList vimcommands', 'show-vimcmd-list'],
       \ 'c'    : [':CocList cmdhistory', 'show-vimcmd-history'],

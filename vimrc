@@ -5,7 +5,7 @@ function! g:Source_vims(vims)
 endfunction
 
 function! g:Open_vimcfg_file(path)
-    exec 'vi' . a:path
+    exec ':e ' . a:path
 endfunction
 
 " config the vimcfg path prefix part
