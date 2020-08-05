@@ -42,7 +42,11 @@ Plug 'vim-scripts/gtags.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/limelight.vim'
 " Plug 'vim-airline/vim-airline'
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+if has("win32")
+    Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
+else
+    Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+endif
 " Plug 'Valloric/YouCompleteMe'
 " Plug 'vim-scripts/winmanager'
 Plug 'skywind3000/asyncrun.vim'
@@ -55,7 +59,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " Plug 'vim-syntastic/syntastic'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Plug 'w0rp/ale'
 Plug 'honza/vim-snippets'
