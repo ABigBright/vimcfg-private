@@ -107,9 +107,9 @@ Plug 'plasticboy/vim-markdown'
 
 " If you don't have nodejs and yarn
 " use pre build
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " If you have nodejs and yarn
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Plug 'connorholyday/vim-snazzy'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
