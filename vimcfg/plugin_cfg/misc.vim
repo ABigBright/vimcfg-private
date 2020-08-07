@@ -90,6 +90,11 @@ if has("gui_running")
 
 endif
 
+if has("win32")
+    let g:python_host_prog  = 'D:\Program Files\Python38\python.exe'
+    let g:python3_host_prog = 'D:\Program Files\Python38\python.exe'
+endif
+
 " script demo
 "
 " let g:briq_tmp='/lib'
