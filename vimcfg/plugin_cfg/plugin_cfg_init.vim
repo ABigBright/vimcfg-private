@@ -22,6 +22,7 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/nerdtree-git-plugin.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/devicons.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/startify.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/vim-gitgutter.vim",
     \]
     
     " not use 

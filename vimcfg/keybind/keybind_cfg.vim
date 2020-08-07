@@ -546,8 +546,8 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap <leader>rn <Plug>(coc-rename)
 " rename config
 let g:which_key_map.r = {
-      \ 'name' : '+rename',
-      \ 'n' : 'symbol-rename',
+      \ 'name' : '+Rename',
+      \ 'n'    : 'symbol-rename',
       \ }
 
 " Map <tab> for trigger completion, completion confirm, snippet expand and jump like VSCode. >
