@@ -59,7 +59,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " Plug 'vim-syntastic/syntastic'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Plug 'w0rp/ale'
 Plug 'honza/vim-snippets'
@@ -101,7 +101,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'trusktr/seti.vim'
 Plug 'andymass/vim-matchup'
-Plug 'ryanoasis/nerd-fonts', {'do': './install FiraCode'}
+" Plug 'ryanoasis/nerd-fonts', {'do': './install FiraCode'}
 Plug 'plasticboy/vim-markdown'
 " Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
