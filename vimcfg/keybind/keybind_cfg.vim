@@ -437,12 +437,94 @@ let g:which_key_map.w = {
 " au VimEnter * unmap  <unique><leader>mbe
 
 " coc.nvim coclist keybind config
+
+" Symbol renaming.
+nmap <leader>er <Plug>(coc-rename)
+
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>ec <Plug>(coc-codeaction-selected)
+nmap <leader>ec <Plug>(coc-codeaction-selected)
+
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>eC <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>eF <Plug>(coc-fix-current)
+
+" Map function and class text objects
+" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+xmap <leader>ef <Plug>(coc-funcobj-i)
+omap <leader>ef <Plug>(coc-funcobj-i)
+xmap <leader>eF <Plug>(coc-funcobj-a)
+omap <leader>eF <Plug>(coc-funcobj-a)
+xmap <leader>eh <Plug>(coc-classobj-i)
+omap <leader>eh <Plug>(coc-classobj-i)
+xmap <leader>eH <Plug>(coc-classobj-a)
+omap <leader>eH <Plug>(coc-classobj-a)
+
+" Use CTRL-S for selections ranges.
+" Requires 'textDocument/selectionRange' support of LS, ex: coc-tsserver
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
+
+" Mappings for CoCList
+" Show all diagnostics.
+nnoremap <silent><nowait> <leader>eD  :<C-u>CocList diagnostics<cr>
+" Manage extensions.
+nnoremap <silent><nowait> <leader>eE  :<C-u>CocList extensions<cr>
+" Find symbol of current document.
+nnoremap <silent><nowait> <leader>eo  :<C-u>CocList outline<cr>
+" Search workspace symbols.
+nnoremap <silent><nowait> <leader>es  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent><nowait> <leader>ej  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent><nowait> <leader>ek  :<C-u>CocPrev<CR>
+" Resume latest coc list.
+nnoremap <silent><nowait> <leader>ep  :<C-u>CocListResume<CR>
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Formatting selected code.
+xmap <leader>ei  <Plug>(coc-format-selected)
+nmap <leader>ei  <Plug>(coc-format-selected)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
 let g:which_key_map.e = {
-      \ 'name' : '+CocList',
-      \ 'a'    : [':CocList', 'CocList-toggle'],
-      \ 'b'    : [':CocList marketplace', 'Coc-extensions-store'],
-      \ 'd'    : [':CocConfig', 'CocConfig-open'],
-      \ 'e'    : [':CocCommand', 'coc-command-open'],
+      \ 'name' : '+CocFunc',
+      \ 'a'    : [':CocList', 'list-toggle'],
+      \ 'b'    : [':CocList marketplace', 'extensions-store'],
+      \ 'd'    : [':CocConfig', 'config-open'],
+      \ 'e'    : [':CocCommand', 'command-open'],
+      \ 'r'    : 'symbol-rename',
+      \ 'c'    : 'codeaction-selected',
+      \ 'C'    : 'current-buffer-codeaction',
+      \ 'g'    : 'fix-current',
+      \ 'f'    : 'function-object',
+      \ 'F'    : 'function-all-object',
+      \ 'h'    : 'class-object',
+      \ 'H'    : 'class-all-object',
+      \ 'D'    : 'list-diagnostics',
+      \ 'E'    : 'list-extensions',
+      \ 'o'    : 'find-symbols-with-current-file',
+      \ 's'    : 'search-workspace-symbols',
+      \ 'j'    : 'default-action-for-next-item',
+      \ 'k'    : 'default-action-for-prev-item',
+      \ 'p'    : 'resume-latest-coclist',
+      \ 'i'    : 'format-selected',
       \ }
 
 nmap <silent> <leader>mm :BookmarkToggle<cr>:e<cr>
@@ -495,66 +577,6 @@ else
     nmap <silent>k :vertical resize +5<cr>
 endif
 
-"coc.nvim keybinding
-function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-" Map <tab> to trigger completion and navigate to the next item: >
-inoremap <silent><expr> <TAB>
-    \ pumvisible() ? "\<C-n>" :
-    \ <SID>check_back_space() ? "\<TAB>" :
-    \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-" " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-" " position. Coc only does snippet and additional edit on confirm.
-" if exists('*complete_info')
-"   inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-" else
-"   imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" endif
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-" rename config
-let g:which_key_map.r = {
-      \ 'name' : '+Rename',
-      \ 'n'    : 'symbol-rename',
-      \ }
-
-" Map <tab> for trigger completion, completion confirm, snippet expand and jump like VSCode. >
-" inoremap <silent><expr> <TAB>
-"   \ pumvisible() ? coc#_select_confirm() :
-"   \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-"   \ <SID>check_back_space() ? "\<TAB>" :
-"   \ coc#refresh()
-"
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
-"
-" let g:coc_snippet_next = '<tab>'
-
 " which-key keybinding config
 nnoremap <silent><leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent><leader> :<c-u>WhichKeyVisual '<Space>'<CR>
-
-" choose-wind keybinding config
-" nmap  \  <Plug>(choosewin)
