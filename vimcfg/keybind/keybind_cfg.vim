@@ -264,19 +264,13 @@ let g:which_key_map.t = {
 
 " fzf and leaderf keybinding config
 let g:Lf_ShortcutF = '<leader>ff'
-nmap <leader>fl  :Locate 
-nmap <leader>fL  :AsyncRun locate 
 let g:which_key_map.f = {
       \ 'name' : '+File',
       \ 'f'    : 'leaderf-find-file',
       \ 'a'    : [':LeaderfFileFullScreen', 'leaderf-find-file-fullscreen'],
-      \ 'F'    : [':Files', 'fzf-find-file'],
-      \ 'l'    : 'locate-find-file',
-      \ 'g'    : [':GFiles', 'git-find-file'],
       \ 'r'    : [':LeaderfMru', 'most-recent-used-file'],
       \ 't'    : [':NERDTreeToggle', 'file-tree-browser-toggle'],
       \ 'c'    : [':NERDTreeFind %', 'current-file-tree-browser'],
-      \ 'L'    : 'async-locate-find-file',
       \ 'b'    : [':CocList files', 'Coc-find-file'],
       \ 'd'    : [':CocList mru', 'Coc-find-recent-file'],
       \ 's'    : [':Startify', 'open-startify'],
@@ -308,8 +302,6 @@ vmap <leader>si         :Tabularize /
 nmap <silent><leader>sA :AsyncRun ag --vimgrep <c-r><c-w><cr>
 nmap <silent><leader>sG :AsyncRun grep -rn <c-r><c-w><cr>
 nmap <silent><leader>sd :AsyncRun rg --vimgrep -rn <c-r><c-w><cr>
-nmap <silent><leader>sa :Ag <c-r><c-w><cr>
-nmap <silent><leader>sr :Rg <c-r><c-w><cr>
 
 " Create mappings (with leader)
 nmap <Leader>ss <Plug>(AerojumpSpace)
@@ -324,8 +316,6 @@ nmap <leader>sF  <Plug>(coc-format-selected)
 
 let g:which_key_map.s = {
       \ 'name' : '+Search-And-Style',
-      \ 'a'    : 'ag-search',
-      \ 'r'    : 'rg-search',
       \ 'i'    : 'indent-toggle',
       \ 'A'    : 'async-ag-search',
       \ 'G'    : 'async-grep-search',
@@ -348,7 +338,6 @@ let g:which_key_map.s = {
 let g:Lf_ShortcutB = '<leader>bt'
 let g:which_key_map.b = {
       \ 'name' : '+Buffer',
-      \ 'T'    : [':Buffers', 'fzf-buffers'],
       \ 't'    : 'leaderf-buffers',
       \ 'b'    : [':CtrlPBuffer', 'ctrlp-buffers'],
       \ 'w'    : [':w!', 'buffer-write-to-file'],
@@ -452,7 +441,6 @@ let g:which_key_map.e = {
       \ 'name' : '+CocList',
       \ 'a'    : [':CocList', 'CocList-toggle'],
       \ 'b'    : [':CocList marketplace', 'Coc-extensions-store'],
-      \ 'c'    : ['<Plug>(coc-terminal-toggle)', 'Coc-terminal-toggle'],
       \ 'd'    : [':CocConfig', 'CocConfig-open'],
       \ 'e'    : [':CocCommand', 'coc-command-open'],
       \ }
@@ -463,7 +451,7 @@ nmap <silent> <leader>mc :BookmarkClearAll<cr>:e<cr>
 
 " markdown config
 let g:which_key_map.m = {
-      \ 'name' : '+markdown-and-bookmark',
+      \ 'name' : '+Markdown-And-Bookmark',
       \ 'p' : ['<Plug>MarkdownPreview', 'markdown-preview'],
       \ 's' : ['<Plug>MarkdownPreviewStop', 'markdown-stop'],
       \ 't' : ['<Plug>MarkdownPreviewToggle', 'markdown-toggle'],
