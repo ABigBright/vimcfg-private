@@ -10,7 +10,7 @@
 },
 
 "list.normalMappings":{
-    "v" : "action:vsplit",
+    "v" : "action:vsplit"
 },
 
 "python.jediEnabled":true
