@@ -121,4 +121,8 @@ Plug 'liuchengxu/vista.vim'
 
 Plug 'liuchengxu/eleline.vim' 
 
+Plug 'tyru/open-browser.vim'
+Plug 'aklt/plantuml-syntax'
+Plug 'weirongxu/plantuml-previewer.vim'
+
 call plug#end()
