@@ -539,7 +539,12 @@ let g:which_key_map.m = {
       \ 'c' : 'clear-all-bookmark',
       \ }
 
-
+let g:which_key_map.u = {
+    \ 'name' : '+UML-Graph',
+    \ 'o' : ['PlantumlOpen', 'PlantumlOpen'],
+    \ 's' : ['PlantumlStop', 'PlantumlStop'],
+    \ 'S' : ['PlantumlStart', 'PlantumlStart'],
+    \}
 
 " some misc setting config keybind
 noremap S :w!<cr>
