@@ -242,6 +242,7 @@ endfunction
 com! -n=? VistaToggle call s:Vista_toggle(<q-args>)
 
 nmap <silent><leader>tt :let g:vista_stay_on_open=1<cr>:call vista#sidebar#Toggle()<cr>
+nmap <silent><leader>tp :let g:vista_stay_on_open=0<cr>:call vista#sidebar#Toggle()<cr>
 nmap <silent><leader>tc :Vista coc<cr>
 
 noremap <leader>tr :set splitright<cr>:vert split<cr>:terminal<cr>
@@ -255,6 +256,7 @@ tnoremap <Esc> <C-\><C-n>
 let g:which_key_map.t = {
       \ 'name' : '+Tag-And-Terminal',
       \ 't'    : 'tag-list-toggle',
+      \ 'p'    : 'tag-list-preview',
       \ 'c'    : 'coc-tag-list-toggle',
       \ 'r'    : 'vertical-split-right-terminal',
       \ 'l'    : 'vertical-split-left-terminal',
