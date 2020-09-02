@@ -8,7 +8,8 @@ let g:coc_global_extensions = [
     \ "coc-sh",
     \ "coc-tsserver",
     \ "coc-vimlsp",
-    \ "coc-actions"
+    \ "coc-actions",
+    \ "coc-todolist"
     \]
 
 
