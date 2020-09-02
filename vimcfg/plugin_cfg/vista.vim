@@ -31,6 +31,8 @@ let g:vista_default_executive = 'ctags'
 let g:vista_executive_for = {
     \ 'sh' : 'coc',
     \ 'py' : 'coc',
+    \ 'js' : 'coc',
+    \ 'ts' : 'coc',
     \ }
 
 " Declare the command including the executable and options used to generate ctags output

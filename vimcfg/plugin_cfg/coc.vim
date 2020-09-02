@@ -5,7 +5,8 @@ let g:coc_global_extensions = [
     \ "coc-explorer",
     \ "coc-snippets",
     \ "coc-python",
-    \ "coc-sh"
+    \ "coc-sh",
+    \ "coc-tsserver"
     \]
 
 

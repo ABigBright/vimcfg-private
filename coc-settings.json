@@ -1,4 +1,6 @@
 {
+"npm.binPath": "cnpm",
+
 "coc.preferences.jumpCommand":"drop",
 
 "languageserver": {
@@ -20,7 +22,19 @@
     "v" : "action:vsplit"
 },
 
-"python.jediEnabled":true
+"python.jediEnabled":true,
+
+"todolist.enable": true,
+"todolist.maxsize": 5000,
+"todolist.dateFormat": "YYYY-MM-DD HH:mm",
+"todolist.autoUpload": false,
+"todolist.monitor": true,
+"todolist.promptForReminder": true,
+"todolist.easyMode": true,
+"todolist.floatwin.background": "#000000",
+"todolist.floatwin.winblend": 0,
+"todolist.floatwin.width": 30,
+"todolist.notify": "floating"
 
 
 }
