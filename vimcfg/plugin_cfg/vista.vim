@@ -28,6 +28,10 @@ let g:vista_default_executive = 'ctags'
 "   \ 'cpp': 'vim_lsp',
 "   \ 'php': 'vim_lsp',
 "   \ }
+let g:vista_executive_for = {
+    \ 'sh' : 'coc',
+    \ 'py' : 'coc',
+    \ }
 
 " Declare the command including the executable and options used to generate ctags output
 " for some certain filetypes.The file path will be appened to your custom command.
