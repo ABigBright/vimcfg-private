@@ -147,10 +147,10 @@ com! -n=? QuickfixJump call s:Quickfix_jump(<q-args>)
 "           \ }
 " endif
     
-noremap <silent><leader>jc :call CocActionAsync("jumpDefinition", "drop")<cr>
-noremap <silent><leader>jD :call CocActionAsync("jumpDeclaration", "drop")<cr>
-noremap <silent><leader>jI :call CocActionAsync("jumpImplementation", "drop")<cr>
-noremap <silent><leader>jg :call CocActionAsync("jumpTypeDefinition", "drop")<cr>
+noremap <silent><leader>jc :call CocActionAsync("jumpDefinition", "edit")<cr>
+noremap <silent><leader>jD :call CocActionAsync("jumpDeclaration", "edit")<cr>
+noremap <silent><leader>jI :call CocActionAsync("jumpImplementation", "edit")<cr>
+noremap <silent><leader>jg :call CocActionAsync("jumpTypeDefinition", "edit")<cr>
 noremap <silent><leader>jh :call CocActionAsync("jumpReferences", "preview")<cr>
 noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:QuickfixJump<cr>
 noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:QuickfixJump<cr>
