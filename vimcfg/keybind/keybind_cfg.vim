@@ -147,10 +147,10 @@ com! -n=? QuickfixJump call s:Quickfix_jump(<q-args>)
 "           \ }
 " endif
     
-noremap <silent><leader>jc :call CocActionAsync("jumpDefinition", "split")<cr>
-noremap <silent><leader>jD :call CocActionAsync("jumpDeclaration", "split")<cr>
-noremap <silent><leader>jI :call CocActionAsync("jumpImplementation", "split")<cr>
-noremap <silent><leader>jg :call CocActionAsync("jumpTypeDefinition", "split")<cr>
+noremap <silent><leader>jc :call CocActionAsync("jumpDefinition", "drop")<cr>
+noremap <silent><leader>jD :call CocActionAsync("jumpDeclaration", "drop")<cr>
+noremap <silent><leader>jI :call CocActionAsync("jumpImplementation", "drop")<cr>
+noremap <silent><leader>jg :call CocActionAsync("jumpTypeDefinition", "drop")<cr>
 noremap <silent><leader>jh :call CocActionAsync("jumpReferences", "preview")<cr>
 noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:QuickfixJump<cr>
 noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:QuickfixJump<cr>
@@ -180,6 +180,9 @@ let g:which_key_map.j = {
       \ 'I'    : 'jump-lsp-implementation',
       \ 'g'    : 'jump-lsp-type-definition',
       \ 'h'    : 'jump-lsp-reference',
+      \ 'k'    : [':AnyJump', 'any-jump'],
+      \ 'l'    : [':AnyJumpLastResults', 'any-jump-last-result'],
+      \ 'm'    : [':AnyJumpVisual', 'any-jump-selections'],
       \ }
   " \ 's'    : 'gtags-jump-symbol',
   " \ 'j'    : 'gtags-jump-definition-or-reference',
@@ -546,6 +549,12 @@ let g:which_key_map.u = {
     \ 'o' : ['PlantumlOpen', 'PlantumlOpen'],
     \ 's' : ['PlantumlStop', 'PlantumlStop'],
     \ 'S' : ['PlantumlStart', 'PlantumlStart'],
+    \}
+
+let g:which_key_map.o = {
+    \ 'name' : '+Other',
+    \ 't' : ['Translate', 'Translate simple'],
+    \ 'w' : ['TranslateW', 'Translate window'],
     \}
 
 " some misc setting config keybind

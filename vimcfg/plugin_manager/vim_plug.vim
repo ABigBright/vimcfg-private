@@ -125,5 +125,7 @@ Plug 'tyru/open-browser.vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'weirongxu/plantuml-previewer.vim'
 Plug 'voldikss/vim-translator'
+Plug 'pechorin/any-jump.vim'
+Plug 'airblade/vim-rooter'
 
 call plug#end()
