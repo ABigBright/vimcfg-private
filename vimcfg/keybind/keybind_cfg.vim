@@ -160,6 +160,7 @@ noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>:QuickfixJump<cr>
 noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
 noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
 noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:QuickfixJump<cr>
+xnoremap <silent><leader>jK :AnyJumpVisual<CR>
 " not common for use
 " noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
 let g:which_key_map.j = {
@@ -181,8 +182,8 @@ let g:which_key_map.j = {
       \ 'g'    : 'jump-lsp-type-definition',
       \ 'h'    : 'jump-lsp-reference',
       \ 'k'    : [':AnyJump', 'any-jump'],
+      \ 'K'    : 'any-jump-selections',
       \ 'l'    : [':AnyJumpLastResults', 'any-jump-last-result'],
-      \ 'm'    : [':AnyJumpVisual', 'any-jump-selections'],
       \ }
   " \ 's'    : 'gtags-jump-symbol',
   " \ 'j'    : 'gtags-jump-definition-or-reference',
