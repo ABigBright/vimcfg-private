@@ -88,7 +88,7 @@ Plug 'altercation/vim-colors-solarized'
 " Plug 'kien/rainbow_parentheses.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'arakashic/chromatica.nvim'
-Plug 'brooth/far.vim'
+" Plug 'brooth/far.vim'
 " Plug 'wsdjeg/FlyGrep.vim'
 " Plug 'neomake/neomake'
 " Plug 'mhinz/vim-grepper'
@@ -130,5 +130,6 @@ Plug 'airblade/vim-rooter'
 Plug 'wincent/ferret'
 Plug 'kkoomen/vim-doge'
 Plug 'Raimondi/delimitMate'
+Plug 'mg979/vim-xtabline'
 
 call plug#end()
