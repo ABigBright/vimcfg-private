@@ -19,6 +19,7 @@ let g:which_key_map.d = {
       \ 'f'    : [':Dox', 'doxygen-file'],
       \ 'a'    : [':DoxAuthor', 'doxygen-author'],
       \ 'l'    : [':DoxLic', 'doxygen-license'],
+      \ 'b'    : [':DogeGenerate', 'begin-doc-generate'],
       \ '1'    : [':1quit!', 'which_key_ignore'],
       \ '2'    : [':2quit!', 'which_key_ignore'],
       \ '3'    : [':3quit!', 'which_key_ignore'],
@@ -336,6 +337,7 @@ let g:which_key_map.s = {
       \ 'l'    : [':LeaderfRgInteractive', 'leaderf-rg-search-interactive'],
       \ 'F'    : 'format-select-region',
       \ 'p'    : [':Leaderf rg --recall', 'leaderf-rg-recall-last-search'],
+      \ 't'    : ['<Plug>(FerretAcks)', 'substitude-string'],
       \ }
       " \ 'g'    : [':Grepper', 'async-grepper-search'],
       " \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
