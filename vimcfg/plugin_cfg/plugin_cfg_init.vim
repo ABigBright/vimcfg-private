@@ -25,6 +25,8 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-gitgutter.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-rooter.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/any-jump.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/vim-doge.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/ferret.vim",
     \]
     
     " not use 

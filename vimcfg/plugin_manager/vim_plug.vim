@@ -127,5 +127,8 @@ Plug 'weirongxu/plantuml-previewer.vim'
 Plug 'voldikss/vim-translator'
 Plug 'pechorin/any-jump.vim'
 Plug 'airblade/vim-rooter'
+Plug 'wincent/ferret'
+Plug 'kkoomen/vim-doge'
+Plug 'Raimondi/delimitMate'
 
 call plug#end()
