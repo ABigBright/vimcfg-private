@@ -130,6 +130,5 @@ Plug 'airblade/vim-rooter'
 Plug 'wincent/ferret'
 Plug 'kkoomen/vim-doge'
 Plug 'Raimondi/delimitMate'
-Plug 'mg979/vim-xtabline'
 
 call plug#end()
