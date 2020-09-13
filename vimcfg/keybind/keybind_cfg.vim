@@ -321,11 +321,13 @@ nmap <Leader>sk <Plug>LeaderfRgCwordRegexNoBoundary<cr>
 " Formatting selected code.
 xmap <leader>sF  <Plug>(coc-format-selected)
 nmap <leader>sF  <Plug>(coc-format-selected)
+nmap <silent><leader>sa :CocSearch 
 
 let g:which_key_map.s = {
       \ 'name' : '+Search-And-Style',
       \ 'i'    : 'indent-toggle',
       \ 'A'    : 'async-ag-search',
+      \ 'a'    : 'coc-search',
       \ 'G'    : 'async-grep-search',
       \ 'd'    : 'async-rg-search',
       \ 's'    : 'search-and-jump-space',
