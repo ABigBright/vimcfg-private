@@ -137,5 +137,6 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'kevinhwang91/rnvimr'
 Plug 'wellle/tmux-complete.vim'
 Plug 'mbbill/undotree'
+Plug 'junegunn/vim-peekaboo'
 
 call plug#end()
