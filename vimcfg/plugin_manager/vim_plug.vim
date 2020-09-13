@@ -136,5 +136,6 @@ Plug 'svermeulen/vim-subversive'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'kevinhwang91/rnvimr'
 Plug 'wellle/tmux-complete.vim'
+Plug 'mbbill/undotree'
 
 call plug#end()
