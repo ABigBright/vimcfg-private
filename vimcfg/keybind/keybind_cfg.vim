@@ -281,6 +281,7 @@ let g:which_key_map.f = {
       \ 'b'    : [':CocList files', 'Coc-find-file'],
       \ 'd'    : [':CocList mru', 'Coc-find-recent-file'],
       \ 's'    : [':Startify', 'open-startify'],
+      \ 'e'    : [':RnvimrToggle', 'run-ranger'],
       \ }
 
 
@@ -565,6 +566,7 @@ let g:which_key_map.o = {
     \ 'w'  : ['TranslateW', 'Translate window'],
     \ 's'  : 'subversive-substitude-range',
     \ 'ss' : 'subversive-substitude-word-range',
+    \ 'u'  : [':UndotreeToggle', 'undotree-toggle'],
     \}
 
 " some misc setting config keybind
