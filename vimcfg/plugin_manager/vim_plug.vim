@@ -132,5 +132,6 @@ Plug 'kkoomen/vim-doge'
 Plug 'Raimondi/delimitMate'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'RRethy/vim-illuminate'
+Plug 'svermeulen/vim-subversive'
 
 call plug#end()

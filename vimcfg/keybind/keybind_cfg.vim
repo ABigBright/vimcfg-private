@@ -554,10 +554,17 @@ let g:which_key_map.u = {
     \ 'S' : ['PlantumlStart', 'PlantumlStart'],
     \}
 
+" key bind config for key `o'
+nmap <leader>os <plug>(SubversiveSubstituteRange)
+xmap <leader>os <plug>(SubversiveSubstituteRange)
+nmap <leader>oss <plug>(SubversiveSubstituteWordRange)
+
 let g:which_key_map.o = {
     \ 'name' : '+Other',
-    \ 't' : ['Translate', 'Translate simple'],
-    \ 'w' : ['TranslateW', 'Translate window'],
+    \ 't'  : ['Translate', 'Translate simple'],
+    \ 'w'  : ['TranslateW', 'Translate window'],
+    \ 's'  : 'subversive-substitude-range',
+    \ 'ss' : 'subversive-substitude-word-range',
     \}
 
 " some misc setting config keybind
