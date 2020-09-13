@@ -131,5 +131,6 @@ Plug 'wincent/ferret'
 Plug 'kkoomen/vim-doge'
 Plug 'Raimondi/delimitMate'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'RRethy/vim-illuminate'
 
 call plug#end()
