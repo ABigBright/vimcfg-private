@@ -134,5 +134,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'RRethy/vim-illuminate'
 Plug 'svermeulen/vim-subversive'
 Plug 'mzlogin/vim-markdown-toc'
+Plug 'kevinhwang91/rnvimr'
+
 
 call plug#end()
