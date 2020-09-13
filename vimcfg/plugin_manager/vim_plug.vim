@@ -135,6 +135,6 @@ Plug 'RRethy/vim-illuminate'
 Plug 'svermeulen/vim-subversive'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'kevinhwang91/rnvimr'
-
+Plug 'wellle/tmux-complete.vim'
 
 call plug#end()
