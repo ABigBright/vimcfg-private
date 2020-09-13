@@ -133,5 +133,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'RRethy/vim-illuminate'
 Plug 'svermeulen/vim-subversive'
+Plug 'mzlogin/vim-markdown-toc'
 
 call plug#end()
