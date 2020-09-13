@@ -21,7 +21,8 @@ let s:molokai_prefix   = g:vims_prefix . 'plugged/molokai/colors'
 let s:solarized_prefix = g:vims_prefix . 'plugged/vim-colors-solarized/colors'
 let s:onehalf_prefix   = g:vims_prefix . 'plugged/onehalf/vim/colors'
 let s:snazzy_prefix    = g:vims_prefix . 'plugged/vim-snazzy/colors'
-let s:gruvbox_prefix    = g:vims_prefix . 'plugged/gruvbox/colors'
+let s:gruvbox_prefix   = g:vims_prefix . 'plugged/gruvbox/colors'
+let s:dracula_prefix   = g:vims_prefix . 'plugged/dracula/colors'
 
 function! g:Transparent_enable(en)
     if a:en == 1
@@ -35,15 +36,8 @@ function! g:Transparent_enable(en)
     endif
 endfunction
 
-if !empty(findfile("snazzy.vim", s:snazzy_prefix))
-    " semi-transparent
-    let g:SnazzyTransparent = 1
-    colo snazzy
-    hi Pmenu ctermbg=235 ctermfg=244
-    hi CursorLine ctermbg=58
-elseif !empty(findfile("molokai.vim", s:molokai_prefix))
-    colo molokai
-    call Transparent_enable(1)
+if !empty(findfile("dracula.vim", s:dracula_prefix))
+    colo dracula
 elseif !empty(findfile("gruvbox.vim", s:gruvbox_prefix))
     colo gruvbox
 elseif !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
@@ -51,6 +45,15 @@ elseif !empty(findfile("onehalfdark.vim", s:onehalf_prefix))
     hi Pmenu ctermbg=235 ctermfg=244
     " hi CursorLine ctermbg=58
     " call Transparent_enable(1)
+elseif !empty(findfile("molokai.vim", s:molokai_prefix))
+    colo molokai
+    call Transparent_enable(1)
+elseif !empty(findfile("snazzy.vim", s:snazzy_prefix))
+    " semi-transparent
+    let g:SnazzyTransparent = 1
+    colo snazzy
+    hi Pmenu ctermbg=235 ctermfg=244
+    hi CursorLine ctermbg=58
 elseif !empty(findfile("solarized.vim", s:solarized_prefix))
     colo solarized
 else

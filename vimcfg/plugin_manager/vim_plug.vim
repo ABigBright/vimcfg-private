@@ -51,7 +51,7 @@ endif
 " Plug 'vim-scripts/winmanager'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'vim-scripts/DoxygenToolkit.vim'
-Plug 'terryma/vim-multiple-cursors'
+" Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'morhetz/gruvbox'
@@ -73,8 +73,8 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!', 'WhichKeyVisu
 " autocmd! User vim-which-key call which#register('<Space>', 'g:which_key_map')
 autocmd! User vim-which-key call which_key#register('<Space>', 'g:which_key_map')
 
-" Plug 'dracula/vim', { 'as': 'dracula' }
-" Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
@@ -130,5 +130,6 @@ Plug 'airblade/vim-rooter'
 Plug 'wincent/ferret'
 Plug 'kkoomen/vim-doge'
 Plug 'Raimondi/delimitMate'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
