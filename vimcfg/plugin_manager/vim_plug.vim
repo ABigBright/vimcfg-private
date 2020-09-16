@@ -139,5 +139,6 @@ Plug 'wellle/tmux-complete.vim'
 Plug 'mbbill/undotree'
 Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-repeat'
+Plug 'wellle/context.vim'
 
 call plug#end()
