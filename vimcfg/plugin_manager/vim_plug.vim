@@ -140,5 +140,7 @@ Plug 'mbbill/undotree'
 Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-repeat'
 Plug 'wellle/context.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 call plug#end()
