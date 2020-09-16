@@ -257,6 +257,10 @@ noremap <leader>tu :set nosplitbelow<cr>:split<cr>:terminal<cr>
 autocmd TermOpen * startinsert
 tnoremap <Esc> <C-\><C-n>
 
+" tab page quick move
+noremap ti :tabnext<cr>
+noremap to :tabprev<cr>
+
 " tag config
 let g:which_key_map.t = {
       \ 'name' : '+Tag-And-Terminal',
@@ -266,8 +270,19 @@ let g:which_key_map.t = {
       \ 'r'    : 'vertical-split-right-terminal',
       \ 'l'    : 'vertical-split-left-terminal',
       \ 'b'    : 'horizontal-split-below-terminal',
-      \ 'u'    : 'horizontal-split-up-terminal'
+      \ 'u'    : 'horizontal-split-up-terminal',
+      \ 'o'    : [':tabo', 'close-other-tab-page'],
+      \ '1'    : [':1tabn', 'which_key_ignore'],
+      \ '2'    : [':2tabn', 'which_key_ignore'],
+      \ '3'    : [':3tabn', 'which_key_ignore'],
+      \ '4'    : [':4tabn', 'which_key_ignore'],
+      \ '5'    : [':5tabn', 'which_key_ignore'],
+      \ '6'    : [':6tabn', 'which_key_ignore'],
+      \ '7'    : [':7tabn', 'which_key_ignore'],
+      \ '8'    : [':8tabn', 'which_key_ignore'],
+      \ '9'    : [':9tabn', 'which_key_ignore'],
       \ }
+
 
 " fzf and leaderf keybinding config
 let g:Lf_ShortcutF = '<leader>ff'
@@ -366,6 +381,7 @@ let g:which_key_map.b = {
       \ '8'    : [':b 8', 'which_key_ignore'],
       \ '9'    : [':b 9', 'which_key_ignore'],
       \ }
+      
 
 
 " comment below config for airline, don't delete, uncommen it when use airline
