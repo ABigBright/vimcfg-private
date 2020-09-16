@@ -141,5 +141,6 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-repeat'
 Plug 'jiangmiao/auto-pairs'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'mg979/vim-xtabline'
 
 call plug#end()
