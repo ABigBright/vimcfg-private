@@ -255,7 +255,10 @@ noremap <leader>tl :set nosplitright<cr>:vert split<cr>:terminal<cr>
 noremap <leader>tb :set splitbelow<cr>:split<cr>:terminal<cr>
 noremap <leader>tu :set nosplitbelow<cr>:split<cr>:terminal<cr>
 autocmd TermOpen * startinsert
-tnoremap <Esc> <C-\><C-n>
+
+
+" comment this, because it can affect fzf plugin, can not exit by Esc"
+" tnoremap <Esc> <C-\><C-n>
 
 " tab page quick move
 noremap ti :tabnext<cr>
