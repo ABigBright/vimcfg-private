@@ -28,7 +28,7 @@ let g:asyncrun_rootmarks = ['.root']
 " right	    internal terminal	open a reusable internal terminal on the right
 " external	external terminal	use a new system terminal to run your task
 
-let g:asynctasks_term_pos = 'bottom'
+let g:asynctasks_term_pos = 'tab'
 
 " If the previous terminal session has finished, the window will be resused. 
 " When you set g:asynctasks_term_pos to one of top, bottom, left and right, 
@@ -41,7 +41,7 @@ let g:asynctasks_term_cols = 80    " set width for vertical terminal split
 " let g:asynctasks_term_pos = 'tab'
 
 " you can prevent focus changing if you set g:asynctasks_term_focus to 0 (split terminals only)
-let g:asynctasks_term_focus = 0
+let g:asynctasks_term_focus = 1
 
 
 " tab terminal can also be reusable if you set g:asynctasks_term_reuse to 1.
