@@ -50,6 +50,7 @@ endif
 " Plug 'Valloric/YouCompleteMe'
 " Plug 'vim-scripts/winmanager'
 Plug 'skywind3000/asyncrun.vim'
+Plug 'skywind3000/asynctasks.vim'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 " Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdcommenter'
