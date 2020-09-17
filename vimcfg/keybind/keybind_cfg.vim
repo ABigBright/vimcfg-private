@@ -12,10 +12,6 @@ let g:which_key_map.a = {
       \ 'name' : '+Async-do-something',
       \ 'r'    : 'async-run',
       \ 's'    : [':AsyncStop', 'async-stop'],
-      \ 'b'    : [':AsyncTask file-build', 'asynctask-file-build'],
-      \ 'e'    : [':AsyncTask file-run', 'asynctask-file-run'],
-      \ 'pb'   : [':AsyncTask project-build', 'asynctask-project-build'],
-      \ 'pe'   : [':AsyncTask project-run', 'asynctask-project-run'],
       \ }
 
 let g:which_key_map.d = {
@@ -341,6 +337,7 @@ nmap <Leader>sk <Plug>LeaderfRgCwordRegexNoBoundary<cr>
 xmap <leader>sF  <Plug>(coc-format-selected)
 nmap <leader>sF  <Plug>(coc-format-selected)
 nmap <silent><leader>sa :CocSearch 
+nmap <silent><leader>sf :Ack 
 
 let g:which_key_map.s = {
       \ 'name' : '+Search-And-Style',
@@ -360,6 +357,7 @@ let g:which_key_map.s = {
       \ 'F'    : 'format-select-region',
       \ 'p'    : [':Leaderf rg --recall', 'leaderf-rg-recall-last-search'],
       \ 't'    : ['<Plug>(FerretAcks)', 'substitude-string'],
+      \ 'f'    : 'search-in-workspace',
       \ }
       " \ 'g'    : [':Grepper', 'async-grepper-search'],
       " \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
@@ -590,6 +588,15 @@ let g:which_key_map.o = {
     \ 'ss' : 'subversive-substitude-word-range',
     \ 'u'  : [':UndotreeToggle', 'undotree-toggle'],
     \}
+
+" for file build and project build
+let g:which_key_map.i = {
+      \ 'name' : '+Build-And-Debug',
+      \ 'a'    : [':AsyncTask file-build', 'asynctask-file-build'],
+      \ 'b'    : [':AsyncTask file-run', 'asynctask-file-run'],
+      \ 'c'    : [':AsyncTask project-build', 'asynctask-project-build'],
+      \ 'd'    : [':AsyncTask project-run', 'asynctask-project-run'],
+      \ }
 
 " some misc setting config keybind
 noremap S :w!<cr>
