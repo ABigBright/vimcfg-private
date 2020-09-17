@@ -598,6 +598,13 @@ let g:which_key_map.i = {
       \ 'd'    : [':AsyncTask project-run', 'asynctask-project-run'],
       \ }
 
+
+" for yankstack_substitute_older/newer_paste edit keybind
+nmap <silent><M-i> <Plug>yankstack_substitute_older_paste
+nmap <silent><M-o> <Plug>yankstack_substitute_newer_paste
+imap <silent><M-i> <Plug>yankstack_substitute_older_paste
+imap <silent><M-o> <Plug>yankstack_substitute_newer_paste
+
 " some misc setting config keybind
 noremap S :w!<cr>
 noremap Q :q!<cr>
