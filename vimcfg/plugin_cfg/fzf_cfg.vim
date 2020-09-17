@@ -20,7 +20,7 @@
 " Default fzf layout
 " - down / up / left / right / window
 " let g:fzf_layout = { 'down': '40%' }
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.8 } }
 
 " You can set up fzf window using a Vim command (Neovim or latest Vim 8 required)
 " let g:fzf_layout = { 'window': 'enew' }
