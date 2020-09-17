@@ -12,6 +12,10 @@ let g:which_key_map.a = {
       \ 'name' : '+Async-do-something',
       \ 'r'    : 'async-run',
       \ 's'    : [':AsyncStop', 'async-stop'],
+      \ 'b'    : [':AsyncTask file-build', 'asynctask-file-build'],
+      \ 'e'    : [':AsyncTask file-run', 'asynctask-file-run'],
+      \ 'pb'   : [':AsyncTask project-build', 'asynctask-project-build'],
+      \ 'pe'   : [':AsyncTask project-run', 'asynctask-project-run'],
       \ }
 
 let g:which_key_map.d = {
