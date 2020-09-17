@@ -185,6 +185,7 @@ let g:which_key_map.j = {
       \ 'k'    : [':AnyJump', 'any-jump'],
       \ 'K'    : 'any-jump-selections',
       \ 'l'    : [':AnyJumpLastResults', 'any-jump-last-result'],
+      \ 'm'    : [':Marks', 'list-all-mark'],
       \ }
   " \ 's'    : 'gtags-jump-symbol',
   " \ 'j'    : 'gtags-jump-definition-or-reference',
@@ -220,10 +221,16 @@ let g:which_key_map.h = {
       \ 'k'    : [':call Open_vimcfg_file(g:keybind_cfg_path)', 'open-keybiding-config'],
       \ 'P'    : [':exec "NERDTreeFind " . g:plugin_cfg_dir', 'open-vimcfg-in-file-browser'],
       \ 'a'    : [':CocList maps', 'show-key-map'],
+      \ 'A'    : [':Maps', 'show-key-map'],
       \ 'b'    : [':CocList vimcommands', 'show-vimcmd-list'],
+      \ 'B'    : [':Commands', 'fzf-vimcmd-list'],
       \ 'c'    : [':CocList cmdhistory', 'show-vimcmd-history'],
       \ 'd'    : [':CocList colors', 'switch-vim-colorscheme'],
       \ 'e'    : [':CocList extensions', 'show-coc-extensions'],
+      \ 'f'    : [':History:', 'show-cmd-history'],
+      \ 's'    : [':History/', 'show-search-history'],
+      \ 't'    : [':Helptags', 'show-help-tags'],
+      \ 'u'    : [':Filetypes', 'show-file-types'],
       \ }
 
 " vim quickfix open/close keybinding config
@@ -287,11 +294,16 @@ let g:which_key_map.t = {
       \ }
 
 
+
+nmap <silent><leader>fl :Locate 
 " fzf and leaderf keybinding config
 let g:Lf_ShortcutF = '<leader>ff'
 let g:which_key_map.f = {
       \ 'name' : '+File',
       \ 'f'    : 'leaderf-find-file',
+      \ 'F'    : [':Files', 'fzf-find-file'],
+      \ 'g'    : [':GFiles', 'git-find-file'],
+      \ 'G'    : [':GFiles?', 'git-find-modified-file'],
       \ 'a'    : [':LeaderfFileFullScreen', 'leaderf-find-file-fullscreen'],
       \ 'r'    : [':LeaderfMru', 'most-recent-used-file'],
       \ 't'    : [':NERDTreeToggle', 'file-tree-browser-toggle'],
@@ -300,6 +312,8 @@ let g:which_key_map.f = {
       \ 'd'    : [':CocList mru', 'Coc-find-recent-file'],
       \ 's'    : [':Startify', 'open-startify'],
       \ 'e'    : [':RnvimrToggle', 'run-ranger'],
+      \ 'l'    : 'locate-find-file',
+      \ 'm'    : [':History', 'fzf-history-file'],
       \ }
 
 
@@ -312,8 +326,8 @@ let g:which_key_map.g = {
       \ 'name' : '+Git',
       \ 'b'    : [':Gblame', 'git-blame'],
       \ 's'    : [':Gstatus', 'git-status'],
-      \ 'c'    : [':GV', 'git-all-commits'],
-      \ 'C'    : [':GV!', 'git-curr-commits'],
+      \ 'c'    : [':Commits', 'git-all-commits'],
+      \ 'C'    : [':BCommits', 'git-curr-commits'],
       \ 'd'    : [':Gvdiff', 'git-diff'],
       \ 'p'    : [':Gpull --rebase', 'git-pull-rebase'],
       \ 'r'    : 'git-rebase',
@@ -341,6 +355,8 @@ xmap <leader>sF  <Plug>(coc-format-selected)
 nmap <leader>sF  <Plug>(coc-format-selected)
 nmap <silent><leader>sa :CocSearch 
 nmap <silent><leader>sf :Ack 
+nmap <silent><leader>sg :Rg 
+nmap <silent><leader>sm :Ag 
 
 let g:which_key_map.s = {
       \ 'name' : '+Search-And-Style',
@@ -360,7 +376,11 @@ let g:which_key_map.s = {
       \ 'F'    : 'format-select-region',
       \ 'p'    : [':Leaderf rg --recall', 'leaderf-rg-recall-last-search'],
       \ 't'    : ['<Plug>(FerretAcks)', 'substitude-string'],
-      \ 'f'    : 'search-in-workspace',
+      \ 'f'    : 'search-workspace',
+      \ 'g'    : 'rg-search-workspace',
+      \ 'm'    : 'ag-search-workspace',
+      \ 'n'    : [':Lines', 'search-loaded-buffer'],
+      \ 'o'    : [':BLines', 'search-current-buffer']
       \ }
       " \ 'g'    : [':Grepper', 'async-grepper-search'],
       " \ 'f'    : [':FlyGrep', 'async-flygrep-search'],
@@ -371,6 +391,7 @@ let g:which_key_map.b = {
       \ 'name' : '+Buffer',
       \ 't'    : 'leaderf-buffers',
       \ 'b'    : [':CtrlPBuffer', 'ctrlp-buffers'],
+      \ 'f'    : [':Buffers', 'fzf-buffers'],
       \ 'w'    : [':w!', 'buffer-write-to-file'],
       \ 'W'    : [':wa!', 'all-buffer-write-to-file'],
       \ 'a'    : [':CocList buffers', 'Coc-buffers'],
@@ -452,6 +473,7 @@ let g:which_key_map.w = {
     \ 'h'    : 'change-split-horizontal',
     \ 'v'    : 'change-split-vertical',
     \ 'p'    : 'previous-window',
+    \ 'a'    : [':Windows', 'list-windows']
     \}
 
 " window manipulate keybinding config
