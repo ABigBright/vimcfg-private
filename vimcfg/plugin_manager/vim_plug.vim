@@ -143,7 +143,7 @@ Plug 'tpope/vim-repeat'
 Plug 'jiangmiao/auto-pairs'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'mg979/vim-xtabline'
-Plug 'camspiers/lens.vim'
+" Plug 'camspiers/lens.vim'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'blueyed/vim-diminactive'
 
