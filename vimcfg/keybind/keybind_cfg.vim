@@ -628,9 +628,10 @@ let g:which_key_map.i = {
 nmap <F5>         <Plug>VimspectorContinue
 nmap <F3>         <Plug>VimspectorStop
 nmap <F4>         <Plug>VimspectorRestart
+nmap <F2>         :VimspectorReset<cr>
 nmap <F6>         <Plug>VimspectorPause
 nmap <F9>         <Plug>VimspectorToggleBreakpoint
-nmap <F7> <Plug>VimspectorToggleConditionalBreakpoint
+nmap <F7>         <Plug>VimspectorToggleConditionalBreakpoint
 nmap <F8>         <Plug>VimspectorAddFunctionBreakpoint
 nmap <F10>        <Plug>VimspectorStepOver
 nmap <F11>        <Plug>VimspectorStepInto
