@@ -624,6 +624,18 @@ let g:which_key_map.i = {
       \ }
 
 
+" config the shortkey for vimspector debug
+nmap <F5>         <Plug>VimspectorContinue
+nmap <F3>         <Plug>VimspectorStop
+nmap <F4>         <Plug>VimspectorRestart
+nmap <F6>         <Plug>VimspectorPause
+nmap <F9>         <Plug>VimspectorToggleBreakpoint
+nmap <F7> <Plug>VimspectorToggleConditionalBreakpoint
+nmap <F8>         <Plug>VimspectorAddFunctionBreakpoint
+nmap <F10>        <Plug>VimspectorStepOver
+nmap <F11>        <Plug>VimspectorStepInto
+nmap <F12>        <Plug>VimspectorStepOut
+
 " for yankstack_substitute_older/newer_paste edit keybind
 nmap <silent><M-i> <Plug>yankstack_substitute_older_paste
 nmap <silent><M-o> <Plug>yankstack_substitute_newer_paste
