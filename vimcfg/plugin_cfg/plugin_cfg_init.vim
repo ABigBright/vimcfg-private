@@ -31,6 +31,7 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_cfg/vim-xtabline.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/asynctask.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/yankstack.vim",
+    \ g:vims_prefix . "vimcfg/plugin_cfg/vimspector.vim",
     \]
     
     " not use 

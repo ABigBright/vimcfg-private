@@ -146,5 +146,6 @@ Plug 'mg979/vim-xtabline'
 " Plug 'camspiers/lens.vim'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'blueyed/vim-diminactive'
+Plug 'puremourning/vimspector'
 
 call plug#end()
