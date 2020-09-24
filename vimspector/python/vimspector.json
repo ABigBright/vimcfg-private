@@ -1,0 +1,18 @@
+{
+  "configurations": {
+    "python: Launch": {
+      "adapter": "debugpy",
+      "configuration": {
+        "name": "<python>: Launch",
+        "type": "python",
+        "request": "launch",
+        "python": "/usr/bin/python3.8",
+        "stopOnEntry": true,
+        "justMyCode": false,
+        "console": "externalTerminal",
+        "debugOptions": [],
+        "program": "${file}"
+      }
+    }
+  }
+}

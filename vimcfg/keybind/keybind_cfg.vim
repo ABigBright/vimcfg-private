@@ -270,6 +270,8 @@ autocmd TermOpen * startinsert
 " tab page quick move
 noremap ti :tabnext<cr>
 noremap to :tabprev<cr>
+noremap tn :tabnew<cr>
+noremap tc :tabclose<cr>
 
 " tag config
 let g:which_key_map.t = {
