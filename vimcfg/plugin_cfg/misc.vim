@@ -15,7 +15,6 @@ syntax on
 set background=dark
 set conceallevel=3
 " set list
-set hidden
 
 " color define 
 let s:molokai_prefix   = g:vims_prefix . 'plugged/molokai/colors'
