@@ -234,6 +234,32 @@ let g:which_key_map.h = {
       \ }
 
 " vim quickfix open/close keybinding config
+function! Quickfix_getitem(quickfix_li_idx) abort
+    let s:curr_li = line('.')
+    return getqflist()[s:curr_li - 1]
+endfunction
+
+function! Quickfix_tabedit(quickfix_item, mode) abort
+    let s:buf_idx = a:quickfix_item['bufnr']
+    let s:li_idx  = a:quickfix_item['lnum']
+
+    if a:mode == 0 "tabe
+        tabnew
+    elseif a:mode == 1 "vsplit
+        wincmd k
+        vsp
+    else
+        wincmd k
+        sp
+    endif
+    exec 'b ' . s:buf_idx
+    exec 'norm '. s:li_idx . 'G'
+endfunction
+
+autocmd FileType qf nnoremap <silent><buffer> t :call Quickfix_tabedit(Quickfix_getitem(line('.')), 0)<cr>
+autocmd FileType qf nnoremap <silent><buffer> v :call Quickfix_tabedit(Quickfix_getitem(line('.')), 1)<cr>
+autocmd FileType qf nnoremap <silent><buffer> s :call Quickfix_tabedit(Quickfix_getitem(line('.')), 2)<cr>
+
 let g:which_key_map.q = {
       \ 'name' : '+Quickfix',
       \ 'o'    : [':botright cw 10', 'open-quickfix-win'],
@@ -271,7 +297,7 @@ autocmd TermOpen * startinsert
 noremap ti :tabnext<cr>
 noremap to :tabprev<cr>
 noremap tn :tabnew<cr>
-noremap tc :tabclose<cr>
+noremap tc :tabclose!<cr>
 
 " tag config
 let g:which_key_map.t = {
