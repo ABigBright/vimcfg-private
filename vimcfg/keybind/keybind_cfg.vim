@@ -244,9 +244,12 @@ function! Quickfix_tabedit(quickfix_item, mode) abort
     let s:li_idx  = a:quickfix_item['lnum']
    
     " copy file name to reg z
-    exec 'norm 0"zyf|'
+    exec 'norm 0vf|h"zy'
     let s:file = @z
-    let s:file = split(s:file, "|")[0]  " get real filename
+    
+    " copy search pattern into reg z
+    exec 'norm 02f<wviw"zy'
+    let s:text = @z
 
     if a:mode == 0 "tabe
         exec 'tabedit ' . s:file
@@ -258,11 +261,12 @@ function! Quickfix_tabedit(quickfix_item, mode) abort
         exec 'sp ' . s:file
     endif
     exec 'norm '. s:li_idx . 'G'
+    call search(s:text)
 endfunction
 
-autocmd FileType qf nnoremap <silent><buffer> t :call Quickfix_tabedit(Quickfix_getitem(line('.')), 0)<cr>
-autocmd FileType qf nnoremap <silent><buffer> v :call Quickfix_tabedit(Quickfix_getitem(line('.')), 1)<cr>
-autocmd FileType qf nnoremap <silent><buffer> s :call Quickfix_tabedit(Quickfix_getitem(line('.')), 2)<cr>
+autocmd FileType qf nnoremap <silent><buffer> <C-t> :call Quickfix_tabedit(Quickfix_getitem(line('.')), 0)<cr>
+autocmd FileType qf nnoremap <silent><buffer> <C-v> :call Quickfix_tabedit(Quickfix_getitem(line('.')), 1)<cr>
+autocmd FileType qf nnoremap <silent><buffer> <C-s> :call Quickfix_tabedit(Quickfix_getitem(line('.')), 2)<cr>
 
 let g:which_key_map.q = {
       \ 'name' : '+Quickfix',
