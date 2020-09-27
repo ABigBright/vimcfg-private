@@ -242,17 +242,21 @@ endfunction
 function! Quickfix_tabedit(quickfix_item, mode) abort
     let s:buf_idx = a:quickfix_item['bufnr']
     let s:li_idx  = a:quickfix_item['lnum']
+   
+    " copy file name to reg z
+    exec 'norm 0"zyf|'
+    let s:file = @z
+    let s:file = split(s:file, "|")[0]  " get real filename
 
     if a:mode == 0 "tabe
-        tabnew
+        exec 'tabedit ' . s:file
     elseif a:mode == 1 "vsplit
         wincmd k
-        vsp
+        exec 'vsp '. s:file
     else
         wincmd k
-        sp
+        exec 'sp ' . s:file
     endif
-    exec 'b ' . s:buf_idx
     exec 'norm '. s:li_idx . 'G'
 endfunction
 
@@ -296,7 +300,7 @@ autocmd TermOpen * startinsert
 " tab page quick move
 noremap ti :tabnext<cr>
 noremap to :tabprev<cr>
-noremap tn :tabnew<cr>
+noremap tn :tabnew %<cr>
 noremap tc :tabclose!<cr>
 
 " tag config
