@@ -307,6 +307,8 @@ noremap to :tabprev<cr>
 noremap tn :tabnew %<cr>
 noremap tc :tabclose!<cr>
 
+nmap <silent><leader>ta :tabn 
+
 " tag config
 let g:which_key_map.t = {
       \ 'name' : '+Tag-And-Terminal',
@@ -327,6 +329,7 @@ let g:which_key_map.t = {
       \ '7'    : [':7tabn', 'which_key_ignore'],
       \ '8'    : [':8tabn', 'which_key_ignore'],
       \ '9'    : [':9tabn', 'which_key_ignore'],
+      \ 'a'    : 'tab-switch',
       \ }
 
 
