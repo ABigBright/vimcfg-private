@@ -10,7 +10,8 @@ let g:coc_global_extensions = [
     \ "coc-vimlsp",
     \ "coc-actions",
     \ "coc-todolist",
-    \ "coc-tasks"
+    \ "coc-tasks",
+    \ "coc-cmake"
     \]
 
 
