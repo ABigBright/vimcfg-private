@@ -2,3 +2,4 @@
 *.un~
 sessions
 .netrwhist
+/autoload/

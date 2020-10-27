@@ -1,3 +1,16 @@
+let s:vim_plug_man = 'plug.vim'
+let s:vim_autoload_path = $HOME . '/.vim/autoload/' . s:vim_plug_man
+
+let $VIM_AUTOLOAD_PATH = s:vim_autoload_path
+
+if empty(glob(s:vim_autoload_path))
+  silent !curl -fLo $VIM_AUTOLOAD_PATH --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+unlet $VIM_AUTOLOAD_PATH
+
 let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_manager/vim_plug.vim",
     \ g:vims_prefix . "vimcfg/plugin_cfg/plugin_cfg_init.vim",
@@ -14,7 +27,7 @@ if empty(finddir(s:plugin_install_dir))
     PlugInstall
 endif
 
-" coc install func define 
+" coc install func define
 let s:coc_install_dir = g:vims_prefix . 'plugged/coc.nvim/plugin'
 function! g:Coc_extd_instl()
     if !empty(finddir(s:coc_install_dir))

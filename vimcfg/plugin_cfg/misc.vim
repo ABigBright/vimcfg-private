@@ -68,6 +68,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set encoding=utf-8
+set modifiable
 set fileencoding=utf-8
 set fileformat=unix
 set autoread

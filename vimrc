@@ -17,9 +17,9 @@ let g:keybind_cfg_path    = g:vims_prefix . "vimcfg/keybind/keybind_cfg.vim"
 
 " the actual vimscipt relative file path
 let s:vims_tbl = [
-    \ g:vims_prefix . "autoload/plug.vim",
     \ g:vims_prefix . "vimcfg/init_cfg/init_cfg_init.vim"
     \]
+    " \ g:vims_prefix . "autoload/plug.vim",
 
 call g:Source_vims(s:vims_tbl)
 
