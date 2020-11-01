@@ -1,18 +1,16 @@
 let s:vim_plug_man = 'plug.vim'
 let s:vim_autoload_path = $HOME . '/.vim/autoload/' . s:vim_plug_man
 
-let $VIM_AUTOLOAD_PATH = s:vim_autoload_path
-
 " use github rest api to download plug.vim
 if empty(glob(s:vim_autoload_path))
+  let $VIM_AUTOLOAD_PATH = s:vim_autoload_path
   " silent !curl -fLo $VIM_AUTOLOAD_PATH --create-dirs
   "   \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   silent !curl -fLo $VIM_AUTOLOAD_PATH --create-dirs -H "Accept: application/vnd.github.v3.raw"
       \ https://api.github.com/repos/junegunn/vim-plug/contents/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  unlet $VIM_AUTOLOAD_PATH
 endif
-
-unlet $VIM_AUTOLOAD_PATH
 
 let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/plugin_manager/vim_plug.vim",
