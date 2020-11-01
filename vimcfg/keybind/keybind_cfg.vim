@@ -357,7 +357,7 @@ let g:which_key_map.f = {
 
 
 
-nmap <silent><leader>gr :Grabse 
+nmap <silent><leader>gr :Grebase 
 nmap <silent><leader>gR :Grevert 
 nmap <silent><leader>gP :Gpush 
 " buffer keybinding config
