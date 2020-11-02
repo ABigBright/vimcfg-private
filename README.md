@@ -8,7 +8,7 @@ So the config is more concerned on speed edit and analyze code more smartly alon
 
 # Feature
 
-Almost feature is driven by all kinds of powerful plug. mainly include beautiful function blew,
+Almost all these features is driven by all kinds of powerful plug. mainly include beautiful function blew,
 
 + Find file by regex fzf git and so on
 + Embeded with [`ranger`](https://github.com/ranger/ranger) file explorer
@@ -33,34 +33,34 @@ More func to be added, update non-scheduled
 
 You should first install these dependency as below, make using vim/neovim more beautiful attribute to these deps
 
-* nodejs  
+* `nodejs`
 ```sh
 curl -sL install-node.now.sh/lts | bash
 ```
-* npm <https://github.com/npm/cli>
-* yarn <https://classic.yarnpkg.com/zh-Hans/docs/install/#debian-stable>
-* rg <https://github.com/BurntSushi/ripgrep>
-* ag <https://github.com/ggreer/the_silver_searcher>
-* python3/python2 <https://www.python.org/downloads/>
-* clangd (coc.nvim used for lsp feature) <https://releases.llvm.org/download.html>
-* nerd-font <https://github.com/ryanoasis/nerd-fonts>
-* git <https://git-scm.com/downloads>
-* universal ctags <https://github.com/universal-ctags/ctags>
-* gnu global <http://www.gnu.org/software/global/download.html>
-* fzf <https://github.com/junegunn/fzf>
+* [`npm`](https://github.com/npm/cli)
+* [`yarn`](https://classic.yarnpkg.com/zh-Hans/docs/install/#debian-stable)
+* [`rg`](https://github.com/BurntSushi/ripgrep)
+* [`ag`](https://github.com/ggreer/the_silver_searcher)
+* [`python3/python2`](https://www.python.org/downloads/)
+* [`clangd`](https://releases.llvm.org/download.html)
+* [`nerd-font`](https://github.com/ryanoasis/nerd-fonts)
+* [`git`](https://git-scm.com/downloads)
+* [`universal ctags`](https://github.com/universal-ctags/ctags)
+* [`gnu global`](http://www.gnu.org/software/global/download.html)
+* [`fzf`](https://github.com/junegunn/fzf)
 
 ## Installing
 
 Make sure have installed `vim 8.0+` or `neovim 0.4.3+`
 
 ### For vim
-```bash
+```sh
 git clone https://github.com/ABigBright/vimcfg-private.git $HOME/.vim
 vim # auto do plug download and update when u first open vim
 ```
 ### For neovim
 
-```bash
+```sh
 git clone https://github.com/ABigBright/vimcfg-private.git $HOME/.vim
 mkdir -p $HOME/.config
 ln -s $HOME/.vim $HOME/.config/nvim
