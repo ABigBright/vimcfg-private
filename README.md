@@ -1,20 +1,37 @@
 # Vimcfg
-This is a customized vim config for my using vim to edit effectively
 
-# How to use
-* Make sure you have installed the vim 8.0+ in you computer.
+This is a customized `Vim/Neovim` config for my using vim to edit effectively, this config act important role in my work with multiple project such as `Android Source Code`, `Linux Kernel` and so on.
 
-* git clone https://github.com/ABigBright/vimcfg-private.git $HOME/.vim
+So the config is more concerned on speed edit and analyze code more smartly along with effectively under excellent `vim/neovim`
 
-* Open vim and type :PlugInstall ex cmd to install the plugins for vim, this maybe be some time
+> All these `plugin` is not test under `Vim` but [`neovim`](https://github.com/neovim/neovim) in `ubuntu` and `archlinux`, I strongly suggest you using `neovim` for this config, some plugin only work in [`neovim`](https://github.com/neovim/neovim)
 
-* After finishing the step 3, you can have fun to use vim 
+# Feature
 
-* I just only test this vimcfg in my linux dist ubuntu.
+Almost feature is driven by all kinds of powerful plug. mainly include beautiful function blew,
 
-# Dependency
++ Find file by regex fzf git and so on
++ Embeded with [`ranger`](https://github.com/ranger/ranger) file explorer
++ Search string by regex in current file and whole project workspace
++ Code jump semantically or grammar, base on [`GNU Global`](https://www.gnu.org/software/global/) tool and `LSP` mechanism
++ Also support `async` doing something due to neovim's excellent asysnc mechanism
++ Buffer switch more smoothly and interactively
++ Quick comment and uncomment code 
++ Auto generate `Doxygen Style` commit for coding
++ Integrated with [`coc.nvim`](https://github.com/neoclide/coc.nvim) the awesome `LSP` client for vim/neovim, support all LSP function like `vscode` 
++ Git work flow supported
++ DAP(Debug Adapter Protocol) support for debug code the same as debug in vscode
++ Markdown preview instantly, also include `PlantUML` support
 
-## you should first install these dependency as below
+More func to be added, update non-scheduled
+
+> About `LSP` more detailed informatio, check out the official specification at https://microsoft.github.io/language-server-protocol/specifications/specification-3-14/.
+
+# Getting Started
+
+## Dependencies
+
+You should first install these dependency as below, make using vim/neovim more beautiful attribute to these deps
 
 * nodejs  
 ```sh
@@ -31,6 +48,24 @@ curl -sL install-node.now.sh/lts | bash
 * universal ctags <https://github.com/universal-ctags/ctags>
 * gnu global <http://www.gnu.org/software/global/download.html>
 * fzf <https://github.com/junegunn/fzf>
+
+## Installing
+
+Make sure have installed `vim 8.0+` or `neovim 0.4.3+`
+
+### For vim
+```bash
+git clone https://github.com/ABigBright/vimcfg-private.git $HOME/.vim
+vim # auto do plug download and update when u first open vim
+```
+### For neovim
+
+```bash
+git clone https://github.com/ABigBright/vimcfg-private.git $HOME/.vim
+mkdir -p $HOME/.config
+ln -s $HOME/.vim $HOME/.config/nvim
+nvim # auto do plug download and update when u first open neovim
+```
 
 # Screenshot
 * vim plug
