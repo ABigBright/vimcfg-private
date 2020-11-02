@@ -49,6 +49,13 @@ curl -sL install-node.now.sh/lts | bash
 * [`gnu global`](http://www.gnu.org/software/global/download.html)
 * [`fzf`](https://github.com/junegunn/fzf)
 
+Except above, neovim has to do thest things blew,
+
+```sh
+pip install pynvim
+yarn global add neovim
+```
+
 ## Installing
 
 Make sure have installed `vim 8.0+` or `neovim 0.4.3+`
@@ -66,6 +73,7 @@ mkdir -p $HOME/.config
 ln -s $HOME/.vim $HOME/.config/nvim
 nvim # auto do plug download and update when u first open neovim
 ```
+> in neovim, also execute :UpdateRemotePlugins after that
 
 # Screenshot
 * vim plug
