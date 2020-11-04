@@ -5,6 +5,7 @@ let g:Lf_DefaultMode = "NameOnly"
 let g:Lf_MaxCount = 0
 
 " for gtags config
+let g:Lf_GtagsAutoUpdate = 0
 " let g:Lf_GtagsAutoGenerate = 1
 " let g:Lf_Gtagslabel = "native-pygments"
 " let g:Lf_RootMarkers = ['.root']
