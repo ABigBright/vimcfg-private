@@ -114,7 +114,7 @@ endif
 " endif
 
 " let g:vimcfg_prefix=$HOME . '/.vim'
-" let g:mhodddd = g:vimcfg_prefix . "/vimcfg/init_cfg/init_cfg_init.vim"
+" let g:mhodddd = g:vimcfg_prefix . "/vimcfg/init/init_init.vim"
 " echo g:mhodddd
 " execute 'source ' . g:mhodddd
 "

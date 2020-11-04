@@ -31,7 +31,7 @@ More func to be added, update non-scheduled
 
 ## Dependencies
 
-You should first install these dependency as below, make using vim/neovim more beautiful attribute to these deps
+You should first install these dependencies as below, make using vim/neovim more beautiful attribute to these deps
 
 * `nodejs`
 ```sh
@@ -49,7 +49,7 @@ curl -sL install-node.now.sh/lts | bash
 * [`gnu global`](http://www.gnu.org/software/global/download.html)
 * [`fzf`](https://github.com/junegunn/fzf)
 
-Except above, neovim has to do thest things blew,
+Except above, neovim has to do these things blew,
 
 ```sh
 pip install pynvim
