@@ -267,6 +267,7 @@ endfunction
 autocmd FileType qf nnoremap <silent><buffer> <C-t> :call Quickfix_tabedit(Quickfix_getitem(line('.')), 0)<cr>
 autocmd FileType qf nnoremap <silent><buffer> <C-v> :call Quickfix_tabedit(Quickfix_getitem(line('.')), 1)<cr>
 autocmd FileType qf nnoremap <silent><buffer> <C-s> :call Quickfix_tabedit(Quickfix_getitem(line('.')), 2)<cr>
+autocmd FileType qf nnoremap <silent><buffer> q :q!<cr>
 
 let g:which_key_map.q = {
       \ 'name' : '+Quickfix',
