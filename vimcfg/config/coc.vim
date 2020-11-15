@@ -11,7 +11,9 @@ let g:coc_global_extensions = [
     \ "coc-actions",
     \ "coc-todolist",
     \ "coc-tasks",
-    \ "coc-cmake"
+    \ "coc-cmake",
+    \ "coc-html",
+    \ "coc-css"
     \]
 
 
