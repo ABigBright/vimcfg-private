@@ -1,0 +1,21 @@
+{
+  "configurations": {
+    "qemu attach": {
+      "adapter": "vscode-cpptools",
+      "configuration": {
+        "request": "launch",
+        "program": "~/studio/oneos_share/out/cortex-a53/oneos.elf",
+        "MIMode": "gdb",
+        "miDebuggerPath": "~/zephyr-sdk-0.11.4/aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gdb",
+        "stopAtEntry": true,
+        "setupCommands": [ 
+            {"text": "file ~/studio/oneos_share/out/cortex-a53/oneos.elf", "description": "load symbols", "ignoreFailures": false},
+            {"text": "target remote localhost:1234", "description": "connect gdbserver", "ignoreFailures": false}
+        ]
+      }
+    } 
+  }
+}
+
+
+
