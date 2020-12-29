@@ -4,7 +4,7 @@
 "coc.preferences.jumpCommand" : "drop",
 "suggest.enablePreview"       : true,
 "list.maxPreviewHeight"       : 38,
-"suggest.numberSelect"        : true,
+"suggest.numberSelect"        : false,
 "list.maxHeight"              : 15,
 
 "languageserver": {
