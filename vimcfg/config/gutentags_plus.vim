@@ -115,4 +115,4 @@ let g:gutentags_plus_height = 10
 " we included it for user's convenience.
 
 let $GTAGSCONF="/usr/share/gtags/gtags.conf"
-let $GTAGSLABEL="pygments"
+let $GTAGSLABEL="native-pygments"
