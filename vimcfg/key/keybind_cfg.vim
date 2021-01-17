@@ -147,21 +147,32 @@ com! -n=? QuickfixJump call s:Quickfix_jump(<q-args>)
 "           \ 'h'    : 'jump-lsp-reference',
 "           \ }
 " endif
+
+" noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:QuickfixJump<cr>
+" noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:QuickfixJump<cr>
+" noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>:QuickfixJump<cr>
+" noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>:QuickfixJump<cr>
+" noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>:QuickfixJump<cr>
+" noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
+" noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
+" noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:QuickfixJump<cr>
     
 noremap <silent><leader>jc :call CocActionAsync("jumpDefinition", "edit")<cr>
 noremap <silent><leader>jD :call CocActionAsync("jumpDeclaration", "edit")<cr>
 noremap <silent><leader>jI :call CocActionAsync("jumpImplementation", "edit")<cr>
 noremap <silent><leader>jg :call CocActionAsync("jumpTypeDefinition", "edit")<cr>
 noremap <silent><leader>jh :call CocActionAsync("jumpReferences", "preview")<cr>
-noremap <silent><leader>js :GscopeFind s <C-R><C-W><cr>:QuickfixJump<cr>
-noremap <silent><leader>jd :GscopeFind g <C-R><C-W><cr>:QuickfixJump<cr>
-noremap <silent><leader>jr :GscopeFind c <C-R><C-W><cr>:QuickfixJump<cr>
-noremap <silent><leader>jt :GscopeFind t <C-R><C-W><cr>:QuickfixJump<cr>
-noremap <silent><leader>je :GscopeFind e <C-R><C-W><cr>:QuickfixJump<cr>
-noremap <silent><leader>jf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
-noremap <silent><leader>ji :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>:QuickfixJump<cr>
-noremap <silent><leader>ja :GscopeFind a <C-R><C-W><cr>:QuickfixJump<cr>
+noremap <silent><leader>jr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump --result ctags", expand("<cword>"))<CR><CR>
+noremap <silent><leader>jd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <silent><leader>js :<C-U><C-R>=printf("Leaderf! gtags -s %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <silent><leader>je :<C-U><C-R>=printf("Leaderf! gtags -g %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <silent><leader>jp :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
+noremap <silent><leader>jb :<C-U><C-R>=printf("Leaderf gtags --current-buffer --result ctags-mod %s", "")<CR><CR>
+noremap <silent><leader>jB :<C-U><C-R>=printf("Leaderf gtags --all-buffers --result ctags-mod %s", "")<CR><CR>
+noremap <silent><leader>ja :<C-U><C-R>=printf("Leaderf gtags --all --result ctags-mod %s", "")<CR><CR>
 xnoremap <silent><leader>jK :AnyJumpVisual<CR>
+autocmd FileType leaderf nnoremap <silent><buffer> q :q!<cr>
+autocmd FileType leaderf nnoremap <silent><buffer> Q :q!<cr>
 " not common for use
 " noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
 let g:which_key_map.j = {
@@ -169,11 +180,8 @@ let g:which_key_map.j = {
       \ 'd'    : 'jump-definition',
       \ 'r'    : 'jump-reference',
       \ 'e'    : 'jump-egrep',
-      \ 't'    : 'jump-text',
-      \ 'i'    : 'jump-include-this-file',
-      \ 'f'    : 'jump-this-file',
       \ 's'    : 'jump-symbol',
-      \ 'a'    : 'jump-symbol-assigned',
+      \ 'a'    : 'all-symbols-in-workspace',
       \ 'b'    : [':LeaderfBufTag', 'current-buffer-tag'],
       \ 'j'    : [':BTags', 'current-buffer-fzf-tag'],
       \ 'B'    : [':LeaderfBufTagAll', 'all-buffers-tag'],
@@ -186,7 +194,11 @@ let g:which_key_map.j = {
       \ 'K'    : 'any-jump-selections',
       \ 'l'    : [':AnyJumpLastResults', 'any-jump-last-result'],
       \ 'm'    : [':Marks', 'list-all-mark'],
+      \ 'p'    : 'previous-jump-results',
       \ }
+  " \ 't'    : 'jump-text',
+  " \ 'i'    : 'jump-include-this-file',
+  " \ 'f'    : 'jump-this-file',
   " \ 's'    : 'gtags-jump-symbol',
   " \ 'j'    : 'gtags-jump-definition-or-reference',
   " \ 'd'    : 'gtags-jump-definition',

@@ -15,7 +15,6 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/vim-matchup.vim",
     \ g:vims_prefix . "vimcfg/config/vim-instant-markdown.vim",
     \ g:vims_prefix . "vimcfg/config/markdown_preview.vim",
-    \ g:vims_prefix . "vimcfg/config/gutentags_plus.vim",
     \ g:vims_prefix . "vimcfg/config/vim-bookmark.vim",
     \ g:vims_prefix . "vimcfg/config/eleline.vim",
     \ g:vims_prefix . "vimcfg/config/vista.vim",
@@ -35,6 +34,7 @@ let s:vims_tbl = [
     \]
     
     " not use 
+    " \ g:vims_prefix . "vimcfg/config/gutentags_plus.vim",
     " \ g:vims_prefix . "vimcfg/config/lens.vim",
     " \ g:vims_prefix . "vimcfg/config/rainbow_parentheses.vim",
     " \ g:vims_prefix . "vimcfg/config/lightline.vim",
