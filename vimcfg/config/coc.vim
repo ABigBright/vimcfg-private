@@ -4,7 +4,6 @@ let g:coc_global_extensions = [
     \ "coc-marketplace",
     \ "coc-explorer",
     \ "coc-snippets",
-    \ "coc-python",
     \ "coc-sh",
     \ "coc-tsserver",
     \ "coc-vimlsp",
@@ -13,9 +12,11 @@ let g:coc_global_extensions = [
     \ "coc-tasks",
     \ "coc-cmake",
     \ "coc-html",
-    \ "coc-css"
+    \ "coc-css",
+    \ "coc-pyright"
     \]
 
+    " \ "coc-python",
 
 hi CocHighlightText ctermbg=red
 hi CocFloating ctermbg=234
