@@ -147,5 +147,6 @@ Plug 'mg979/vim-xtabline'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'blueyed/vim-diminactive'
 Plug 'puremourning/vimspector'
+Plug 'tpope/vim-speeddating'
 
 call plug#end()
