@@ -14,7 +14,7 @@ set scrolloff=5
 syntax on
 set background=dark
 set conceallevel=3
-" set list
+set list
 
 " color define 
 let s:molokai_prefix   = g:vims_prefix . 'plugged/molokai/colors'

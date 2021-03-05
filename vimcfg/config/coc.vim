@@ -8,7 +8,6 @@ let g:coc_global_extensions = [
     \ "coc-tsserver",
     \ "coc-vimlsp",
     \ "coc-actions",
-    \ "coc-todolist",
     \ "coc-tasks",
     \ "coc-cmake",
     \ "coc-html",
@@ -17,6 +16,7 @@ let g:coc_global_extensions = [
     \]
 
     " \ "coc-python",
+    " \ "coc-todolist",
 
 hi CocHighlightText ctermbg=red
 hi CocFloating ctermbg=234
