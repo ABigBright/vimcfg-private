@@ -378,14 +378,13 @@ let g:which_key_map.g = {
       \ 'name' : '+Git',
       \ 'b'    : [':Gblame', 'git-blame'],
       \ 's'    : [':Gstatus', 'git-status'],
-      \ 'c'    : [':Commits', 'git-all-commits'],
-      \ 'C'    : [':BCommits', 'git-curr-commits'],
+      \ 'c'    : [':GV', 'git-all-commits'],
+      \ 'C'    : [':GV!', 'git-curr-commits'],
       \ 'd'    : [':Gvdiff', 'git-diff'],
       \ 'p'    : [':Gpull --rebase', 'git-pull-rebase'],
       \ 'r'    : 'git-rebase',
       \ 'R'    : 'git-revert',
       \ 'P'    : 'git-push',
-      \ 'l'    : [':Gllog', 'git-log'],
       \ }
 
 " search keybinding config
