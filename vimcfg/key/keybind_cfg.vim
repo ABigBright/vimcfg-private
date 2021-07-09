@@ -642,6 +642,9 @@ let g:which_key_map.m = {
       \ 'a' : 'show-all-bookmark',
       \ 'b' : [':Marks', 'list-marks'],
       \ 'c' : 'clear-all-bookmark',
+      \ 'r' : [':PrevimOpen', 'PrevimOpen'],
+      \ 'd' : [':PrevimWipeCache', 'PrevimWipeCache'],
+      \ 'f' : [':PrevimRefresh', 'PrevimRefresh'],
       \ }
 
 let g:which_key_map.u = {

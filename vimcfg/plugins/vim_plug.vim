@@ -150,5 +150,6 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'blueyed/vim-diminactive'
 Plug 'puremourning/vimspector'
 Plug 'tpope/vim-speeddating'
+Plug 'previm/previm'
 
 call plug#end()
