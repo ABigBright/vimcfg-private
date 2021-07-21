@@ -151,5 +151,6 @@ Plug 'blueyed/vim-diminactive'
 Plug 'puremourning/vimspector'
 Plug 'tpope/vim-speeddating'
 Plug 'previm/previm'
+Plug 'APZelos/blamer.nvim'
 
 call plug#end()
