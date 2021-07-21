@@ -12,7 +12,8 @@ let g:coc_global_extensions = [
     \ "coc-cmake",
     \ "coc-html",
     \ "coc-css",
-    \ "coc-pyright"
+    \ "coc-pyright",
+    \ "coc-zi"
     \]
 
     " \ "coc-python",
