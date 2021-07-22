@@ -18,6 +18,8 @@ let g:xtabline_settings.enable_persistance        = 0
 let g:xtabline_settings.last_open_first           = 1
 let g:xtabline_settings.theme                     = "paramount"
 
+let g:xtabline_settings.tab_icon = ["", ""]
+
 " let g:xtabline_settings.indicators = {
 "     \ 'modified': '[+]',
 "     \ 'pinned': '[!]',
