@@ -1,5 +1,6 @@
 {
 
+// coc config
 "npm.binPath"                 : "cnpm",
 "coc.preferences.jumpCommand" : "drop",
 "suggest.enablePreview"       : true,
@@ -7,6 +8,7 @@
 "suggest.numberSelect"        : false,
 "list.maxHeight"              : 15,
 
+// languageserver settings
 "languageserver": {
     "clangd": {
         "command": "clangd",
@@ -38,7 +40,43 @@
 "todolist.floatwin.background" : "#000000",
 "todolist.floatwin.winblend"   : 0,
 "todolist.floatwin.width"      : 30,
-"todolist.notify"              : "floating"
+"todolist.notify"              : "floating",
 
+// config for coc-zi
+"zi.enable": true,
+"zi.patterns": {
+    "": [],
+    "javascript": [
+        "^\\s*\\/\\/",
+        "^\\s*\\/\\*",
+        "^\\s*\\*"
+    ],
+    "typescript": [
+        "^\\s*\\/\\/",
+        "^\\s*\\/\\*",
+        "^\\s*\\*"
+    ],
+    "markdown": [],
+    "vim": [
+        "^\\s*\\\""
+    ],
+    "gitcommit": []
+},
+
+"zi.syntaxKinds.javascript": [
+    "StringLiteral",
+    "NoSubstitutionTemplateLiteral",
+    "TemplateHead",
+    "TemplateTail",
+    "TemplateMiddle"
+],
+
+"zi.syntaxKinds.typescript": [
+    "StringLiteral",
+    "NoSubstitutionTemplateLiteral",
+    "TemplateHead",
+    "TemplateTail",
+    "TemplateMiddle"
+]
 
 }
