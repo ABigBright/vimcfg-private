@@ -32,6 +32,7 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/yankstack.vim",
     \ g:vims_prefix . "vimcfg/config/vimspector.vim",
     \ g:vims_prefix . "vimcfg/config/fugitive-gitlib.vim",
+    \ g:vims_prefix . "vimcfg/config/context.vim",
     \]
     
     " not use 
