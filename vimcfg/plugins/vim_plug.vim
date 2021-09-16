@@ -152,7 +152,6 @@ Plug 'puremourning/vimspector'
 Plug 'tpope/vim-speeddating'
 Plug 'previm/previm'
 Plug 'APZelos/blamer.nvim'
-Plug 'wellle/context.vim'
 Plug 'kevinhwang91/nvim-bqf'
 
 call plug#end()

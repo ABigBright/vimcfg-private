@@ -32,10 +32,10 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/yankstack.vim",
     \ g:vims_prefix . "vimcfg/config/vimspector.vim",
     \ g:vims_prefix . "vimcfg/config/fugitive-gitlib.vim",
-    \ g:vims_prefix . "vimcfg/config/context.vim",
     \]
     
     " not use 
+    " \ g:vims_prefix . "vimcfg/config/context.vim",
     " \ g:vims_prefix . "vimcfg/config/gutentags_plus.vim",
     " \ g:vims_prefix . "vimcfg/config/lens.vim",
     " \ g:vims_prefix . "vimcfg/config/rainbow_parentheses.vim",
