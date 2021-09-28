@@ -148,7 +148,7 @@ Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'mg979/vim-xtabline'
 " Plug 'camspiers/lens.vim'
 Plug 'maxbrunsfeld/vim-yankstack'
-Plug 'blueyed/vim-diminactive'
+" Plug 'blueyed/vim-diminactive'
 Plug 'puremourning/vimspector'
 Plug 'tpope/vim-speeddating'
 Plug 'previm/previm'

@@ -376,7 +376,7 @@ nmap <silent><leader>gP :Gpush
 " buffer keybinding config
 let g:which_key_map.g = {
       \ 'name' : '+Git',
-      \ 'b'    : [':Gblame', 'git-blame'],
+      \ 'b'    : [':Git blame', 'git-blame'],
       \ 's'    : [':Gstatus', 'git-status'],
       \ 'c'    : [':GV', 'git-all-commits'],
       \ 'C'    : [':GV!', 'git-curr-commits'],
