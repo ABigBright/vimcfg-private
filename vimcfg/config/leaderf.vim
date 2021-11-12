@@ -37,13 +37,25 @@ let g:Lf_GtagsGutentags = 0
 let g:Lf_GtagsAutoUpdate = 1
 let g:Lf_GtagsAutoGenerate = 1
 let g:Lf_Gtagslabel = "native-pygments"
-let g:Lf_RootMarkers = ['.root', '.git', '.svn', '.hg']
+let g:Lf_RootMarkers = ['.root']
 " let g:Lf_WindowPosition = 'popup'
 " let g:Lf_PreviewHorizontalPosition = "center"
 " let g:Lf_PreviewInPopup = 1
 let g:Lf_WorkingDirectoryMode = 'Aac'
 let g:Lf_RecurseSubmodules = 1
 let g:Lf_GtagsSkipUnreadable = 1
+
+" Gtags accepts a list of files as target files. This option indicates
+" where the target files come from. It has 3 values: 0, 1, 2.
+" 0 - gtags search the target files by itself.
+" 1 - the target files come from FileExplorer.
+" 2 - the target files come from |g:Lf_GtagsfilesCmd|.
+let g:Lf_GtagsSource = 2
+let g:Lf_GtagsfilesCmd = {
+        \ '.git': 'git ls-files --recurse-submodules',
+        \ '.hg': 'hg files',
+        \ 'default': 'rg --no-messages --files'
+        \}
 
 " Show icons, icons are shown by default
 " let g:Lf_ShowDevIcons = 1
