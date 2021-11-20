@@ -100,6 +100,9 @@ endif
 if has("win32")
     let g:python_host_prog  = 'D:\Program Files\Python38\python.exe'
     let g:python3_host_prog = 'D:\Program Files\Python38\python.exe'
+elseif has("mac")
+    let g:python_host_prog  = '/usr/bin/python'
+    let g:python3_host_prog = '/usr/bin/python3'
 endif
 
 " script demo
