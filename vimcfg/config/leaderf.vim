@@ -30,9 +30,16 @@ let g:Lf_PreviewResult = {
 "         \ }
 
 " for gtags config
-let $GTAGSCONF="/usr/share/gtags/gtags.conf"
+if has("mac")
+    let $GTAGSCONF="/opt/homebrew/Cellar/global/6.6.7_2/share/gtags/gtags.conf"
+    let g:Lf_Gtagsconf="/opt/homebrew/Cellar/global/6.6.7_2/share/gtags/gtags.conf"
+elseif has("unix")
+    let $GTAGSCONF="/usr/share/gtags/gtags.conf"
+    let g:Lf_Gtagsconf="/usr/share/gtags/gtags.conf"
+elseif has("win32")
+endif
+
 let $GTAGSLABEL="native-pygments"
-let g:Lf_Gtagsconf="/usr/share/gtags/gtags.conf"
 let g:Lf_GtagsGutentags = 0
 let g:Lf_GtagsAutoUpdate = 1
 let g:Lf_GtagsAutoGenerate = 1

@@ -21,6 +21,9 @@ let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 " See all the avaliable executives via `:echo g:vista#executives`.
 let g:vista_default_executive = 'ctags'
 
+if has("mac")
+    let g:vista_ctags_executable = '/opt/homebrew/bin/ctags'
+endif
 " Set the executive for some filetypes explicitly. Use the explicit executive
 " instead of the default one for these filetypes when using `:Vista` without
 " specifying the executive.
