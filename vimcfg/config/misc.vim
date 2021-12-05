@@ -103,6 +103,7 @@ if has("win32")
 elseif has("mac")
     let g:python_host_prog  = '/usr/bin/python'
     let g:python3_host_prog = '/usr/bin/python3'
+	set guifont=FiraMono\ Nerd\ Font\ Mono:h13
 endif
 
 " script demo
