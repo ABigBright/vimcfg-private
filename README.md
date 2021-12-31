@@ -78,9 +78,9 @@ nvim # auto do plug download and update when u first open neovim
 # Screenshot
 * vim plug
 
-![vim plug](https://github.com/ABigBright/vimcfg-private/blob/master/pic/plug_install.png)
+![vim plug](./pic/plug_install.png)
 
 * vim panel
 
-![vim panel](https://github.com/ABigBright/vimcfg-private/blob/master/pic/vim_panel.png)
+![vim panel](./pic/vim_panel.png)
 
