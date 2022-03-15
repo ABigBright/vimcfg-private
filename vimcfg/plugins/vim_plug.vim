@@ -35,7 +35,7 @@ call plug#begin('~/.vim/plugged')
 
 " Initialize plugin system
 " Plug 'vim-scripts/minibufexplorerpp'
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 Plug 'tomasr/molokai'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/gtags.vim'
