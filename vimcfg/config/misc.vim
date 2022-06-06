@@ -16,6 +16,8 @@ set background=dark
 set conceallevel=3
 set list
 
+let &fencs = "gb2312,gb18030" . &fencs
+
 " color define 
 let s:molokai_prefix   = g:vims_prefix . 'plugged/molokai/colors'
 let s:solarized_prefix = g:vims_prefix . 'plugged/vim-colors-solarized/colors'
