@@ -73,7 +73,6 @@ set fileencoding=utf-8
 set fileformat=unix
 set autoread
 set nobackup
-set timeoutlen=500
 
 if !has('nvim')
     " set termwinsize=

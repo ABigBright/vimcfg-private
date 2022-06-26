@@ -77,15 +77,6 @@
     "TemplateHead",
     "TemplateTail",
     "TemplateMiddle"
-],
-
-"explorer.keyMappings.global": {
-    "H" : ["wait", "gotoParent"]
-},
-
-"explorer.quitOnOpen": true,
-"explorer.icon.enableNerdfont": true
-
-
+]
 
 }

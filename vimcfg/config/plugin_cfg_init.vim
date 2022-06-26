@@ -4,6 +4,7 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/fzf_cfg.vim",
     \ g:vims_prefix . "vimcfg/config/leaderf.vim",
     \ g:vims_prefix . "vimcfg/config/nerdcommenter.vim",
+    \ g:vims_prefix . "vimcfg/config/nerdtree.vim",
     \ g:vims_prefix . "vimcfg/config/quickfix.vim",
     \ g:vims_prefix . "vimcfg/config/tagbar.vim",
     \ g:vims_prefix . "vimcfg/config/vim-grepper.vim",
@@ -34,7 +35,6 @@ let s:vims_tbl = [
     \]
     
     " not use 
-    " \ g:vims_prefix . "vimcfg/config/nerdtree.vim",
     " \ g:vims_prefix . "vimcfg/config/context.vim",
     " \ g:vims_prefix . "vimcfg/config/gutentags_plus.vim",
     " \ g:vims_prefix . "vimcfg/config/lens.vim",
