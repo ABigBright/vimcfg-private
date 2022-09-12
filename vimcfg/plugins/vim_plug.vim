@@ -112,7 +112,7 @@ Plug 'plasticboy/vim-markdown'
 " use pre build
 " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " If you have nodejs and yarn
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Plug 'connorholyday/vim-snazzy'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -154,5 +154,28 @@ Plug 'tpope/vim-speeddating'
 Plug 'previm/previm'
 Plug 'APZelos/blamer.nvim'
 Plug 'kevinhwang91/nvim-bqf'
+
+" telekasten
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' } " or , { 'branch': '0.1.x' }
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'renerocksai/calendar-vim'
+Plug 'renerocksai/telekasten.nvim'
+Plug 'nvim-telescope/telescope-media-files.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" taskwiki
+Plug 'vimwiki/vimwiki'
+Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'blindFS/vim-taskwarrior'
+Plug 'tools-life/taskwiki'
+
+" neuron
+" Plug 'oberblastmeister/neuron.nvim'
+" Plug 'nvim-lua/popup.nvim'
+
+" orgmode
+" Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'nvim-orgmode/orgmode'
 
 call plug#end()

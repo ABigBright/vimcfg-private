@@ -1,6 +1,47 @@
 let mapleader=" "
 let g:which_key_map = {}
 
+" telekasten config
+" On hesitation, bring up the command panel
+" nnoremap <silent><leader>z :lua require('telekasten').panel()<CR>
+
+" Function mappings
+nnoremap <silent><leader>zf :lua require('telekasten').find_notes()<CR>
+nnoremap <silent><leader>zd :lua require('telekasten').find_daily_notes()<CR>
+nnoremap <silent><leader>zg :lua require('telekasten').search_notes()<CR>
+nnoremap <silent><leader>zz :lua require('telekasten').follow_link()<CR>
+nnoremap <silent><leader>zT :lua require('telekasten').goto_today()<CR>
+nnoremap <silent><leader>zW :lua require('telekasten').goto_thisweek()<CR>
+nnoremap <silent><leader>zw :lua require('telekasten').find_weekly_notes()<CR>
+nnoremap <silent><leader>zn :lua require('telekasten').new_note()<CR>
+nnoremap <silent><leader>zN :lua require('telekasten').new_templated_note()<CR>
+nnoremap <silent><leader>zy :lua require('telekasten').yank_notelink()<CR>
+nnoremap <silent><leader>zc :lua require('telekasten').show_calendar()<CR>
+nnoremap <silent><leader>zC :CalendarT<CR>
+nnoremap <silent><leader>zi :lua require('telekasten').paste_img_and_link()<CR>
+nnoremap <silent><leader>zt :lua require('telekasten').toggle_todo()<CR>
+nnoremap <silent><leader>zb :lua require('telekasten').show_backlinks()<CR>
+nnoremap <silent><leader>zF :lua require('telekasten').find_friends()<CR>
+nnoremap <silent><leader>zI :lua require('telekasten').insert_img_link({ i=true })<CR>
+nnoremap <silent><leader>zp :lua require('telekasten').preview_img()<CR>
+nnoremap <silent><leader>zm :lua require('telekasten').browse_media()<CR>
+nnoremap <silent><leader>za :lua require('telekasten').show_tags()<CR>
+nnoremap <silent><leader>zr :lua require('telekasten').rename_note()<CR>
+" on hesitation, bring up the panel
+" nnoremap <leader>z :lua require('telekasten').panel()<CR>
+
+" we could define [[ in **insert mode** to call insert link
+" inoremap [[ <cmd>:lua require('telekasten').insert_link()<CR>
+" alternatively: leader [
+inoremap <silent><leader>[ <cmd>:lua require('telekasten').insert_link({ i=true })<CR>
+inoremap <silent><leader>za <cmd>:lua require('telekasten').show_tags({i = true})<CR>
+
+" zettelkasten config
+let g:which_key_map.z = {
+      \ 'name' : '+Zettelkasten',
+      \ }
+
+
 " nerdcomment config
 let g:which_key_map.c = {
       \ 'name' : '+Comment',

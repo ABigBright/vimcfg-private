@@ -32,9 +32,20 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/yankstack.vim",
     \ g:vims_prefix . "vimcfg/config/vimspector.vim",
     \ g:vims_prefix . "vimcfg/config/fugitive-gitlib.vim",
+    \ g:vims_prefix . "vimcfg/config/vimwiki.vim",
+    \ g:vims_prefix . "vimcfg/config/taskwiki.vim",
+    \ g:vims_prefix . "vimcfg/config/autopair.vim",
+    \ g:vims_prefix . "vimcfg/config/telekasten.vim",
+    \ g:vims_prefix . "vimcfg/config/calendar.vim",
+    \ g:vims_prefix . "vimcfg/config/telescope.vim",
+    \ g:vims_prefix . "vimcfg/config/telescope-media-files.vim",
+    \ g:vims_prefix . "vimcfg/config/nvim-web-devicons.vim",
+    \ g:vims_prefix . "vimcfg/config/nvim-treesitter.vim",
     \]
     
     " not use 
+    " \ g:vims_prefix . "vimcfg/config/orgmode.vim",
+    " \ g:vims_prefix . "vimcfg/config/neuron.vim",
     " \ g:vims_prefix . "vimcfg/config/context.vim",
     " \ g:vims_prefix . "vimcfg/config/gutentags_plus.vim",
     " \ g:vims_prefix . "vimcfg/config/lens.vim",
