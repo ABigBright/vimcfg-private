@@ -1,3 +1,5 @@
+if exists("g:loaded_telekasten")
+
 lua << END
 local home = vim.fn.expand("~/zettelkasten")
 -- NOTE for Windows users:
@@ -147,6 +149,7 @@ require('telekasten').setup({
 })
 END
 
+endif
 " ----- the following are for syntax-coloring [[links]] and ==highlighted text==
 " ----- (see the section about coloring in README.md)
 

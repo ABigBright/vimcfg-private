@@ -1,3 +1,5 @@
+if exists("g:loaded_telescope")
+
 lua << EOF
 
 require('telescope').setup{
@@ -32,3 +34,5 @@ require('telescope').setup{
   }
 }
 EOF
+
+endif

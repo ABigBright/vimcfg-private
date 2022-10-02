@@ -41,6 +41,7 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/telescope-media-files.vim",
     \ g:vims_prefix . "vimcfg/config/nvim-web-devicons.vim",
     \ g:vims_prefix . "vimcfg/config/nvim-treesitter.vim",
+    \ g:vims_prefix . "vimcfg/config/vim-markdown.vim",
     \]
     
     " not use 

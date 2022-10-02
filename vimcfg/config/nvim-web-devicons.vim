@@ -1,3 +1,5 @@
+if exists('g:loaded_devicons')
+
 lua << EOF
 require'nvim-web-devicons'.setup {
  -- your personnal icons can go here (to override)
@@ -16,3 +18,5 @@ require'nvim-web-devicons'.setup {
  default = true;
 }
 EOF
+
+endif
