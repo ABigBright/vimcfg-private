@@ -1,5 +1,3 @@
-if exists("g:loaded_nvim_treesitter")
-
 lua << EOF
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
@@ -35,5 +33,3 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
-
-endif

@@ -1,5 +1,3 @@
-if exists("g:loaded_telescope")
-
 lua << EOF
 require'telescope'.setup {
   extensions = {
@@ -14,5 +12,3 @@ require'telescope'.setup {
 
 require('telescope').load_extension('media_files')
 EOF
-
-endif
