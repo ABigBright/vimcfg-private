@@ -101,7 +101,13 @@ Plug 'mhinz/vim-startify'
 " Plug 't9md/vim-choosewin'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Remove keys with not valid characters
+" As of nvim v0.8.0 because of [this commit](neovim/neovim@61be343#diff-0cb0499adc01b42937b9626782911534f0df700663756f193a8a6cdb1c70d368)
+" Groups with not valid characters will result to an error.
+Plug 'ABigBright/vim-nerdtree-syntax-highlight'
+
 Plug 'trusktr/seti.vim'
 Plug 'andymass/vim-matchup'
 " Plug 'ryanoasis/nerd-fonts', {'do': './install FiraCode'}
