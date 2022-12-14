@@ -1,82 +1,96 @@
 {
-
-// coc config
-"npm.binPath"                 : "cnpm",
-"coc.preferences.jumpCommand" : "drop",
-"suggest.enablePreview"       : true,
-"list.maxPreviewHeight"       : 38,
-"suggest.numberSelect"        : false,
-"list.maxHeight"              : 15,
-
-// languageserver settings
-"languageserver": {
-    "clangd": {
-        "command": "clangd",
-        "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".root/"],
-        "filetypes": ["c", "cpp", "objc", "objcpp"]
+    // coc config
+    "npm.binPath": "cnpm",
+    "coc.preferences.jumpCommand": "drop",
+    "suggest.enablePreview": true,
+    "list.maxPreviewHeight": 38,
+    "suggest.numberSelect": false,
+    "list.maxHeight": 15,
+    // languageserver settings
+    "languageserver": {
+        "clangd": {
+            "command": "clangd",
+            "rootPatterns": [
+                "compile_flags.txt",
+                "compile_commands.json",
+                ".root/"
+            ],
+            "filetypes": [
+                "c",
+                "cpp",
+                "objc",
+                "objcpp"
+            ]
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": [
+                "start"
+            ],
+            "filetypes": [
+                "sh"
+            ],
+            "ignoredRootPaths": [
+                "~"
+            ]
+        },
+        "dockerfile": {
+            "command": "docker-langserver",
+            "filetypes": [
+                "dockerfile"
+            ],
+            "args": [
+                "--stdio"
+            ]
+        }
     },
-
-    "bash": {
-      "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
-    }
-},
-
-"list.normalMappings":{
-    "v" : "action:vsplit"
-},
-
-// "python.jediEnabled":true,
-
-"todolist.enable"              : true,
-"todolist.maxsize"             : 5000,
-"todolist.dateFormat"          : "YYYY-MM-DD HH : mm",
-"todolist.autoUpload"          : false,
-"todolist.monitor"             : true,
-"todolist.promptForReminder"   : true,
-"todolist.easyMode"            : true,
-"todolist.floatwin.background" : "#000000",
-"todolist.floatwin.winblend"   : 0,
-"todolist.floatwin.width"      : 30,
-"todolist.notify"              : "floating",
-
-// config for coc-zi
-"zi.enable": true,
-"zi.patterns": {
-    "": [],
-    "javascript": [
-        "^\\s*\\/\\/",
-        "^\\s*\\/\\*",
-        "^\\s*\\*"
+    "list.normalMappings": {
+        "v": "action:vsplit"
+    },
+    // "python.jediEnabled":true,
+    "todolist.enable": true,
+    "todolist.maxsize": 5000,
+    "todolist.dateFormat": "YYYY-MM-DD HH : mm",
+    "todolist.autoUpload": false,
+    "todolist.monitor": true,
+    "todolist.promptForReminder": true,
+    "todolist.easyMode": true,
+    "todolist.floatwin.background": "#000000",
+    "todolist.floatwin.winblend": 0,
+    "todolist.floatwin.width": 30,
+    "todolist.notify": "floating",
+    // config for coc-zi
+    "zi.enable": true,
+    "zi.patterns": {
+        "": [],
+        "javascript": [
+            "^\\s*\\/\\/",
+            "^\\s*\\/\\*",
+            "^\\s*\\*"
+        ],
+        "typescript": [
+            "^\\s*\\/\\/",
+            "^\\s*\\/\\*",
+            "^\\s*\\*"
+        ],
+        "markdown": [],
+        "vim": [
+            "^\\s*\\\""
+        ],
+        "gitcommit": []
+    },
+    "zi.syntaxKinds.javascript": [
+        "StringLiteral",
+        "NoSubstitutionTemplateLiteral",
+        "TemplateHead",
+        "TemplateTail",
+        "TemplateMiddle"
     ],
-    "typescript": [
-        "^\\s*\\/\\/",
-        "^\\s*\\/\\*",
-        "^\\s*\\*"
-    ],
-    "markdown": [],
-    "vim": [
-        "^\\s*\\\""
-    ],
-    "gitcommit": []
-},
-
-"zi.syntaxKinds.javascript": [
-    "StringLiteral",
-    "NoSubstitutionTemplateLiteral",
-    "TemplateHead",
-    "TemplateTail",
-    "TemplateMiddle"
-],
-
-"zi.syntaxKinds.typescript": [
-    "StringLiteral",
-    "NoSubstitutionTemplateLiteral",
-    "TemplateHead",
-    "TemplateTail",
-    "TemplateMiddle"
-]
-
+    "zi.syntaxKinds.typescript": [
+        "StringLiteral",
+        "NoSubstitutionTemplateLiteral",
+        "TemplateHead",
+        "TemplateTail",
+        "TemplateMiddle"
+    ]
 }

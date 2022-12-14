@@ -13,7 +13,8 @@ let g:coc_global_extensions = [
     \ "coc-html",
     \ "coc-css",
     \ "coc-pyright",
-    \ "coc-zi"
+    \ "coc-zi",
+    \ "coc-markdownlint"
     \]
 
     " \ "coc-python",
