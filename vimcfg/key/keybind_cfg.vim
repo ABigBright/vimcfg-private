@@ -203,7 +203,8 @@ noremap <silent><leader>jD :call CocActionAsync("jumpDeclaration", "edit")<cr>
 noremap <silent><leader>jI :call CocActionAsync("jumpImplementation", "edit")<cr>
 noremap <silent><leader>jg :call CocActionAsync("jumpTypeDefinition", "edit")<cr>
 noremap <silent><leader>jh :call CocActionAsync("jumpReferences", "preview")<cr>
-noremap <silent><leader>jr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump --result ctags", expand("<cword>"))<CR><CR>
+" noremap <silent><leader>jr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump --result ctags", expand("<cword>"))<CR><CR>
+noremap <silent><leader>jr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
 noremap <silent><leader>jd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
 noremap <silent><leader>js :<C-U><C-R>=printf("Leaderf! gtags -s %s --auto-jump", expand("<cword>"))<CR><CR>
 noremap <silent><leader>je :<C-U><C-R>=printf("Leaderf! gtags -g %s --auto-jump", expand("<cword>"))<CR><CR>
@@ -597,6 +598,9 @@ nmap <leader>eC <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>ef <Plug>(coc-fix-current)
 
+" Run the Code Lens action on the current line.
+nmap <leader>el  <Plug>(coc-codelens-action)
+
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
 xmap if <Plug>(coc-funcobj-i)
@@ -649,7 +653,7 @@ xmap <leader>ei  <Plug>(coc-format-selected)
 nmap <leader>ei  <Plug>(coc-format-selected)
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call <SID>ShowDocumentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -658,6 +662,16 @@ function! s:show_documentation()
     call CocActionAsync('doHover')
   else
     execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+function! s:ShowDocumentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
   endif
 endfunction
 
@@ -671,6 +685,7 @@ let g:which_key_map.e = {
       \ 'c'    : 'codeaction-selected',
       \ 'C'    : 'current-buffer-codeaction',
       \ 'f'    : 'fix-current',
+      \ 'l'    : 'codelens-action',
       \ 'D'    : 'list-diagnostics',
       \ 'E'    : 'list-extensions',
       \ 'o'    : 'find-symbols-with-current-file',
