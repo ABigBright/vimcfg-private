@@ -42,6 +42,12 @@
             "args": [
                 "--stdio"
             ]
+        },
+        "lua": {
+            "command": "lua-lsp",
+            "filetypes": [
+                "lua"
+            ]
         }
     },
     "list.normalMappings": {

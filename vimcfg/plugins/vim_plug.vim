@@ -184,4 +184,30 @@ Plug 'tools-life/taskwiki'
 " Plug 'nvim-treesitter/nvim-treesitter'
 " Plug 'nvim-orgmode/orgmode'
 
+Plug 'is0n/fm-nvim'
+Plug 'voldikss/vim-floaterm'
+
+if has('nvim')
+    function! UpdateRemotePlugins(...)
+        " Needed to refresh runtime files
+        let &rtp=&rtp
+        UpdateRemotePlugins
+    endfunction
+
+    Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
+    Plug 'romgrk/fzy-lua-native'
+else
+    Plug 'gelguy/wilder.nvim'
+
+    " To use Python remote plugin features in Vim, can be skipped
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+" -- Is using a standard Neovim install, i.e. built from source or using a
+" -- provided appimage.
+Plug 'lewis6991/impatient.nvim'
+Plug 'dstein64/vim-startuptime'
+Plug 'rcarriga/nvim-notify'
+
 call plug#end()

@@ -1,4 +1,3 @@
-lua << EOF
 require'telescope'.setup {
   extensions = {
     media_files = {
@@ -11,4 +10,3 @@ require'telescope'.setup {
 }
 
 require('telescope').load_extension('media_files')
-EOF
