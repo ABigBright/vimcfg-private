@@ -213,5 +213,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
 Plug 'nvim-tree/nvim-tree.lua'
+Plug 'folke/todo-comments.nvim'
+
 
 call plug#end()
