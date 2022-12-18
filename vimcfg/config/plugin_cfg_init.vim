@@ -44,6 +44,7 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/fm-nvim.lua",
     \ g:vims_prefix . "vimcfg/config/wilder.lua",
     \ g:vims_prefix . "vimcfg/config/inpatient.lua",
+    \ g:vims_prefix . "vimcfg/config/indent-blankline.lua",
     \]
     
     " not use 
