@@ -54,7 +54,7 @@ wilder.set_option('renderer', wilder.popupmenu_renderer(
     highlighter = wilder.highlighter_with_gradient(highlighters),
     left = {' ', wilder.popupmenu_devicons()},
     right = {' ', wilder.popupmenu_scrollbar()},
-    pumblend = 0,
+    pumblend = 15,
   })
 ))
 

@@ -15,6 +15,7 @@ syntax on
 set background=dark
 set conceallevel=3
 set list
+" set termguicolors to enable highlight groups
 set termguicolors
 
 " color define 

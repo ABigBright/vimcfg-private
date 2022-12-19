@@ -1,4 +1,5 @@
 let s:vim_plug_man = 'plug.vim'
+let g:plug_shallow = 1
 
 if has("win32")
     let s:vim_autoload_path = $HOME . '\.vim\autoload\' . s:vim_plug_man
