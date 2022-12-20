@@ -10,6 +10,7 @@ require("nvim-tree").setup()
 -- OR setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
+  root_dirs = {".root/"},
   view = {
     adaptive_size = true,
   },
@@ -29,5 +30,12 @@ require("nvim-tree").setup({
     debounce_delay = 15,
     update_root = true,
     ignore_list = {},
+  },
+  git = {
+    enable = true,
+    ignore = false,
+    show_on_dirs = true,
+    show_on_open_dirs = true,
+    timeout = 400,
   },
 })

@@ -1,4 +1,6 @@
 let s:vim_plug_man = 'plug.vim'
+
+" make vim_plug only clone -depth=1
 let g:plug_shallow = 1
 
 if has("win32")
