@@ -38,25 +38,25 @@ inoremap <silent><leader>za <cmd>:lua require('telekasten').show_tags({i = true}
 
 " zettelkasten config
 let g:which_key_map.z = {
-      \ 'name' : '+Zettelkasten',
+      \ 'name' : '+zettelkasten',
       \ }
 
 
 " nerdcomment config
 let g:which_key_map.c = {
-      \ 'name' : '+Comment',
+      \ 'name' : '+comment',
       \ }
 
 " async run keybinding config
 nmap <leader>ar :AsyncRun 
 let g:which_key_map.a = {
-      \ 'name' : '+Async-do-something',
+      \ 'name' : '+async',
       \ 'r'    : 'async-run',
       \ 's'    : [':AsyncStop', 'async-stop'],
       \ }
 
 let g:which_key_map.d = {
-      \ 'name' : '+Doxystyle-and-window',
+      \ 'name' : '+doxystyle',
       \ 'f'    : [':Dox', 'doxygen-file'],
       \ 'a'    : [':DoxAuthor', 'doxygen-author'],
       \ 'l'    : [':DoxLic', 'doxygen-license'],
@@ -218,7 +218,7 @@ autocmd FileType leaderf nnoremap <silent><buffer> Q :q!<cr>
 " not common for use
 " noremap <silent><leader>jI :GscopeFind d <C-R><C-W><cr>
 let g:which_key_map.j = {
-      \ 'name' : '+Jump',
+      \ 'name' : '+jump',
       \ 'd'    : 'jump-definition',
       \ 'r'    : 'jump-reference',
       \ 'e'    : 'jump-egrep',
@@ -269,7 +269,7 @@ let g:which_key_map.j = {
 
 " private init config file 
 let g:which_key_map.h = {
-      \ 'name' : '+Help',
+      \ 'name' : '+help',
       \ 'i'    : [':call Open_vimcfg_file(g:vimrc_path)', 'open-vimrc'],
       \ 'p'    : [':call Open_vimcfg_file(g:plugin_manange_path)', 'open-vimplug'],
       \ 'k'    : [':call Open_vimcfg_file(g:keybind_cfg_path)', 'open-keybiding-config'],
@@ -324,7 +324,7 @@ autocmd FileType qf nnoremap <silent><buffer> <C-s> :call Quickfix_tabedit(Quick
 autocmd FileType qf nnoremap <silent><buffer> q :q!<cr>
 
 let g:which_key_map.q = {
-      \ 'name' : '+Quickfix',
+      \ 'name' : '+qf',
       \ 'o'    : [':botright cw 10', 'open-quickfix-win'],
       \ 'c'    : [':ccl', 'close-quickfix-win'],
       \ }
@@ -366,7 +366,7 @@ nmap <silent><leader>ta :tabn
 
 " tag config
 let g:which_key_map.t = {
-      \ 'name' : '+Tag-And-Terminal',
+      \ 'name' : '+tag-and-term',
       \ 't'    : 'tag-list-toggle',
       \ 'p'    : 'tag-list-preview',
       \ 'c'    : 'coc-tag-list-toggle',
@@ -396,7 +396,7 @@ nmap <silent><leader>fl :Locate
 " fzf and leaderf keybinding config
 let g:Lf_ShortcutF = '<leader>ff'
 let g:which_key_map.f = {
-      \ 'name' : '+File',
+      \ 'name' : '+file',
       \ 'f'    : 'leaderf-find-file',
       \ 'F'    : [':Files', 'fzf-find-file'],
       \ 'g'    : [':GFiles', 'git-find-file'],
@@ -407,7 +407,7 @@ let g:which_key_map.f = {
       \ 'c'    : [':NvimTreeFindFileToggle', 'current-file-tree-browser'],
       \ 'b'    : [':CocList files', 'Coc-find-file'],
       \ 'd'    : [':CocList mru', 'Coc-find-recent-file'],
-      \ 's'    : [':Startify', 'open-startify'],
+      \ 's'    : [':telescope find_files', 'telescope-find-file'],
       \ 'e'    : [':RnvimrToggle', 'run-ranger'],
       \ 'l'    : 'locate-find-file',
       \ 'm'    : [':History', 'fzf-history-file'],
@@ -420,7 +420,7 @@ nmap <silent><leader>gR :Grevert
 nmap <silent><leader>gP :Gpush 
 " buffer keybinding config
 let g:which_key_map.g = {
-      \ 'name' : '+Git',
+      \ 'name' : '+git',
       \ 'b'    : [':Git blame', 'git-blame'],
       \ 's'    : [':Gstatus', 'git-status'],
       \ 'c'    : [':GV', 'git-all-commits'],
@@ -455,7 +455,7 @@ nmap <silent><leader>sg :Rg
 nmap <silent><leader>sm :Ag 
 
 let g:which_key_map.s = {
-      \ 'name' : '+Search-And-Style',
+      \ 'name' : '+search-and-format',
       \ 'i'    : 'indent-toggle',
       \ 'A'    : 'async-ag-search',
       \ 'a'    : 'coc-search',
@@ -484,7 +484,7 @@ let g:which_key_map.s = {
 " buffer keybinding config
 let g:Lf_ShortcutB = '<leader>bt'
 let g:which_key_map.b = {
-      \ 'name' : '+Buffer',
+      \ 'name' : '+buf',
       \ 't'    : 'leaderf-buffers',
       \ 'b'    : [':CtrlPBuffer', 'ctrlp-buffers'],
       \ 'f'    : [':Buffers', 'fzf-buffers'],
@@ -560,7 +560,7 @@ noremap <leader>wv <C-W>t<C-W>H
 noremap <leader>wp <c-w>p 
 " window keybind config
 let g:which_key_map.w = {
-    \ 'name' : '+Window',
+    \ 'name' : '+win',
     \ 'r'    : 'vertical-split-right-win',
     \ 'l'    : 'vertical-split-left-win',
     \ 'b'    : 'horizontal-split-below-win',
@@ -679,7 +679,7 @@ function! s:ShowDocumentation()
 endfunction
 
 let g:which_key_map.e = {
-      \ 'name' : '+CocFunc',
+      \ 'name' : '+coc',
       \ 'a'    : [':CocList', 'list-toggle'],
       \ 'b'    : [':CocList marketplace', 'extensions-store'],
       \ 'd'    : [':CocConfig', 'config-open'],
@@ -705,7 +705,7 @@ nmap <silent> <leader>mc :BookmarkClearAll<cr>:e<cr>
 
 " markdown config
 let g:which_key_map.m = {
-      \ 'name' : '+Markdown-And-Bookmark',
+      \ 'name' : '+markdown-and-bookmark',
       \ 'p' : ['<Plug>MarkdownPreview', 'markdown-preview'],
       \ 's' : ['<Plug>MarkdownPreviewStop', 'markdown-stop'],
       \ 't' : ['<Plug>MarkdownPreviewToggle', 'markdown-toggle'],
@@ -719,7 +719,7 @@ let g:which_key_map.m = {
       \ }
 
 let g:which_key_map.u = {
-    \ 'name' : '+UML-Graph',
+    \ 'name' : '+uml',
     \ 'o' : ['PlantumlOpen', 'PlantumlOpen'],
     \ 's' : ['PlantumlStop', 'PlantumlStop'],
     \ 'S' : ['PlantumlStart', 'PlantumlStart'],
@@ -731,7 +731,7 @@ xmap <leader>os <plug>(SubversiveSubstituteRange)
 nmap <leader>oss <plug>(SubversiveSubstituteWordRange)
 
 let g:which_key_map.o = {
-    \ 'name' : '+Other',
+    \ 'name' : '+other',
     \ 't'  : ['Translate', 'Translate simple'],
     \ 'w'  : ['TranslateW', 'Translate window'],
     \ 's'  : 'subversive-substitude-range',
@@ -741,7 +741,7 @@ let g:which_key_map.o = {
 
 " for file build and project build
 let g:which_key_map.i = {
-      \ 'name' : '+Build-And-Debug',
+      \ 'name' : '+build-and-debug',
       \ 'a'    : [':AsyncTask file-build', 'asynctask-file-build'],
       \ 'b'    : [':AsyncTask file-run', 'asynctask-file-run'],
       \ 'c'    : [':AsyncTask project-build', 'asynctask-project-build'],
