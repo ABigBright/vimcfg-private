@@ -407,7 +407,7 @@ let g:which_key_map.f = {
       \ 'c'    : [':NvimTreeFindFileToggle', 'current-file-tree-browser'],
       \ 'b'    : [':CocList files', 'Coc-find-file'],
       \ 'd'    : [':CocList mru', 'Coc-find-recent-file'],
-      \ 's'    : [':telescope find_files', 'telescope-find-file'],
+      \ 's'    : [':lua require("telescope.builtin").find_files() ', 'telescope-find-file'],
       \ 'e'    : [':RnvimrToggle', 'run-ranger'],
       \ 'l'    : 'locate-find-file',
       \ 'm'    : [':History', 'fzf-history-file'],
@@ -748,6 +748,12 @@ let g:which_key_map.i = {
       \ 'd'    : [':AsyncTask project-run', 'asynctask-project-run'],
       \ }
 
+" session
+let g:which_key_map.S = {
+      \ 'name' : '+session',
+      \ 'l'    : [':lua require("telescope._extensions.session-lens.main").search_session() ', 'load-session'],
+      \ 's'    : [':lua require("auto-session").SaveSession() ', 'save-session'],
+      \ }
 
 " config the shortkey for vimspector debug
 nmap <F5>         <Plug>VimspectorContinue
