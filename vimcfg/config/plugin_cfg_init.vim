@@ -47,6 +47,7 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/indent-blankline.lua",
     \ g:vims_prefix . "vimcfg/config/todo-comments.lua",
     \ g:vims_prefix . "vimcfg/config/nvim-tree.lua",
+    \ g:vims_prefix . "vimcfg/config/auto-session.lua",
     \ g:vims_prefix . "vimcfg/config/session-lens.lua",
     \ g:vims_prefix . "vimcfg/config/zen-mode.lua",
     \]
