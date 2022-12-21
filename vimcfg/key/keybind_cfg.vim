@@ -757,6 +757,10 @@ let g:which_key_map.S = {
       \ 's'    : [':lua require("auto-session").SaveSession() ', 'save-session'],
       \ }
 
+" cancel hlsearch select state
+noremap <silent><leader><cr> :noh<cr>
+let g:which_key_map["<CR>"] = "which_key_ignore"
+
 " config the shortkey for vimspector debug
 nmap <F5>         <Plug>VimspectorContinue
 nmap <F3>         <Plug>VimspectorStop
