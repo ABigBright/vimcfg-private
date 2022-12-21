@@ -267,6 +267,8 @@ let g:which_key_map.j = {
   " \ 'I'    : 'gutentags-jump-function-called-by-this-func',
   " \ 'A'    : 'gutentags-jump-this-symbol-is-assigned-value',
 
+autocmd FileType help nnoremap <silent><buffer> q :q!<cr>
+
 " private init config file 
 let g:which_key_map.h = {
       \ 'name' : '+help',
