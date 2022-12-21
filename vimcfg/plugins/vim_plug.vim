@@ -128,7 +128,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 
 Plug 'liuchengxu/vista.vim'
 
-Plug 'liuchengxu/eleline.vim' 
+Plug 'ABigBright/eleline.vim', { 'branch' : 'adjust_color' }
 
 Plug 'tyru/open-browser.vim'
 Plug 'aklt/plantuml-syntax'
