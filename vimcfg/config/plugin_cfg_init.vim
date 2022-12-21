@@ -50,6 +50,7 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/auto-session.lua",
     \ g:vims_prefix . "vimcfg/config/session-lens.lua",
     \ g:vims_prefix . "vimcfg/config/zen-mode.lua",
+    \ g:vims_prefix . "vimcfg/config/vim-plugin-AnsiEsc.vim",
     \]
     
     " not use 
