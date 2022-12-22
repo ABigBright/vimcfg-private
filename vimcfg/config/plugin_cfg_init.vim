@@ -33,7 +33,6 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/vimspector.vim",
     \ g:vims_prefix . "vimcfg/config/fugitive-gitlib.vim",
     \ g:vims_prefix . "vimcfg/config/vimwiki.vim",
-    \ g:vims_prefix . "vimcfg/config/taskwiki.vim",
     \ g:vims_prefix . "vimcfg/config/autopair.vim",
     \ g:vims_prefix . "vimcfg/config/telekasten.vim",
     \ g:vims_prefix . "vimcfg/config/calendar.vim",
@@ -50,10 +49,12 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/auto-session.lua",
     \ g:vims_prefix . "vimcfg/config/session-lens.lua",
     \ g:vims_prefix . "vimcfg/config/zen-mode.lua",
-    \ g:vims_prefix . "vimcfg/config/vim-plugin-AnsiEsc.vim",
+    \ g:vims_prefix . "vimcfg/config/nvim-orgmode.lua",
     \]
     
     " not use 
+    " \ g:vims_prefix . "vimcfg/config/vim-plugin-AnsiEsc.vim",
+    " \ g:vims_prefix . "vimcfg/config/taskwiki.vim",
     " \ g:vims_prefix . "vimcfg/config/hologram.lua",
     " \ g:vims_prefix . "vimcfg/config/orgmode.lua",
     " \ g:vims_prefix . "vimcfg/config/neuron.lua",

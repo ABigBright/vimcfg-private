@@ -172,9 +172,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " taskwiki
 Plug 'vimwiki/vimwiki'
-Plug 'powerman/vim-plugin-AnsiEsc'
-Plug 'blindFS/vim-taskwarrior'
-Plug 'tools-life/taskwiki'
+" Plug 'powerman/vim-plugin-AnsiEsc'
+" Plug 'blindFS/vim-taskwarrior'
+" Plug 'tools-life/taskwiki'
 
 " neuron
 " Plug 'oberblastmeister/neuron.nvim'
@@ -217,5 +217,7 @@ Plug 'folke/todo-comments.nvim'
 Plug 'rmagatti/auto-session'
 Plug 'rmagatti/session-lens'
 Plug 'folke/zen-mode.nvim'
+
+Plug 'nvim-orgmode/orgmode'
 
 call plug#end()
