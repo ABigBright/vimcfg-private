@@ -35,6 +35,9 @@ nnoremap <silent><leader>zr :lua require('telekasten').rename_note()<CR>
 " alternatively: leader [
 inoremap <silent><leader>[ <cmd>:lua require('telekasten').insert_link({ i=true })<CR>
 inoremap <silent><leader>za <cmd>:lua require('telekasten').show_tags({i = true})<CR>
+autocmd FileType vimwiki,telekasten nnoremap <silent><buffer> <cr> <Plug>VimwikiFollowLink
+" autocmd FileType telekasten nnoremap <silent><buffer> <cr> <Plug>VimwikiFollowLink
+" autocmd FileType markdown nnoremap <silent><buffer> <cr> <Plug>VimwikiFollowLink
 
 " zettelkasten config
 let g:which_key_map.z = {
