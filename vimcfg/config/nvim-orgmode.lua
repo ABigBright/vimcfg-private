@@ -2,8 +2,8 @@
 require('orgmode').setup_ts_grammar()
 
 local default_config = {
-  org_agenda_files = {'~/org/agenda/*.org', '~/org/work/weekly/todo.org'},
-  org_default_notes_file = '~/org/agenda/refile.org',
+  org_agenda_files = {'~/zettelkasten/org/agenda/*.org', '~/zettelkasten/org/work/weekly/todo.org'},
+  org_default_notes_file = '~/zettelkasten/org/agenda/refile.org',
   org_todo_keywords = { 'TODO(t)', 'WAIT(w)', '|', 'DONE(d)', 'ASSIGN(a)', 'CANCEL(c)' },
   org_todo_keyword_faces = {
         WAIT = ':foreground orange :weight bold',
