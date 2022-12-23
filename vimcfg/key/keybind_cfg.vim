@@ -728,11 +728,11 @@ let g:which_key_map.u = {
     \}
 
 " key bind config for key `o'
-nmap <leader>os <plug>(SubversiveSubstituteRange)
-xmap <leader>os <plug>(SubversiveSubstituteRange)
-nmap <leader>oss <plug>(SubversiveSubstituteWordRange)
+nmap <leader>ks <plug>(SubversiveSubstituteRange)
+xmap <leader>ks <plug>(SubversiveSubstituteRange)
+nmap <leader>kss <plug>(SubversiveSubstituteWordRange)
 
-let g:which_key_map.o = {
+let g:which_key_map.k = {
     \ 'name' : '+other',
     \ 't'  : ['Translate', 'Translate simple'],
     \ 'w'  : ['TranslateW', 'Translate window'],
@@ -760,6 +760,11 @@ let g:which_key_map.S = {
 " cancel hlsearch select state
 noremap <silent><leader><cr> :noh<cr>
 let g:which_key_map["<CR>"] = "which_key_ignore"
+
+" orgmode key mapping
+let g:which_key_map.o = {
+      \ 'name': '+orgmode'
+      \ }
 
 " config the shortkey for vimspector debug
 nmap <F5>         <Plug>VimspectorContinue
