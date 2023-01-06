@@ -6,6 +6,7 @@
     "list.maxPreviewHeight": 38,
     "suggest.numberSelect": false,
     "list.maxHeight": 15,
+    "workspace.openResourceCommand":"",
     // languageserver settings
     "languageserver": {
         "clangd": {
