@@ -209,7 +209,7 @@ endif
 Plug 'lewis6991/impatient.nvim'
 Plug 'dstein64/vim-startuptime'
 Plug 'rcarriga/nvim-notify'
-Plug 'lukas-reineke/indent-blankline.nvim'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
 Plug 'nvim-tree/nvim-tree.lua'

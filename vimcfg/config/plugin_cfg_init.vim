@@ -43,7 +43,6 @@ let s:vims_tbl = [
     \ g:vims_prefix . "vimcfg/config/fm-nvim.lua",
     \ g:vims_prefix . "vimcfg/config/wilder.lua",
     \ g:vims_prefix . "vimcfg/config/inpatient.lua",
-    \ g:vims_prefix . "vimcfg/config/indent-blankline.lua",
     \ g:vims_prefix . "vimcfg/config/todo-comments.lua",
     \ g:vims_prefix . "vimcfg/config/nvim-tree.lua",
     \ g:vims_prefix . "vimcfg/config/auto-session.lua",
@@ -53,6 +52,7 @@ let s:vims_tbl = [
     \]
     
     " not use 
+    " \ g:vims_prefix . "vimcfg/config/indent-blankline.lua",
     " \ g:vims_prefix . "vimcfg/config/vim-plugin-AnsiEsc.vim",
     " \ g:vims_prefix . "vimcfg/config/taskwiki.vim",
     " \ g:vims_prefix . "vimcfg/config/hologram.lua",
