@@ -166,12 +166,12 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' } " or , { 'branch': '0.1.x' }
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'renerocksai/calendar-vim'
-Plug 'renerocksai/telekasten.nvim'
+Plug 'ABigBright/telekasten.nvim', { 'tag': 'cus_for_briq' }
 Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " taskwiki
-Plug 'vimwiki/vimwiki'
+Plug 'ABigBright/vimwiki', {'branch': 'cus_for_briq'}
 " Plug 'powerman/vim-plugin-AnsiEsc'
 " Plug 'blindFS/vim-taskwarrior'
 " Plug 'tools-life/taskwiki'

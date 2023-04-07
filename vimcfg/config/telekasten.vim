@@ -1,4 +1,11 @@
 lua << END
+
+-- this is customize for briq use only
+local l_filter_extensions = {".org", ".md"}
+vim.g.telekasten_follow_link_filter_extension = l_filter_extensions
+vim.g.telekasten_find_note_filter_extension = l_filter_extensions
+vim.g.telekasten_insert_link_filter_extension = l_filter_extensions
+
 local home = vim.fn.expand("~/zettelkasten")
 -- NOTE for Windows users:
 -- - don't use Windows
